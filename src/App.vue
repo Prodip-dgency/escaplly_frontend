@@ -3,6 +3,7 @@
      <navsection />
      <herosection />
      <uspsection />
+     <escape-room-section />
     <!-- <router-view /> -->
   </div>
 </template>
@@ -11,11 +12,13 @@
  import Navsection from "./components/Navsection.vue";
  import Herosection from "./components/Herosection.vue";
  import Uspsection from "./components/Uspsection.vue";
+ import EscapeRoomSection from "./components/EscapeRoomSection.vue";
 export default {
   components: {
     Navsection,
     Herosection,
-    Uspsection
+    Uspsection,
+    EscapeRoomSection
   }
 }
 </script>
