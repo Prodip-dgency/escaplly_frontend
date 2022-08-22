@@ -1,3 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
 body{
-    background: red;
+    background: #eeeeee;
+}
+
+
+:root{
+    --text-color-light-varient8: #f9f9f9;
+    --primary-color: #7856c3;
+    --text-color-light-varient4: #6A6A6A;
+}
+
+
+
+.body-container{
+    width: 1240px;
 }
