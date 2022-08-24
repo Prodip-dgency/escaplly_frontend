@@ -19,7 +19,6 @@ export default {};
 <style lang="scss">
 .hero-container {
   height: 520px;
-  width: 100%;
   background-image: url("../assets/hero_image.jpg");
   background-size: cover;
   display: flex;

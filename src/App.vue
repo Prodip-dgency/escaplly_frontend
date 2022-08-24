@@ -4,6 +4,8 @@
      <herosection />
      <uspsection />
      <escape-room-section />
+     <curious-section />
+     <top-companies />
     <!-- <router-view /> -->
   </div>
 </template>
@@ -13,12 +15,16 @@
  import Herosection from "./components/Herosection.vue";
  import Uspsection from "./components/Uspsection.vue";
  import EscapeRoomSection from "./components/EscapeRoomSection.vue";
+ import CuriousSection from "./components/CuriousSection.vue";
+ import TopCompanies from "./components/TopCompanies.vue";
 export default {
   components: {
     Navsection,
     Herosection,
     Uspsection,
-    EscapeRoomSection
+    EscapeRoomSection,
+    CuriousSection,
+    TopCompanies
   }
 }
 </script>

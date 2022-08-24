@@ -7,19 +7,44 @@
 }
 body{
     background: #eeeeee;
+   
 }
 
 
 :root{
     --text-color-light-varient8: #f9f9f9;
+    --text-color-light-varient6: #CCCCCC;
+
     --primary-color: #7856c3;
     --text-color-light-varient4: #6A6A6A;
+    --Text-color-dark-varient2: #191919;
     --secondary-color: #ff492c;
+    --Secondary-color-light-varient3: #ff0000;
     --link-and-icon-color: #1a73eb;
+    --text-color-light-varient3: #ffffff;
 }
 
 
 
 .body-container{
     width: 1240px;
+}
+
+/* view more button */
+
+.footer-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16.89px;
+    padding-top:50px ;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: var( --link-and-icon-color);
+
+  }
+.footer-btn{
+    text-decoration: none;
+    color: var( --link-and-icon-color);
 }

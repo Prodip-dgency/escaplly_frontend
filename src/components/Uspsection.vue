@@ -25,7 +25,6 @@ export default {};
 
 <style lang="scss">
 .usp-container {
-  width: 100%;
   display: flex;
   justify-content: center;
   position: relative;

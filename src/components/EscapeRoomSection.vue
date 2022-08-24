@@ -36,8 +36,8 @@
           </div>
         </div>
       </div>
-      <div class="footer-btn">
-        <a href="#"> View more escape rooms</a>
+      <div class="footer-btn-container">
+        <a class="footer-btn" href="#"> View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
@@ -56,7 +56,6 @@ export default {
 
 <style lang="scss">
 .escape-container {
-  width: 100%;
   height: 1448px;
   background: #ffffff;
   display: flex;
@@ -103,11 +102,14 @@ export default {
           gap: 15px;
           color: var(--text-color-light-varient4);
           font-size: 16px;
+           padding: 1px 0 4px 0;
         }
         img {
-          padding: 4px 0;
+          width: 276px;
+          height: 180px;
         }
         .card-body {
+          padding: 7px 0 0 0;
           height: 175px;
           display: flex;
           flex-direction: column;
@@ -162,20 +164,6 @@ export default {
       }
     }
   }
-  .footer-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16.89px;
-    padding-top:5rem ;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    color: var( --link-and-icon-color);
-    a{
-        text-decoration: none;
-        color: var( --link-and-icon-color);
-    }
-  }
+
 }
 </style>
