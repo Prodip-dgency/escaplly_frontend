@@ -16,7 +16,6 @@ export default {};
 <style lang="scss">
 .nav-container {
   height: 69px;
-  width: 100%;
   background: var(--text-color-light-varient8);
   display: flex;
   justify-content: center;

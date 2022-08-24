@@ -1,27 +1,26 @@
 <template>
-  <div class="escape-container">
-    <div class="body-container">
-      <div class="container">
-        <div class="text">
-          <h2>Top Escape Room And Fun Activities</h2>
-          <h6>
-            Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply
-            dummy text of the text a lpsum simply text for dummy only.
-          </h6>
-        </div>
-        <div class="inner-container">
+  <div class="companies-container">
+    <div class="container body-container">
+      <div class="header-text">
+        <h2>Top Escape Room Companies</h2>
+        <h6>
+          Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply
+          dummy text of the text a lpsum simply text for dummy only.
+        </h6>
+      </div>
+      <VueCarousel v-bind="settings">
+        <div class="slider-container">
           <div class="game-card" v-for="item in items" :key="item">
             <div class="header">
               <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
               <p><i class="fa-solid fa-person-running"></i> In Person</p>
             </div>
-            <img src="../assets/cardimg1.jpg" alt="" />
+            <img src="../assets/companycard4.jpg" alt="" />
             <div class="card-body">
               <div>
-                <h2>Escape Game Name</h2>
-                <div class="company-name">
-                  <span>by </span>
-                  <p>Escape Room Company</p>
+                <h5>Escape Game Name</h5>
+                <div class="available-game">
+                  <p>Available escape game: 9</p>
                 </div>
               </div>
 
@@ -35,65 +34,72 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-btn">
-        <a href="#"> View more escape rooms</a>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
+      </VueCarousel>
     </div>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
+import VueCarousel from 'vue-carousel';
 export default {
+  name: "MyComponent",
+  components: { VueCarousel },
+  settings: {
+    dots: true,
+    focusOnSelect: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    touchThreshold: 5,
+  },
+
   data() {
     return {
-      items: ["a", "b", "c", "d", "e", "f", "g", "h"],
+      items: ["a", "b", "c", "d"],
     };
   },
 };
 </script>
 
 <style lang="scss">
-.escape-container {
-  height: 1448px;
-  background: #ffffff;
+.companies-container {
+  margin-top: 25px;
+  height: 888px;
+  background: var(--text-color-light-varient3);
   display: flex;
   justify-content: center;
   .container {
-    display: flex;
-    flex-direction: column;
-    gap: 10rem;
-    .text {
-      height: 70px;
-      width: 820px;
-      padding: 180px 281px 100px 210px;
+    padding: 100px 0;
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
       text-align: center;
+      font-family: "Roboto", sans-serif;
+
       h2 {
-        font-family: "Roboto", sans-serif;
         font-size: 50px;
-        width: 820px;
+        font-weight: 500;
+        line-height: 70px;
       }
       h6 {
         width: 809px;
-        font-family: "Roboto", sans-serif;
         font-size: 24px;
         font-weight: 400;
         line-height: 33.6px;
         color: var(--text-color-light-varient4);
-        margin-top: 1.3rem;
       }
     }
-
-    .inner-container {
+    .slider-container {
+      display: flex;
+      padding-top: 60px;
       font-family: "Roboto", sans-serif;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      justify-items: center;
-      row-gap: 50px;
       .game-card {
         width: 290px;
-        height: 400px;
+        height: 348px;
         padding: 6px 7px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -102,34 +108,26 @@ export default {
           gap: 15px;
           color: var(--text-color-light-varient4);
           font-size: 16px;
-           padding: 1px 0 4px 0;
+          padding: 1px 0 4px 0;
         }
         img {
+          height: 160px;
           width: 276px;
-          height: 180px;
         }
         .card-body {
           padding: 7px 0 0 0;
-          height: 175px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          h2 {
+          gap: 20px;
+          h5 {
             font-size: 26px;
             line-height: 36.4px;
           }
-          .company-name {
+          .available-game {
             font-size: 18px;
-            line-height: 26px;
-            display: flex;
-            gap: 7px;
-            span {
-              font-weight: 300;
-              color: var(--text-color-light-varient4);
-            }
+            line-height: 25.2px;
+            opacity: 80%;
             p {
-              font-style: italic;
-              text-decoration: underline;
               font-weight: 400;
             }
           }
@@ -138,7 +136,7 @@ export default {
             height: 56px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 5px;
             .location {
               display: flex;
               align-items: center;
@@ -157,26 +155,7 @@ export default {
             }
           }
         }
-        &:hover {
-          box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.25);
-          transition: all 1s;
-        }
       }
-    }
-  }
-  .footer-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16.89px;
-    padding-top:5rem ;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    color: var( --link-and-icon-color);
-    a{
-        text-decoration: none;
-        color: var( --link-and-icon-color);
     }
   }
 }
