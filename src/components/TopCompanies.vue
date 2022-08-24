@@ -8,56 +8,71 @@
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
-      <VueCarousel v-bind="settings">
-        <div class="slider-container">
-          <div class="game-card" v-for="item in items" :key="item">
-            <div class="header">
-              <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
-              <p><i class="fa-solid fa-person-running"></i> In Person</p>
-            </div>
-            <img src="../assets/companycard4.jpg" alt="" />
-            <div class="card-body">
-              <div>
-                <h5>Escape Game Name</h5>
-                <div class="available-game">
-                  <p>Available escape game: 9</p>
-                </div>
+      <Carousel :settings="settings">
+        <Slide v-for="item in items" :key="item">
+          <div class="slider-container">
+            <div class="game-card">
+              <div class="header">
+                <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
+                <p><i class="fa-solid fa-person-running"></i> In Person</p>
               </div>
-
-              <div class="card-footer">
-                <div class="location">
-                  <span class="material-symbols-outlined"> location_on </span>
-                  <P>New York City, US</P>
+              <img src="../assets/companycard4.jpg" alt="" />
+              <div class="card-body">
+                <div class="card-header">
+                  <h5>Escape Game Name</h5>
+                  <div class="available-game">
+                    <p>Available escape game: 9</p>
+                  </div>
                 </div>
-                <p>From <span>$29</span>/Person</p>
+                <div class="card-footer">
+                  <div class="location">
+                    <span class="material-symbols-outlined"> location_on </span>
+                    <P>New York City, US</P>
+                  </div>
+                  <div class="footer-text">
+                    <p>From <span>$29</span>/Person</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </VueCarousel>
+        </Slide>
+        <template #addons>
+          <Pagination />
+          <!-- <Navigation /> -->
+        </template>
+      </Carousel>
+      <div class="footer-btn-container">
+        <a class="footer-btn" href="#"> View more escape rooms</a>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import VueCarousel from 'vue-carousel';
-export default {
-  name: "MyComponent",
-  components: { VueCarousel },
-  settings: {
-    dots: true,
-    focusOnSelect: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    touchThreshold: 5,
-  },
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
+export default {
+  name: "WrapAround",
+  components: {
+    Carousel,
+    Slide,
+    Navigation,
+    Pagination,
+  },
   data() {
     return {
-      items: ["a", "b", "c", "d"],
+      items: ["a", "b", "c", "d", "e", "f", "g", "h"],
+      settings: {
+        itemsToShow: 4,
+        // itemsToScroll: 2,
+        snapAlign: "end",
+        transition: 1000,
+        autoplay: 3000,
+        wrapAround: true,
+      },
     };
   },
 };
@@ -70,8 +85,10 @@ export default {
   background: var(--text-color-light-varient3);
   display: flex;
   justify-content: center;
+
   .container {
     padding: 100px 0;
+
     .header-text {
       display: flex;
       flex-direction: column;
@@ -119,16 +136,21 @@ export default {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          h5 {
-            font-size: 26px;
-            line-height: 36.4px;
-          }
-          .available-game {
-            font-size: 18px;
-            line-height: 25.2px;
-            opacity: 80%;
-            p {
-              font-weight: 400;
+          .card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h5 {
+              font-size: 26px;
+              line-height: 36.4px;
+            }
+            .available-game {
+              font-size: 18px;
+              line-height: 25.2px;
+              opacity: 80%;
+              p {
+                font-weight: 400;
+              }
             }
           }
           .card-footer {
@@ -136,7 +158,7 @@ export default {
             height: 56px;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 6px;
             .location {
               display: flex;
               align-items: center;
@@ -146,17 +168,36 @@ export default {
                 color: var(--text-color-light-varient4);
               }
             }
-            p {
-              font-weight: 400;
-              span {
-                font-weight: 700;
-                color: var(--secondary-color);
+            .footer-text {
+              display: flex;
+              p {
+                font-weight: 400;
+                span {
+                  font-weight: 700;
+                  color: var(--secondary-color);
+                }
               }
             }
           }
         }
       }
     }
+  }
+  .carousel__viewport {
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+  .carousel__pagination {
+    padding-top: 12px;
+  }
+  .carousel__pagination-button {
+    background: var(--text-color-light-varient6);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+  }
+  .carousel__pagination-button--active {
+    background: var(--text-color-light-varient4);
   }
 }
 </style>

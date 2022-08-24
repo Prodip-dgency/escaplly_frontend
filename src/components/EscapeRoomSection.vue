@@ -36,8 +36,8 @@
           </div>
         </div>
       </div>
-      <div class="footer-btn">
-        <a href="#"> View more escape rooms</a>
+      <div class="footer-btn-container">
+        <a class="footer-btn" href="#"> View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
@@ -164,20 +164,6 @@ export default {
       }
     }
   }
-  .footer-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16.89px;
-    padding-top:5rem ;
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    color: var( --link-and-icon-color);
-    a{
-        text-decoration: none;
-        color: var( --link-and-icon-color);
-    }
-  }
+
 }
 </style>
