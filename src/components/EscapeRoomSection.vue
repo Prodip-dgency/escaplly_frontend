@@ -71,6 +71,7 @@ export default {
       text-align: center;
       h2 {
         font-family: "Roboto", sans-serif;
+        font-weight: 500;
         font-size: 50px;
         width: 820px;
       }

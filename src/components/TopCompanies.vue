@@ -2,8 +2,8 @@
   <div class="companies-container">
     <div class="container body-container">
       <div class="header-text">
-        <h2>Top Escape Room Companies</h2>
-        <h6>
+        <h2 class="page-title">Top Escape Room Companies</h2>
+        <h6 class="page-description">
           Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
@@ -89,29 +89,7 @@ export default {
   .container {
     padding: 100px 0;
 
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
-      font-family: "Roboto", sans-serif;
-
-      h2 {
-        font-size: 50px;
-        font-weight: 500;
-        line-height: 70px;
-      }
-      h6 {
-        width: 809px;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 33.6px;
-        color: var(--text-color-light-varient4);
-      }
-    }
     .slider-container {
-      display: flex;
       padding-top: 60px;
       font-family: "Roboto", sans-serif;
       .game-card {
