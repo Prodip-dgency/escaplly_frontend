@@ -2,8 +2,8 @@
   <div class="curious-container">
     <div class="container body-container">
       <div class="header-text">
-        <h2>Curious Want To Know!</h2>
-        <h6>
+        <h2 class="page-title">Curious Want To Know!</h2>
+        <h6 class="page-description">
           Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
@@ -66,27 +66,6 @@ export default {
   .container {
     padding: 100px 0;
 
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
-      font-family: "Roboto", sans-serif;
-
-      h2 {
-        font-size: 50px;
-        font-weight: 500;
-        line-height: 70px;
-      }
-      h6 {
-        width: 809px;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 33.6px;
-        color: var(--text-color-light-varient4);
-      }
-    }
     .body-text {
       display: flex;
       justify-content: space-between;
@@ -121,7 +100,7 @@ export default {
           button {
             display: flex;
             gap: 10px;
-            padding: 10px 30px;
+            padding: 14px 30px;
             color: var(--text-color-light-varient3);
             border: none;
             border-radius: 5px;

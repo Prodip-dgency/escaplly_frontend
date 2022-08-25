@@ -6,6 +6,9 @@
      <escape-room-section />
      <curious-section />
      <top-companies />
+     <mission-vision />
+     <footer-section />
+
     <!-- <router-view /> -->
   </div>
 </template>
@@ -17,6 +20,8 @@
  import EscapeRoomSection from "./components/EscapeRoomSection.vue";
  import CuriousSection from "./components/CuriousSection.vue";
  import TopCompanies from "./components/TopCompanies.vue";
+ import MissionVision from "./components/MissionVision.vue";
+ import FooterSection from "./components/FooterSection.vue";
 export default {
   components: {
     Navsection,
@@ -24,7 +29,9 @@ export default {
     Uspsection,
     EscapeRoomSection,
     CuriousSection,
-    TopCompanies
+    TopCompanies,
+    MissionVision,
+    FooterSection
   }
 }
 </script>

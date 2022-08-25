@@ -14,7 +14,6 @@ body{
 :root{
     --text-color-light-varient8: #f9f9f9;
     --text-color-light-varient6: #CCCCCC;
-
     --primary-color: #7856c3;
     --text-color-light-varient4: #6A6A6A;
     --Text-color-dark-varient2: #191919;
@@ -22,6 +21,8 @@ body{
     --Secondary-color-light-varient3: #ff0000;
     --link-and-icon-color: #1a73eb;
     --text-color-light-varient3: #ffffff;
+    --Secondary-color-v2-dark-varient3: #F4FFED;
+    --Secondary-color-v1-light-varient3: #FFEFED;
 }
 
 
@@ -29,6 +30,29 @@ body{
 .body-container{
     width: 1240px;
 }
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+
+  }
+
+  .page-title{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 70px;
+  }
+  .page-description{
+    width: 809px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    color: var(--text-color-light-varient4);
+  }
 
 /* view more button */
 
