@@ -100,7 +100,7 @@ export default {
           button {
             display: flex;
             gap: 10px;
-            padding: 10px 30px;
+            padding: 14px 30px;
             color: var(--text-color-light-varient3);
             border: none;
             border-radius: 5px;
