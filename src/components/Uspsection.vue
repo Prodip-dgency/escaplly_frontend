@@ -24,6 +24,7 @@ export default {};
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .usp-container {
   display: flex;
   justify-content: center;
@@ -43,12 +44,18 @@ export default {};
       font-family: "Roboto", sans-serif;
       font-size: 40px;
       color: var(--primary-color);
+      @media #{$media-mobile-sm} {
+        font-size: 22px;
+      }
     }
     h4 {
       font-family: "Roboto", sans-serif;
       font-size: 30px;
       font-weight: 300;
-      color:  var(--text-color-light-varient4);
+      color: var(--text-color-light-varient4);
+      @media #{$media-mobile-sm} {
+        font-size: 18px;
+      }
     }
     .text-section {
       width: 300px;
@@ -61,6 +68,15 @@ export default {};
     .second-section {
       border-right: 2.5px solid var(--primary-color);
     }
+
+    @media #{$media-mobile-sm} {
+      width: 394px;
+      height: 74px;
+      top: -2rem  ;
+    }
+  }
+  @media #{$media-mobile-sm} {
+    width: 414px;
   }
 }
 </style>

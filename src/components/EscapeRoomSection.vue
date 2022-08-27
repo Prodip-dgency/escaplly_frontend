@@ -55,6 +55,7 @@ export default {
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .escape-container {
   height: 1448px;
   background: #ffffff;
@@ -74,6 +75,10 @@ export default {
         font-weight: 500;
         font-size: 50px;
         width: 820px;
+        @media #{$media-mobile-sm} {
+          font-size: 24px;
+          width: 414px;
+        }
       }
       h6 {
         width: 809px;
@@ -83,6 +88,12 @@ export default {
         line-height: 33.6px;
         color: var(--text-color-light-varient4);
         margin-top: 1.3rem;
+      }
+      @media #{$media-mobile-sm} {
+        width: 414px;
+        height: 70px;
+       padding: 50px 25px;
+       
       }
     }
 
@@ -164,6 +175,14 @@ export default {
         }
       }
     }
+    @media #{$media-mobile-sm} {
+      gap: 4rem;
+
+    }
+  }
+   @media #{$media-mobile-sm} {
+    width: 414px;
+    justify-content: start;
   }
 
 }

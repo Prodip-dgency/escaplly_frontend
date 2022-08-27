@@ -79,6 +79,7 @@ export default {
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .companies-container {
   margin-top: 25px;
   height: 888px;
@@ -176,6 +177,9 @@ export default {
   }
   .carousel__pagination-button--active {
     background: var(--text-color-light-varient4);
+  }
+   @media #{$media-mobile-sm} {
+    width: 414px;
   }
 }
 </style>

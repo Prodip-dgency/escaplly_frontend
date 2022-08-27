@@ -71,6 +71,7 @@ export default {};
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 footer {
   .footer-container {
     background: #000000;
@@ -161,6 +162,9 @@ footer {
             gap: 30px;
         }
     }
+  }
+   @media #{$media-mobile-sm} {
+    width: 414px;
   }
 }
 </style>

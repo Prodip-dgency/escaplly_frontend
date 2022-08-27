@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .curious-container {
   margin-top: 25px;
   height: 684px;
@@ -126,6 +127,9 @@ export default {
         }
       }
     }
+  }
+   @media #{$media-mobile-sm} {
+    width: 414px;
   }
 }
 </style>

@@ -79,6 +79,7 @@ export default {};
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .mission-container {
   margin-top: 25px;
   height: 1014px;
@@ -157,6 +158,9 @@ export default {};
         }
       }
     }
+  }
+   @media #{$media-mobile-sm} {
+    width: 414px;
   }
 }
 </style>
