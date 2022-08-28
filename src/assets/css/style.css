@@ -29,6 +29,12 @@ body{
 
 .body-container{
     width: 1240px;
+  }
+  .container{
+    padding: 100px 0;
+  }
+  @media only screen and (max-width: 480px){
+     
 }
 
 
@@ -58,7 +64,7 @@ body{
 
 /* view more button */
 
-.footer-btn-container {
+ .footer-btn-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,9 +74,36 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     color: var( --link-and-icon-color);
-
   }
-.footer-btn{
+  @media only screen and (max-width: 480px){
+    .body-container{
+      width: 414px;
+    }
+    .container{
+      padding: 40px 10px;
+    }
+
+    .footer-btn-container{
+      padding: 35px 0;
+    }
+    
+    .header-text{
+      align-items: inherit;
+      text-align: inherit;
+      gap: 15px;
+    }
+    .page-title{
+      line-height: 33px;
+      font-size: 24px;
+    }
+    .page-description{
+       font-size: 18px;
+       width: 392px;
+       line-height: 25px;
+    }
+  }
+
+ .footer-btn{
     text-decoration: none;
     color: var( --link-and-icon-color);
-}
+  }

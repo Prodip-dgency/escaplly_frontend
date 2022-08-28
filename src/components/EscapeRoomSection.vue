@@ -1,7 +1,7 @@
 <template>
   <div class="escape-container">
     <div class="body-container">
-      <div class="container">
+      <div class="container1">
         <div class="text">
           <h2>Top Escape Room And Fun Activities</h2>
           <h6>
@@ -15,22 +15,24 @@
               <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
               <p><i class="fa-solid fa-person-running"></i> In Person</p>
             </div>
-            <img src="../assets/cardimg1.jpg" alt="" />
-            <div class="card-body">
-              <div>
-                <h2>Escape Game Name</h2>
-                <div class="company-name">
-                  <span>by </span>
-                  <p>Escape Room Company</p>
+            <div class="img-body">
+              <img src="../assets/cardimg1.jpg" alt="" />
+              <div class="card-body">
+                <div>
+                  <h5>Escape Game Name</h5>
+                  <div class="company-name">
+                    <span>by </span>
+                    <p>Escape Room Company</p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="card-footer">
-                <div class="location">
-                  <span class="material-symbols-outlined"> location_on </span>
-                  <P>New York City, US</P>
+                <div class="card-footer">
+                  <div class="location">
+                    <span class="material-symbols-outlined"> location_on </span>
+                    <P>New York City, US</P>
+                  </div>
+                  <p>From <span>$29</span>/Person</p>
                 </div>
-                <p>From <span>$29</span>/Person</p>
               </div>
             </div>
           </div>
@@ -61,7 +63,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   background: #ffffff;
   display: flex;
   justify-content: center;
-  .container {
+  .container1 {
     display: flex;
     flex-direction: column;
     gap: 10rem;
@@ -77,7 +79,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         width: 820px;
         @media #{$media-mobile-sm} {
           font-size: 24px;
-          width: 414px;
+          width: 391px;
+          text-align: start;
         }
       }
       h6 {
@@ -88,12 +91,16 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         line-height: 33.6px;
         color: var(--text-color-light-varient4);
         margin-top: 1.3rem;
+        @media #{$media-mobile-sm} {
+          font-size: 18px;
+          line-height: 25px;
+          width: 391px;
+          text-align: start;
+        }
       }
       @media #{$media-mobile-sm} {
-        width: 414px;
         height: 70px;
-       padding: 50px 25px;
-       
+        padding: 70px 10px;
       }
     }
 
@@ -114,76 +121,115 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           gap: 15px;
           color: var(--text-color-light-varient4);
           font-size: 16px;
-           padding: 1px 0 4px 0;
+          padding: 1px 0 4px 0;
         }
-        img {
-          width: 276px;
-          height: 180px;
-        }
-        .card-body {
-          padding: 7px 0 0 0;
-          height: 175px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          h2 {
-            font-size: 26px;
-            line-height: 36.4px;
-          }
-          .company-name {
-            font-size: 18px;
-            line-height: 26px;
-            display: flex;
-            gap: 7px;
-            span {
-              font-weight: 300;
-              color: var(--text-color-light-varient4);
-            }
-            p {
-              font-style: italic;
-              text-decoration: underline;
-              font-weight: 400;
+        .img-body {
+          img {
+            width: 276px;
+            height: 180px;
+            @media #{$media-mobile-sm} {
+              width: 152px;
+              height: 118px;
             }
           }
-          .card-footer {
-            font-size: 18px;
-            height: 56px;
+          .card-body {
+            padding: 7px 0 0 0;
+            height: 175px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            .location {
+            h5 {
+              font-size: 26px;
+              line-height: 36.4px;
+              font-weight: 500;
+              @media #{$media-mobile-sm} {
+                font-size: 18px;
+                line-height: 25px;
+              }
+            }
+            .company-name {
+              font-size: 18px;
+              line-height: 26px;
               display: flex;
-              align-items: center;
-              gap: 6px;
-              font-weight: 400;
-              p {
+              gap: 7px;
+              span {
+                font-weight: 300;
                 color: var(--text-color-light-varient4);
               }
-            }
-            p {
-              font-weight: 400;
-              span {
-                font-weight: 700;
-                color: var(--secondary-color);
+              p {
+                font-style: italic;
+                text-decoration: underline;
+                font-weight: 400;
+              }
+              @media #{$media-mobile-sm} {
+                font-size: 16px;
+                line-height: 22px;
               }
             }
+            .card-footer {
+              font-size: 18px;
+              height: 56px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              .location {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-weight: 400;
+                p {
+                  color: var(--text-color-light-varient4);
+                }
+              }
+              p {
+                font-weight: 400;
+                span {
+                  font-weight: 700;
+                  color: var(--secondary-color);
+                }
+              }
+              @media #{$media-mobile-sm} {
+                justify-content: inherit;
+                gap: 5px;
+                font-size: 16px;
+                line-height: 22px;
+              }
+            }
+            @media #{$media-mobile-sm} {
+              padding: 0;
+              justify-content: inherit;
+              gap: 25px;
+            }
+          }
+          @media #{$media-mobile-sm} {
+            display: flex;
+            gap: 10px;
           }
         }
         &:hover {
           box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.25);
           transition: all 1s;
         }
+        @media #{$media-mobile-sm} {
+          height: 160px;
+          width: 394px;
+        }
+      }
+      @media #{$media-mobile-sm} {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 10px;
       }
     }
     @media #{$media-mobile-sm} {
-      gap: 4rem;
-
+      gap: 100px;
     }
   }
-   @media #{$media-mobile-sm} {
+  @media #{$media-mobile-sm} {
     width: 414px;
+    height: 100%;
     justify-content: start;
   }
-
 }
 </style>

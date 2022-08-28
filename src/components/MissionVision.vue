@@ -87,8 +87,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   display: flex;
   justify-content: center;
   .container {
-    padding: 100px 0;
-
     .players-owners {
       padding-top: 60px;
       display: flex;

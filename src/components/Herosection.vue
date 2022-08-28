@@ -1,6 +1,6 @@
 <template>
   <div class="hero-container">
-    <div class="container body-container">
+    <div class="container1 body-container">
       <h1>Top Escape Room Near You</h1>
       <div class="text">
         <p>
@@ -24,7 +24,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   background-size: cover;
   display: flex;
   justify-content: center;
-  .container {
+  .container1 {
     display: flex;
     flex-direction: column;
     align-items: center;

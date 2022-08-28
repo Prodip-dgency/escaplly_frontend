@@ -123,7 +123,7 @@ footer {
         }
       }
       .footer-middle {
-        border-top: 1px solid var(--text-color-light-varient6);
+        border-top: 2px solid #2d2d2d;
         color: var(--text-color-light-varient6);
         display: flex;
         justify-content: center;
