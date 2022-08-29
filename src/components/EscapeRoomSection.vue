@@ -59,7 +59,7 @@ export default {
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .escape-container {
-  height: 1448px;
+  height: 1384px;
   background: #ffffff;
   display: flex;
   justify-content: center;

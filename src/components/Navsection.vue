@@ -23,6 +23,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 999;
   .container1 {
     display: flex;
     justify-content: space-between;
