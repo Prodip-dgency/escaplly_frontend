@@ -94,15 +94,24 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       font-family: "Roboto", sans-serif;
 
       h3 {
-        font-weight: 400;
+        font-weight: 600;
         font-size: 40px;
         line-height: 56px;
+        @media #{$media-mobile-sm} {
+          font-size: 20px;
+          line-height: 28px;
+          margin-bottom: 5px;
+        }
       }
       p {
         font-weight: 400;
         font-size: 22px;
         color: var(--text-color-light-varient4);
         line-height: 30.8px;
+        @media #{$media-mobile-sm} {
+          font-size: 18px;
+          line-height: 25px;
+        }
       }
       ul {
         margin: 20px 0 40px 0;
@@ -115,10 +124,15 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           font-size: 18px;
           line-height: 25.2px;
           padding-bottom: 10px;
+          @media #{$media-mobile-sm} {
+           padding-bottom: 5px;
+          }
+        }
+        @media #{$media-mobile-sm} {
+          margin: 20px 0 20px 0;
         }
       }
-      img{
-     
+      img {
       }
 
       button {
@@ -126,7 +140,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         padding: 15px 40px;
         font-weight: 500;
         font-size: 18px;
-
         border-radius: 6px;
       }
       .players {
@@ -141,6 +154,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           color: #53a318;
           border: 2px solid #53a318;
         }
+        @media #{$media-mobile-sm} {
+          width: 100%;
+          height: 100%;
+          padding: 30px 11px 40px 11px;
+        }
       }
       .owners {
         width: 594px;
@@ -150,15 +168,26 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         i {
           color: #ff492c;
         }
-        .btn2{
+        .btn2 {
           color: #ff492c;
           border: 2px solid #ff492c;
         }
+        @media #{$media-mobile-sm} {
+          width: 100%;
+          height: 100%;
+          padding: 30px 11px 40px 11px;
+        }
+      }
+      @media #{$media-mobile-sm} {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 10px;
       }
     }
   }
-   @media #{$media-mobile-sm} {
+  @media #{$media-mobile-sm} {
     width: 414px;
+    height: 100%;
   }
 }
 </style>

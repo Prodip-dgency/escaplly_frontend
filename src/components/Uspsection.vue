@@ -59,8 +59,14 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     }
     .text-section {
       width: 300px;
-      align-self: center;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+      @media #{$media-mobile-sm} {
+        width: inherit;
+      }
     }
     .first-section {
       border-right: 2.5px solid var(--primary-color);
@@ -72,7 +78,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     @media #{$media-mobile-sm} {
       width: 394px;
       height: 74px;
-      top: -2rem  ;
+      top: -2rem;
     }
   }
   @media #{$media-mobile-sm} {

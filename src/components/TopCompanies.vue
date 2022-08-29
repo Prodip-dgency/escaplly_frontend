@@ -1,5 +1,5 @@
 <template>
-  <div class="companies-container">
+  <div class="companies-container" >
     <div class="container body-container">
       <div class="header-text">
         <h2  class="page-title">Top Escape Room Companies</h2>
@@ -8,9 +8,9 @@
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
-      <Carousel :settings="settings">
+      <Carousel :settings="settings" v-show="!mobileshow()">
         <Slide v-for="item in items" :key="item">
-          <div class="slider-container">
+          <div class="slider-container" >
             <div class="game-card">
               <div class="header">
                 <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
@@ -43,7 +43,7 @@
         </template>
       </Carousel>
       <!-- Mobile responsive section -->
-      <div class="mobile-card" v-show="mobileshow" v-for="item in items" :key="item">
+      <div class="mobile-card" v-show="mobileshow()" v-for="item in items" :key="item">
         <div class="header">
           <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
           <p><i class="fa-solid fa-person-running"></i> In Person</p>
@@ -71,11 +71,10 @@
         </div>
       </div>
       <div class="footer-btn-container">
-        <a class="footer-btn" href="#"> View more escape rooms</a>
+        <a class="footer-btn" href="#"  > View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
-    
   </div>
   
 </template>
@@ -103,17 +102,25 @@ export default {
         autoplay: 3000,
         wrapAround: true,
       },
-      // a: true,
     };
   },
-  watch:{
+  methods:{
     mobileshow(){
+      // const box= document.querySelector('.companies-container')
+      // const resizeObserver = new ResizeObserver((entries) => {
+      //     console.log(entries);
+      //   })
+
+      //   resizeObserver.observe(box);
+
       let w = screen.width;
+      
       if(w <= 480){
         return true
       }else{
        return false
       }
+     
     }
 
   }
@@ -274,11 +281,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       }
     }
   }
-  .carousel {
-    @media #{$media-mobile-sm} {
-      display: none;
-    }
-  }
+  // .carousel {
+  //   @media #{$media-mobile-sm} {
+  //     display: none;
+  //   }
+  // }
   .carousel__viewport {
     padding-bottom: 10px;
     overflow: hidden;

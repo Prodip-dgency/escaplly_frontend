@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-container">
-      <div class="container body-container">
+      <div class="container1 body-container">
         <div class="footer-upper">
           <div class="upper1">
             <div class="logo-text">
@@ -14,60 +14,115 @@
             </div>
             <div class="list">
               <ul>
-                <p>Escape Room Fans</p>
-                <li>Link 1</li>
-                <li>Link 2</li>
-                <li>Link 3</li>
-                <li>Link 4</li>
+                <p>
+                  <a class="list-btn" @click="linkopen('link')">+</a> Escape
+                  Room Fans
+                </p>
+
+                <div :class="activeclass">
+                  <li>Link 1</li>
+                  <li>Link 2</li>
+                  <li>Link 3</li>
+                  <li>Link 4</li>
+                </div>
               </ul>
               <ul>
-                <p>Escape Room Fans</p>
-                <li>Link 1</li>
-                <li>Link 2</li>
-                <li>Link 3</li>
-                <li>Link 4</li>
+                <p>
+                  <a class="list-btn" @click="linkopen1('link')">+</a> Escape
+                  Room Owner
+                </p>
+
+                <div :class="activeclass1">
+                  <li>Link 1</li>
+                  <li>Link 2</li>
+                  <li>Link 3</li>
+                  <li>Link 4</li>
+                </div>
               </ul>
               <ul>
-                <p>Escape Room Fans</p>
-                <li>Link 1</li>
-                <li>Link 2</li>
-                <li>Link 3</li>
-                <li>Link 4</li>
+                <p>
+                  <a class="list-btn" @click="linkopen2('link')">+</a> About
+                  Company
+                </p>
+
+                <div :class="activeclass2">
+                  <li>Link 1</li>
+                  <li>Link 2</li>
+                  <li>Link 3</li>
+                  <li>Link 4</li>
+                </div>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-middle">
-          <div class="divider middle"><p>Terms & Conditions</p></div>
-          <div class="divider middle">
-            <p class="divider">Privacy Policy</p>
+          <div class="mobile-responsive">
+            <div class="divider middle"><p>Terms & Conditions</p></div>
+            <div class="divider middle">
+              <p class="divider">Privacy Policy</p>
+            </div>
+            <div class="divider middle">
+              <p class="divider">Cookie Policy</p>
+            </div>
           </div>
-          <div class="divider middle"><p class="divider">Cookie Policy</p></div>
-          <div class="divider middle"><p class="divider">Disclaimer</p></div>
-          <div class="divider"><p>Sitemap</p></div>
+          <div class="mobile-responsive2">
+            <div class="divider middle"><p class="divider">Disclaimer</p></div>
+            <div class="divider"><p>Sitemap</p></div>
+          </div>
         </div>
       </div>
     </div>
     <div class="footer-down">
-        <div class="down-container body-container">
-           <div class="right-section">
-            <i class="fa-regular fa-copyright"></i>
-            <p>escaplly - All Rights Reserved</p>
-           </div>
-           <div class="logo-section">
-            <i class="fa-brands fa-square-facebook"></i>
-           <i class="fa-brands fa-instagram"></i>
-           <i class="fa-brands fa-twitter"></i>
-           <i class="fa-brands fa-youtube"></i>
-           <i class="fa-brands fa-linkedin"></i>
-           </div>
+      <div class="down-container body-container">
+        <div class="right-section">
+          <i class="fa-regular fa-copyright"></i>
+          <p>Escaplly - All Rights Reserved</p>
         </div>
+        <div class="logo-section">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      activeclass: "link",
+      activeclass1: "link",
+      activeclass2: "link",
+    };
+  },
+  methods: {
+    linkopen(x) {
+      if (this.activeclass) {
+        this.activeclass = "";
+      } else {
+        this.activeclass = x;
+      }
+    },
+    linkopen1(x) {
+      if (this.activeclass1) {
+        this.activeclass1 = "";
+      } else {
+        this.activeclass1 = x;
+      }
+    },
+    linkopen2(x) {
+      if (this.activeclass2) {
+        this.activeclass2 = "";
+      } else {
+        this.activeclass2 = x;
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -78,7 +133,7 @@ footer {
     height: 362px;
     display: flex;
     justify-content: center;
-    .container {
+    .container1 {
       font-family: "Roboto", sans-serif;
       .footer-upper {
         padding: 37px 0 35px 0;
@@ -109,6 +164,17 @@ footer {
                 line-height: 30px;
                 padding-bottom: 20px;
                 color: var(--text-color-light-varient8);
+                .list-btn {
+                  display: none;
+                  @media #{$media-mobile-sm} {
+                    display: inline;
+                  }
+                }
+                @media #{$media-mobile-sm} {
+                  padding-bottom: 0;
+                  font-size: 18px;
+                  line-height: 21px;
+                }
               }
               li {
                 list-style: none;
@@ -117,9 +183,37 @@ footer {
                 font-size: 18px;
                 line-height: 25px;
                 padding-bottom: 10px;
+                @media #{$media-mobile-sm} {
+                  padding-left: 20px;
+                }
+              }
+              .link {
+                @media #{$media-mobile-sm} {
+                  display: none;
+                }
+              }
+              @media #{$media-mobile-sm} {
+                height: 100%;
+              }
+            }
+            @media #{$media-mobile-sm} {
+              flex-direction: column;
+              gap: 15px;
+              &:before {
+                content: "Useful Links";
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: 500;
               }
             }
           }
+          @media #{$media-mobile-sm} {
+            flex-direction: column;
+            gap: 20px;
+          }
+        }
+        @media #{$media-mobile-sm} {
+          padding: 0 0 35px 0;
         }
       }
       .footer-middle {
@@ -135,11 +229,41 @@ footer {
           display: flex;
           justify-content: center;
           width: 177px;
+          @media #{$media-mobile-sm} {
+            width: inherit;
+            justify-content: inherit;
+          }
         }
         .middle {
           border-right: 1px solid #2d2d2d;
         }
+        .mobile-responsive {
+          display: flex;
+          @media #{$media-mobile-sm} {
+            gap: 30px;
+            padding-top: 25px;
+          }
+        }
+        .mobile-responsive2 {
+          display: flex;
+          @media #{$media-mobile-sm} {
+            gap: 30px;
+            padding: 10px 0 30px 0;
+          }
+        }
+
+        @media #{$media-mobile-sm} {
+          display: inherit;
+          font-size: 15px;
+          height: 100%;
+        }
       }
+      @media #{$media-mobile-sm} {
+        padding: 40px 10px 0 10px;
+      }
+    }
+    @media #{$media-mobile-sm} {
+      height: 100%;
     }
   }
   .footer-down {
@@ -148,22 +272,35 @@ footer {
     color: #ffffff;
     display: flex;
     justify-content: center;
-    .down-container{
+    font-family: "Roboto", sans-serif;
+    .down-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .right-section {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .right-section{
-            display: flex;
-            gap: 11px;
+        gap: 11px;
+      }
+      .logo-section {
+        font-size: 28px;
+        display: flex;
+        gap: 30px;
+        @media #{$media-mobile-sm} {
+          gap: 20px;
         }
-        .logo-section{
-            font-size: 28px;
-            display: flex;
-            gap: 30px;
-        }
+      }
+      @media #{$media-mobile-sm} {
+        flex-direction: column;
+        justify-content: inherit;
+        gap: 15px;
+      }
+    }
+    @media #{$media-mobile-sm} {
+      padding: 20px 0;
+      height: 100%;
     }
   }
-   @media #{$media-mobile-sm} {
+  @media #{$media-mobile-sm} {
     width: 414px;
   }
 }

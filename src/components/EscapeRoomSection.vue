@@ -72,6 +72,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       width: 820px;
       padding: 180px 281px 100px 210px;
       text-align: center;
+      
       h2 {
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -100,7 +101,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       }
       @media #{$media-mobile-sm} {
         height: 70px;
-        padding: 70px 10px;
+        padding: 70px 10px; 
       }
     }
 

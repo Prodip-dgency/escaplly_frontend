@@ -86,7 +86,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           gap: 10px;
           h4 {
             font-size: 30px;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 42px;
             @media #{$media-mobile-sm} {
               font-size: 20px;
