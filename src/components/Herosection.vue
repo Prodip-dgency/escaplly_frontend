@@ -1,6 +1,6 @@
 <template>
   <div class="hero-container">
-    <div class="container body-container">
+    <div class="container1 body-container">
       <h1>Top Escape Room Near You</h1>
       <div class="text">
         <p>
@@ -17,13 +17,14 @@ export default {};
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .hero-container {
   height: 520px;
   background-image: url("../assets/hero_image.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
-  .container {
+  .container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,6 +33,10 @@ export default {};
       color: #fff;
       font-family: "Roboto", sans-serif;
       font-size: 66px;
+      @media #{$media-mobile-sm} {
+        font-size: 28px;
+      }
+
     }
 
     .text {
@@ -44,7 +49,24 @@ export default {};
         font-size: 24px;
         line-height: 33.6px;
       }
+      @media #{$media-mobile-sm} {
+        width: 392px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 25.2px;
+      }
     }
+    @media #{$media-mobile-sm} {
+      display: block;
+      text-align: center;
+      padding-top: 38px;
+    }
+  }
+   @media #{$media-mobile-sm} {
+    width: 414px;
+    height: 305px;
+    width: 415px;
+    object-fit: cover;
   }
 }
 </style>

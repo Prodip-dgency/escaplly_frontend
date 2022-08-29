@@ -1,16 +1,16 @@
 <template>
-  <div class="companies-container">
+  <div class="companies-container" >
     <div class="container body-container">
       <div class="header-text">
-        <h2 class="page-title">Top Escape Room Companies</h2>
+        <h2  class="page-title">Top Escape Room Companies</h2>
         <h6 class="page-description">
           Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
-      <Carousel :settings="settings">
+      <Carousel :settings="settings" v-show="!mobileshow()">
         <Slide v-for="item in items" :key="item">
-          <div class="slider-container">
+          <div class="slider-container" >
             <div class="game-card">
               <div class="header">
                 <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
@@ -42,12 +42,41 @@
           <!-- <Navigation /> -->
         </template>
       </Carousel>
+      <!-- Mobile responsive section -->
+      <div class="mobile-card" v-show="mobileshow()" v-for="item in items" :key="item">
+        <div class="header">
+          <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
+          <p><i class="fa-solid fa-person-running"></i> In Person</p>
+        </div>
+        <div class="img-body">
+          <img src="../assets/companycard4.jpg" alt="" />
+          <div class="card-body">
+            <div class="card-header">
+              <h5>Escape Game Name</h5>
+              <div class="available-game">
+                <p>Available escape game: 9</p>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="location">
+                <span class="material-symbols-outlined"> location_on </span>
+                <P>New York City, US</P>
+              </div>
+              <div class="footer-text">
+                <p>From <span>$29</span>/Person</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="footer-btn-container">
-        <a class="footer-btn" href="#"> View more escape rooms</a>
+        <a class="footer-btn" href="#"  > View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -75,10 +104,31 @@ export default {
       },
     };
   },
+  methods:{
+    mobileshow(){
+      // const box= document.querySelector('.companies-container')
+      // const resizeObserver = new ResizeObserver((entries) => {
+      //     console.log(entries);
+      //   })
+
+      //   resizeObserver.observe(box);
+
+      let w = screen.width;
+      
+      if(w <= 480){
+        return true
+      }else{
+       return false
+      }
+     
+    }
+
+  }
 };
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .companies-container {
   margin-top: 25px;
   height: 888px;
@@ -87,8 +137,11 @@ export default {
   justify-content: center;
 
   .container {
-    padding: 100px 0;
-
+    .header-text {
+      @media #{$media-mobile-sm} {
+        margin-bottom: 30px;
+      }
+    }
     .slider-container {
       padding-top: 60px;
       font-family: "Roboto", sans-serif;
@@ -159,8 +212,80 @@ export default {
           }
         }
       }
+      @media #{$media-mobile-sm} {
+        padding-top: 30px;
+      }
+    }
+    @media #{$media-mobile-sm} {
+      padding: 40px 10px;
+      display: block;
+    }
+    // card design for movile
+
+    .mobile-card {
+      width: 394px;
+      height: 160px;
+      padding: 6px 7px;
+      border-radius: 5px;
+      box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 20px;
+
+      .header {
+        display: flex;
+        gap: 15px;
+        color: var(--text-color-light-varient4);
+        font-size: 16px;
+        padding: 1px 0 6px 0;
+      }
+      .img-body {
+        display: flex;
+        gap: 10px;
+
+        img {
+          height: 118px;
+          width: 118px;
+          object-fit: cover;
+        }
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .card-header {
+            h5 {
+              font-size: 18px;
+              line-height: 25px;
+            }
+            p {
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: 400;
+            }
+          }
+          .card-footer {
+            .location {
+              display: flex;
+              gap: 3px;
+              p {
+                color: var(--text-color-light-varient4);
+              }
+            }
+            .footer-text {
+              span {
+                color: var(--secondary-color);
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
     }
   }
+  // .carousel {
+  //   @media #{$media-mobile-sm} {
+  //     display: none;
+  //   }
+  // }
   .carousel__viewport {
     padding-bottom: 10px;
     overflow: hidden;
@@ -176,6 +301,10 @@ export default {
   }
   .carousel__pagination-button--active {
     background: var(--text-color-light-varient4);
+  }
+  @media #{$media-mobile-sm} {
+    width: 414px;
+    height: 100%;
   }
 }
 </style>

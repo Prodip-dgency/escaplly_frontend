@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style lang="scss">
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .curious-container {
   margin-top: 25px;
   height: 684px;
@@ -64,8 +65,11 @@ export default {
   display: flex;
   justify-content: center;
   .container {
-    padding: 100px 0;
-
+    h2 {
+      @media #{$media-mobile-sm} {
+        font-size: 24px;
+      }
+    }
     .body-text {
       display: flex;
       justify-content: space-between;
@@ -77,19 +81,27 @@ export default {
         flex-direction: column;
         gap: 52.5px;
         .text {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
           h4 {
             font-size: 30px;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 42px;
+            @media #{$media-mobile-sm} {
+              font-size: 20px;
+              line-height: 28px;
+            }
           }
           p {
             font-size: 22px;
             font-weight: 400;
             line-height: 30.8px;
             color: var(--Text-color-dark-varient2);
+            @media #{$media-mobile-sm} {
+              font-size: 18px;
+              line-height: 25px;
+            }
           }
         }
         .btn-container {
@@ -124,8 +136,21 @@ export default {
         .violet {
           background: var(--primary-color);
         }
+        @media #{$media-mobile-sm} {
+          gap: 30px;
+        }
+      }
+      @media #{$media-mobile-sm} {
+        flex-direction: column;
+        gap: 60px;
+        padding-top: 25px;
       }
     }
+
+  }
+  @media #{$media-mobile-sm} {
+    width: 414px;
+    height: 100%;
   }
 }
 </style>
