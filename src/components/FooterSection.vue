@@ -255,7 +255,7 @@ footer {
         @media #{$media-mobile-sm} {
           display: inherit;
           font-size: 15px;
-          height: 100%;
+          height: 100px;
         }
       }
       @media #{$media-mobile-sm} {

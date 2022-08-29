@@ -1,6 +1,6 @@
 <template>
   <div class="nav-container">
-    <div class="container body-container">
+    <div class="container1 body-container">
       <div class="logo">
         <img src="../assets/escaplly_logo.svg" alt="" />
       </div>
@@ -20,8 +20,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   background: var(--text-color-light-varient8);
   display: flex;
   justify-content: center;
-
-  .container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  .container1 {
     display: flex;
     justify-content: space-between;
     align-items: center;

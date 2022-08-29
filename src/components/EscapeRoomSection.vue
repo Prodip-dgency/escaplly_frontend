@@ -102,6 +102,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       @media #{$media-mobile-sm} {
         height: 70px;
         padding: 70px 10px; 
+        width: 392px;
       }
     }
 
@@ -113,7 +114,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       row-gap: 50px;
       .game-card {
         width: 290px;
-        height: 400px;
+        height: 368px;
         padding: 6px 7px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -135,10 +136,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           }
           .card-body {
             padding: 7px 0 0 0;
-            height: 175px;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 20px;
             h5 {
               font-size: 26px;
               line-height: 36.4px;
@@ -199,7 +200,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             @media #{$media-mobile-sm} {
               padding: 0;
               justify-content: inherit;
-              gap: 25px;
+              gap: 15px;
             }
           }
           @media #{$media-mobile-sm} {

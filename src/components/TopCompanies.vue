@@ -250,7 +250,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         .card-body {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          gap: 15px;
           .card-header {
             h5 {
               font-size: 18px;
