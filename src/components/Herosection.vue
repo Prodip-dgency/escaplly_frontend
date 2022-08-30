@@ -40,8 +40,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     }
 
     .text {
-        width: 724px;
-        margin: 1rem 1rem;
+        margin: 1rem 15rem;
         text-align: center;
       p {
         color: #ebebeb;
@@ -50,8 +49,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         line-height: 33.6px;
       }
       @media #{$media-mobile-sm} {
-        width: 392px;
-        height: 50px;
+        margin: inherit;
         font-size: 18px;
         line-height: 25.2px;
       }
@@ -63,9 +61,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     }
   }
    @media #{$media-mobile-sm} {
-    width: 414px;
     height: 305px;
-    width: 415px;
+    width: 414px;
     object-fit: cover;
   }
 }

@@ -131,7 +131,7 @@ export default {
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .companies-container {
   margin-top: 25px;
-  height: 888px;
+  // height: 888px;
   background: var(--text-color-light-varient3);
   display: flex;
   justify-content: center;
