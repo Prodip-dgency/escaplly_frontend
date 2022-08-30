@@ -131,7 +131,6 @@ export default {
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .companies-container {
   margin-top: 25px;
-  // height: 888px;
   background: var(--text-color-light-varient3);
   display: flex;
   justify-content: center;
@@ -146,8 +145,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       padding-top: 60px;
       font-family: "Roboto", sans-serif;
       .game-card {
-        width: 290px;
-        height: 348px;
         padding: 6px 7px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -223,8 +220,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     // card design for movile
 
     .mobile-card {
-      width: 394px;
-      height: 160px;
       padding: 6px 7px;
       border-radius: 5px;
       box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -303,8 +298,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     background: var(--text-color-light-varient4);
   }
   @media #{$media-mobile-sm} {
-    width: 414px;
-    height: 100%;
+    padding-bottom: 7px;
   }
 }
 </style>

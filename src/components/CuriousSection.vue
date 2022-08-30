@@ -58,9 +58,9 @@ export default {
 
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
+$media-mobile-ex-sm: "only screen and (max-width : 375px)";
 .curious-container {
   margin-top: 25px;
-  height: 684px;
   background: var(--text-color-light-varient3);
   display: flex;
   justify-content: center;
@@ -119,6 +119,14 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             font-family: "Roboto", sans-serif;
             font-size: 18px;
             font-weight: 500;
+            @media #{$media-mobile-sm} {
+             padding: 12px 26px;
+            }
+            @media #{$media-mobile-ex-sm} {
+             padding: 12px 18px;
+             font-size: 16px;
+            }
+
           }
           a {
             text-decoration: none;
@@ -146,11 +154,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         padding-top: 25px;
       }
     }
+  }
 
-  }
-  @media #{$media-mobile-sm} {
-    width: 414px;
-    height: 100%;
-  }
 }
 </style>

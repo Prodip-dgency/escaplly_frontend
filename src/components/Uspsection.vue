@@ -25,15 +25,14 @@ export default {};
 
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
+$media-mobile-ex-sm: "only screen and (max-width : 375px)";
+
 .usp-container {
   display: flex;
   justify-content: center;
   position: relative;
 
   .inner-container {
-    // width: 932px;
-    // height: 148px;
-    
     border-radius: 5px;
     background: var(--text-color-light-varient8);
     position: absolute;
@@ -48,6 +47,9 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       @media #{$media-mobile-sm} {
         font-size: 22px;
       }
+      @media #{$media-mobile-ex-sm}{
+        font-size: 18px;
+      }
     }
     h4 {
       font-family: "Roboto", sans-serif;
@@ -57,10 +59,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       @media #{$media-mobile-sm} {
         font-size: 18px;
       }
+       @media #{$media-mobile-ex-sm}{
+        font-size: 14px;
+      }
     }
     .text-section {
-      // padding: 0 126px;
-      // width: 300px;
       padding: 0 120px;
       display: flex;
       flex-direction: column;
@@ -68,7 +71,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       align-items: center;
       margin: 20px 0;
       @media #{$media-mobile-sm} {
-        padding: 0 25px;
+        padding: 0 20px;
       }
     }
     .first-section {
@@ -84,8 +87,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       top: -2rem;
     }
   }
-  @media #{$media-mobile-sm} {
-    width: 414px;
-  }
+
 }
 </style>

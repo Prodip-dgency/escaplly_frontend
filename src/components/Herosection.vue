@@ -62,7 +62,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   }
    @media #{$media-mobile-sm} {
     height: 305px;
-    width: 414px;
     object-fit: cover;
   }
 }

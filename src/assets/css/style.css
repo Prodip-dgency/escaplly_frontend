@@ -55,7 +55,7 @@ body{
     line-height: 70px;
   }
   .page-description{
-    width: 809px;
+    padding: 0 210px;
     font-size: 24px;
     font-weight: 400;
     line-height: 33.6px;
@@ -77,15 +77,13 @@ body{
   }
   @media only screen and (max-width: 480px){
     .body-container{
-      width: 414px;
-    
     }
     .container{
       padding: 40px 10px;
     }
 
     .footer-btn-container{
-      padding: 35px 0;
+      padding-top: 37px ;
     }
     
     .header-text{
@@ -98,8 +96,8 @@ body{
       font-size: 24px;
     }
     .page-description{
+      padding: 0;
        font-size: 18px;
-       width: 392px;
        line-height: 25px;
     }
   }

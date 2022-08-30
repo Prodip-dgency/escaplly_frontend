@@ -130,7 +130,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 footer {
   .footer-container {
     background: #000000;
-    height: 362px;
     display: flex;
     justify-content: center;
     .container1 {
@@ -192,9 +191,6 @@ footer {
                   display: none;
                 }
               }
-              @media #{$media-mobile-sm} {
-                height: 100%;
-              }
             }
             @media #{$media-mobile-sm} {
               flex-direction: column;
@@ -222,15 +218,16 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 70px;
+        padding: 25px 0;
         font-size: 17px;
         font-weight: 400;
+        
         .divider {
           display: flex;
           justify-content: center;
-          width: 177px;
+          padding: 0 20px;
           @media #{$media-mobile-sm} {
-            width: inherit;
+            padding: 0 2px 0 0;
             justify-content: inherit;
           }
         }
@@ -241,38 +238,34 @@ footer {
           display: flex;
           @media #{$media-mobile-sm} {
             gap: 30px;
-            padding-top: 25px;
+            margin-bottom: 10px;
           }
         }
         .mobile-responsive2 {
           display: flex;
           @media #{$media-mobile-sm} {
             gap: 30px;
-            padding: 10px 0 30px 0;
           }
         }
 
         @media #{$media-mobile-sm} {
-          display: inherit;
+         display: inherit;
           font-size: 15px;
-          height: 100px;
+          padding: 25px 0 30px 0;
         }
       }
       @media #{$media-mobile-sm} {
         padding: 40px 10px 0 10px;
       }
     }
-    @media #{$media-mobile-sm} {
-      height: 100%;
-    }
   }
   .footer-down {
-    height: 78px;
     background: #191919;
     color: #ffffff;
     display: flex;
     justify-content: center;
     font-family: "Roboto", sans-serif;
+    padding: 26px 0;
     .down-container {
       display: flex;
       justify-content: space-between;
@@ -297,11 +290,8 @@ footer {
     }
     @media #{$media-mobile-sm} {
       padding: 20px 0;
-      height: 100%;
     }
   }
-  @media #{$media-mobile-sm} {
-    width: 414px;
-  }
+ 
 }
 </style>

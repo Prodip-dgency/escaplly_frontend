@@ -59,33 +59,28 @@ export default {
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .escape-container {
-  height: 1384px;
   background: #ffffff;
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
   .container1 {
     display: flex;
     flex-direction: column;
-    gap: 10rem;
     .text {
-      height: 70px;
-      width: 820px;
-      padding: 180px 281px 100px 210px;
+      padding: 180px 210px 100px 210px;
       text-align: center;
       
       h2 {
         font-family: "Roboto", sans-serif;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 50px;
-        width: 820px;
+        line-height: 33px;
         @media #{$media-mobile-sm} {
           font-size: 24px;
-          width: 391px;
           text-align: start;
         }
       }
       h6 {
-        width: 809px;
         font-family: "Roboto", sans-serif;
         font-size: 24px;
         font-weight: 400;
@@ -95,14 +90,13 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         @media #{$media-mobile-sm} {
           font-size: 18px;
           line-height: 25px;
-          width: 391px;
           text-align: start;
         }
       }
       @media #{$media-mobile-sm} {
-        height: 70px;
-        padding: 70px 10px; 
-        width: 392px;
+        padding: 70px 10px 30px 20px; 
+        gap: 30px;
+        
       }
     }
 
@@ -113,8 +107,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       justify-items: center;
       row-gap: 50px;
       .game-card {
-        width: 290px;
-        height: 368px;
         padding: 6px 7px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -136,7 +128,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           }
           .card-body {
             padding: 7px 0 0 0;
-            height: 100%;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -213,8 +204,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           transition: all 1s;
         }
         @media #{$media-mobile-sm} {
-          height: 160px;
-          width: 394px;
+         
         }
       }
       @media #{$media-mobile-sm} {
@@ -225,13 +215,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       }
     }
     @media #{$media-mobile-sm} {
-      gap: 100px;
+       padding-right: 10px;
     }
   }
   @media #{$media-mobile-sm} {
-    width: 414px;
-    height: 100%;
-    justify-content: start;
+    padding-bottom: 47px;
   }
 }
 </style>

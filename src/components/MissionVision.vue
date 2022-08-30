@@ -82,7 +82,6 @@ export default {};
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .mission-container {
   margin-top: 25px;
-  height: 1014px;
   background: var(--text-color-light-varient3);
   display: flex;
   justify-content: center;
@@ -143,8 +142,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         border-radius: 6px;
       }
       .players {
-        width: 594px;
-        height: 596px;
         background: var(--Secondary-color-v2-dark-varient3);
         padding: 50px 55px 50px 50px;
         i {
@@ -155,14 +152,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           border: 2px solid #53a318;
         }
         @media #{$media-mobile-sm} {
-          width: 100%;
-          height: 100%;
           padding: 30px 11px 40px 11px;
         }
       }
       .owners {
-        width: 594px;
-        height: 596px;
         background: var(--Secondary-color-v1-light-varient3);
         padding: 50px 55px 50px 50px;
         i {
@@ -173,8 +166,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           border: 2px solid #ff492c;
         }
         @media #{$media-mobile-sm} {
-          width: 100%;
-          height: 100%;
           padding: 30px 11px 40px 11px;
         }
       }
@@ -186,8 +177,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     }
   }
   @media #{$media-mobile-sm} {
-    width: 414px;
-    height: 100%;
+   
   }
 }
 </style>

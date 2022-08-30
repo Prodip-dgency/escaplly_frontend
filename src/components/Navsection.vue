@@ -18,21 +18,19 @@ export default {};
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .nav-container {
-  //
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+ 
   .main-container {
-    background: var(--text-color-light-varient8);
+   background: var(--text-color-light-varient8);
     display: flex;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
     padding: 12px 0;
-    z-index: 999;
     .container1 {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       .menu-bar {
         font-size: 30px;
       }
@@ -40,9 +38,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         padding: 0 10px;
       }
     }
+    @media #{$media-mobile-sm} {
+      justify-content: flex-start;
+    }
   }
-  @media #{$media-mobile-sm} {
-    width: 414px;
-  }
+ 
 }
 </style>
