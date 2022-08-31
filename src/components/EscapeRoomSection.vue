@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="escape-container">
     <div class="body-container">
       <div class="container1">
@@ -10,17 +11,15 @@
           </h6>
         </div>
         <div class="inner-container">
-          <div
-            class="game-card"
-            v-for="activityprofile in activityprofiles"
-            :key="activityprofile.id"
-          >
+          <div class="game-card" v-for="activityprofile in activityprofiles" :key="activityprofile.id">
             <div class="header">
               <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
               <p><i class="fa-solid fa-person-running"></i> In Person</p>
             </div>
             <div class="img-body">
-              <img src="../assets/cardimg1.jpg" alt="" />
+              <div v-if="activityprofile.main_image">
+                <img :src="activityprofile.main_image.image" alt="" />
+              </div>
               <div class="card-body">
                 <div>
                   <h5>{{ activityprofile.title }}</h5>
@@ -31,7 +30,10 @@
                 </div>
 
                 <div class="card-footer">
-                  <div v-for="companyprofile in companyprofiles" :key="companyprofile.id">
+                  <div
+                    v-for="companyprofile in companyprofiles"
+                    :key="companyprofile.id"
+                  >
                     <div
                       class="location"
                       v-if="activityprofile.id == companyprofile.id"
@@ -42,7 +44,10 @@
                       <P>{{ companyprofile.address_line }}</P>
                     </div>
                   </div>
-                  <p>From <span>${{activityprofile.price}}</span>/Person</p>
+                  <p>
+                    From <span>${{ activityprofile.price }}</span
+                    >/Person
+                  </p>
                 </div>
               </div>
             </div>
@@ -51,11 +56,11 @@
       </div>
       <div class="footer-btn-container">
         <a class="footer-btn" href="#" @click="myfunc">
-          View more escape rooms</a
-        >
+          View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -86,6 +91,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+
+//------------------------ Under this is shakil's css---------------------------
+
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .escape-container {
   background: #ffffff;
@@ -130,13 +139,13 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 
     .inner-container {
       font-family: "Roboto", sans-serif;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       justify-items: center;
-      row-gap: 50px;
       .game-card {
-        width: 290px;
+        width: calc(25% - 20px);
         padding: 6px 7px;
+        margin: 10px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
         .header {
@@ -191,7 +200,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             .card-footer {
               font-size: 18px;
               // height: 56px;
-              
+
               display: flex;
               flex-direction: column;
               justify-content: space-between;
