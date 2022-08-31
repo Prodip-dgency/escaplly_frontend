@@ -1,39 +1,23 @@
 <template>
   <div>
-     <navsection />
-     <herosection />
-     <uspsection />
-     <escape-room-section />
-     <curious-section />
-     <top-companies />
-     <mission-vision />
-     <footer-section />
+    <navsection />
 
-    <!-- <router-view /> -->
+    <router-view />
+
+    <footer-section />
   </div>
 </template>
 
 <script>
- import Navsection from "./components/Navsection.vue";
- import Herosection from "./components/Herosection.vue";
- import Uspsection from "./components/Uspsection.vue";
- import EscapeRoomSection from "./components/EscapeRoomSection.vue";
- import CuriousSection from "./components/CuriousSection.vue";
- import TopCompanies from "./components/TopCompanies.vue";
- import MissionVision from "./components/MissionVision.vue";
- import FooterSection from "./components/FooterSection.vue";
+import Navsection from "./components/Navsection.vue";
+import FooterSection from "./components/FooterSection.vue";
+
 export default {
   components: {
     Navsection,
-    Herosection,
-    Uspsection,
-    EscapeRoomSection,
-    CuriousSection,
-    TopCompanies,
-    MissionVision,
-    FooterSection
-  }
-}
+    FooterSection,
+  },
+};
 </script>
 
 <style>
@@ -44,5 +28,4 @@ export default {
   text-align: center;
   color: #2c3e50;
 } */
-
 </style>
