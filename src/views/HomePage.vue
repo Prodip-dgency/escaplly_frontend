@@ -4,7 +4,7 @@
     <uspsection />
     <escape-room-section />
     <curious-section />
-    <top-companies />
+    <top-companies :companies="companies" />
     <mission-vision />
   </div>
 </template>
@@ -26,6 +26,19 @@ export default {
     TopCompanies,
     MissionVision,
   },
+  data(){
+    return {
+      companies: []
+    }
+  },
+  methods: {
+    
+  },
+  mounted(){
+    fetch("http://159.203.95.1/company/viewset/company-profile/")
+    .then((res) => res.json())
+    .then((data) => this.companies = data)
+  }
 };
 </script>
 

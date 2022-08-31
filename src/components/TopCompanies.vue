@@ -1,16 +1,16 @@
 <template>
-  <div class="companies-container" >
+  <div class="companies-container">
     <div class="container body-container">
       <div class="header-text">
-        <h2  class="page-title">Top Escape Room Companies</h2>
+        <h2 class="page-title">Top Escape Room Companies</h2>
         <h6 class="page-description">
           Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
       <Carousel :settings="settings" v-show="!mobileshow()">
-        <Slide v-for="item in items" :key="item">
-          <div class="slider-container" >
+        <Slide v-for="company in companies" :key="company.id">
+          <div class="slider-container">
             <div class="game-card">
               <div class="header">
                 <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
@@ -19,7 +19,7 @@
               <img src="../assets/companycard4.jpg" alt="" />
               <div class="card-body">
                 <div class="card-header">
-                  <h5>Escape Game Name</h5>
+                  <h5>{{ company.title }}</h5>
                   <div class="available-game">
                     <p>Available escape game: 9</p>
                   </div>
@@ -43,7 +43,12 @@
         </template>
       </Carousel>
       <!-- Mobile responsive section -->
-      <div class="mobile-card" v-show="mobileshow()" v-for="item in items" :key="item">
+      <div
+        class="mobile-card"
+        v-show="mobileshow()"
+        v-for="item in items"
+        :key="item"
+      >
         <div class="header">
           <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
           <p><i class="fa-solid fa-person-running"></i> In Person</p>
@@ -71,12 +76,11 @@
         </div>
       </div>
       <div class="footer-btn-container">
-        <a class="footer-btn" href="#"  > View more escape rooms</a>
+        <a class="footer-btn" href="#"> View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -91,6 +95,9 @@ export default {
     Navigation,
     Pagination,
   },
+  props: {
+    companies: [],
+  },
   data() {
     return {
       items: ["a", "b", "c", "d", "e", "f", "g", "h"],
@@ -104,8 +111,8 @@ export default {
       },
     };
   },
-  methods:{
-    mobileshow(){
+  methods: {
+    mobileshow() {
       // const box= document.querySelector('.companies-container')
       // const resizeObserver = new ResizeObserver((entries) => {
       //     console.log(entries);
@@ -114,16 +121,14 @@ export default {
       //   resizeObserver.observe(box);
 
       let w = screen.width;
-      
-      if(w <= 480){
-        return true
-      }else{
-       return false
-      }
-     
-    }
 
-  }
+      if (w <= 480) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
 };
 </script>
 
