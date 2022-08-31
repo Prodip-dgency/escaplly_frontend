@@ -9,25 +9,26 @@
         </h6>
       </div>
       <Carousel :settings="settings" v-show="!mobileshow()">
-        <Slide v-for="company in companies" :key="company.id">
-          <div class="slider-container">
-            <div class="game-card">
+        <Slide v-for=" company in companies" :key="company">
+          <!-- <Slide v-for="item in items" :key="item"> -->
+          <div class="slider-container" >
+            <div class="game-card" >
               <div class="header">
                 <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
                 <p><i class="fa-solid fa-person-running"></i> In Person</p>
               </div>
-              <img src="../assets/companycard4.jpg" alt="" />
+              <img :src="company.profile_image.image" alt="" />
               <div class="card-body">
                 <div class="card-header">
-                  <h5>{{ company.title }}</h5>
+                  <h5 >{{company.title}}</h5>
                   <div class="available-game">
-                    <p>Available escape game: 9</p>
+                    <p>Available escape game: {{ activityCount(company) }}</p>
                   </div>
                 </div>
                 <div class="card-footer">
                   <div class="location">
                     <span class="material-symbols-outlined"> location_on </span>
-                    <P>New York City, US</P>
+                    <P>{{company.address_line}}</P>
                   </div>
                   <div class="footer-text">
                     <p>From <span>$29</span>/Person</p>
@@ -76,10 +77,11 @@
         </div>
       </div>
       <div class="footer-btn-container">
-        <a class="footer-btn" href="#"> View more escape rooms</a>
+        <a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
+    <!-- This is {{ this.activity_profiles }} -->
   </div>
 </template>
 
@@ -97,21 +99,41 @@ export default {
   },
   props: {
     companies: [],
+    activity_profiles: [],
   },
   data() {
     return {
       items: ["a", "b", "c", "d", "e", "f", "g", "h"],
       settings: {
         itemsToShow: 4,
-        // itemsToScroll: 2,
+        itemsToScroll: 1,
         snapAlign: "end",
         transition: 1000,
         autoplay: 3000,
-        wrapAround: true,
+        wrapAround: false,
       },
+      abc:[]
     };
   },
   methods: {
+    activityCount(icompany){
+      // console.log("icompany:" , icompany.company)
+      // console.log(icompany.company)
+      
+      for (let x = 0; x<(this.activity_profiles).length; x++){
+        // console.log(this.activity_profiles[x].activity.company)
+        // if (this.activity_profiles.activity){
+        //   console.log()
+        // }
+        if (this.activity_profiles[x].activity.company.id == icompany.company.id){
+           this.abc=icompany.company
+        }
+        // console.log(this.activity_profiles[x])
+      }
+      console.log(this.abc);
+    },
+
+
     mobileshow() {
       // const box= document.querySelector('.companies-container')
       // const resizeObserver = new ResizeObserver((entries) => {
@@ -128,6 +150,9 @@ export default {
         return false;
       }
     },
+    myfunc(){
+      console.log(this.companies);
+    }
   },
 };
 </script>
@@ -163,6 +188,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         img {
           height: 160px;
           width: 276px;
+          object-fit: contain;
         }
         .card-body {
           padding: 7px 0 0 0;
@@ -188,13 +214,12 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           }
           .card-footer {
             font-size: 18px;
-            height: 56px;
             display: flex;
             flex-direction: column;
             gap: 6px;
             .location {
               display: flex;
-              align-items: center;
+              // align-items: center;
               gap: 6px;
               font-weight: 400;
               p {
@@ -281,11 +306,12 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       }
     }
   }
-  // .carousel {
-  //   @media #{$media-mobile-sm} {
-  //     display: none;
-  //   }
-  // }
+  .carousel {
+    text-align: inherit;
+    @media #{$media-mobile-sm} {
+      // display: none;
+    }
+  }
   .carousel__viewport {
     padding-bottom: 10px;
     overflow: hidden;

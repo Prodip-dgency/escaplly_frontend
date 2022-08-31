@@ -4,8 +4,12 @@
     <uspsection />
     <escape-room-section />
     <curious-section />
-    <top-companies :companies="companies" />
+    <!-- :companies="companies" -->
+    <top-companies :companies="companies" :activity_profiles="activity_profiles" />
     <mission-vision />
+    <div>
+      
+    </div>
   </div>
 </template>
 
@@ -28,7 +32,8 @@ export default {
   },
   data(){
     return {
-      companies: []
+      companies: [],
+      activity_profiles: [],
     }
   },
   methods: {
@@ -38,6 +43,10 @@ export default {
     fetch("http://159.203.95.1/company/viewset/company-profile/")
     .then((res) => res.json())
     .then((data) => this.companies = data)
+
+    fetch("http://159.203.95.1/activity/viewset/activityprofile/")
+    .then((res) => res.json())
+    .then((data) => this.activity_profiles = data)
   }
 };
 </script>
