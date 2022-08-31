@@ -14,8 +14,8 @@
             </div>
             <div class="list">
               <ul>
-                <p>
-                  <a class="list-btn" @click="linkopen('link')">+</a> Escape
+                <p @click="linkopen('link')">
+                  <a class="list-btn" >+</a> Escape
                   Room Fans
                 </p>
 
@@ -27,8 +27,8 @@
                 </div>
               </ul>
               <ul>
-                <p>
-                  <a class="list-btn" @click="linkopen1('link')">+</a> Escape
+                <p @click="linkopen1('link')">
+                  <a class="list-btn">+</a> Escape
                   Room Owner
                 </p>
 
@@ -40,8 +40,8 @@
                 </div>
               </ul>
               <ul>
-                <p>
-                  <a class="list-btn" @click="linkopen2('link')">+</a> About
+                <p @click="linkopen2('link')">
+                  <a class="list-btn" >+</a> About
                   Company
                 </p>
 
@@ -127,6 +127,7 @@ export default {
 
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
+$media-mobile-ex-sm: "only screen and (max-width : 375px)";
 footer {
   .footer-container {
     background: #000000;
@@ -253,6 +254,10 @@ footer {
           font-size: 15px;
           padding: 25px 0 30px 0;
         }
+        @media #{$media-mobile-ex-sm} {
+          font-size: 12px;
+        }
+
       }
       @media #{$media-mobile-sm} {
         padding: 40px 10px 0 10px;

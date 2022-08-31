@@ -31,6 +31,7 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
   display: flex;
   justify-content: center;
   position: relative;
+  
 
   .inner-container {
     border-radius: 5px;
@@ -39,6 +40,7 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
     top: -2.5rem;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
 
     h3 {
       font-family: "Roboto", sans-serif;
