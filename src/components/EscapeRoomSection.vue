@@ -10,7 +10,11 @@
           </h6>
         </div>
         <div class="inner-container">
-          <div class="game-card" v-for="item in items" :key="item">
+          <div
+            class="game-card"
+            v-for="activityprofile in activityprofiles"
+            :key="activityprofile.id"
+          >
             <div class="header">
               <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
               <p><i class="fa-solid fa-person-running"></i> In Person</p>
@@ -19,19 +23,26 @@
               <img src="../assets/cardimg1.jpg" alt="" />
               <div class="card-body">
                 <div>
-                  <h5>Escape Game Name</h5>
+                  <h5>{{ activityprofile.title }}</h5>
                   <div class="company-name">
                     <span>by </span>
-                    <p>Escape Room Company</p>
+                    <p>{{ activityprofile.activity.company.title }}</p>
                   </div>
                 </div>
 
                 <div class="card-footer">
-                  <div class="location">
-                    <span class="material-symbols-outlined"> location_on </span>
-                    <P>New York City, US</P>
+                  <div v-for="companyprofile in companyprofiles" :key="companyprofile.id">
+                    <div
+                      class="location"
+                      v-if="activityprofile.id == companyprofile.id"
+                    >
+                      <span class="material-symbols-outlined">
+                        location_on
+                      </span>
+                      <P>{{ companyprofile.address_line }}</P>
+                    </div>
                   </div>
-                  <p>From <span>$29</span>/Person</p>
+                  <p>From <span>${{activityprofile.price}}</span>/Person</p>
                 </div>
               </div>
             </div>
@@ -39,7 +50,9 @@
         </div>
       </div>
       <div class="footer-btn-container">
-        <a class="footer-btn" href="#"> View more escape rooms</a>
+        <a class="footer-btn" href="#" @click="myfunc">
+          View more escape rooms</a
+        >
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
@@ -51,7 +64,23 @@ export default {
   data() {
     return {
       items: ["a", "b", "c", "d", "e", "f", "g", "h"],
+      activityprofiles: [],
+      companyprofiles: [],
     };
+  },
+  mounted() {
+    fetch("http://159.203.95.1/activity/viewset/activityprofile/")
+      .then((res) => res.json())
+      .then((data) => (this.activityprofiles = data));
+
+    fetch("http://159.203.95.1/company/viewset/company-profile/")
+      .then((res) => res.json())
+      .then((data) => (this.companyprofiles = data));
+  },
+  methods: {
+    myfunc() {
+      console.log(this.activityprofiles);
+    },
   },
 };
 </script>
@@ -69,7 +98,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
     .text {
       padding: 180px 210px 100px 210px;
       text-align: center;
-      
+
       h2 {
         font-family: "Roboto", sans-serif;
         font-weight: 600;
@@ -94,9 +123,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         }
       }
       @media #{$media-mobile-sm} {
-        padding: 70px 10px 30px 20px; 
+        padding: 70px 10px 30px 20px;
         gap: 30px;
-        
       }
     }
 
@@ -107,6 +135,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       justify-items: center;
       row-gap: 50px;
       .game-card {
+        width: 290px;
         padding: 6px 7px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -127,7 +156,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             }
           }
           .card-body {
-            padding: 7px 0 0 0;
+            padding: 7px 2px 7px 2px;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -161,7 +190,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             }
             .card-footer {
               font-size: 18px;
-              height: 56px;
+              // height: 56px;
+              
               display: flex;
               flex-direction: column;
               justify-content: space-between;
@@ -204,7 +234,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           transition: all 1s;
         }
         @media #{$media-mobile-sm} {
-         
         }
       }
       @media #{$media-mobile-sm} {
@@ -215,7 +244,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       }
     }
     @media #{$media-mobile-sm} {
-       padding-right: 10px;
+      padding-right: 10px;
     }
   }
   @media #{$media-mobile-sm} {
