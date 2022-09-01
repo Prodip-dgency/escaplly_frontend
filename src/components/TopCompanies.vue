@@ -13,9 +13,9 @@
         <p>Available escape game: {{ activityCount(company) }}</p>
 
       </div>
-      <Carousel :settings="settings" v-show="!mobileshow()">
+      <!-- <Carousel :settings="settings" v-show="!mobileshow()">
         <Slide v-for="company in companies" :key="company">
-          <!-- <Slide v-for="item in items" :key="item"> -->
+           <Slide v-for="item in items" :key="item">
           <div class="slider-container" >
             <div class="game-card" >
               <div class="header">
@@ -27,7 +27,7 @@
                 <div class="card-header">
                   <h5 >{{company.title}}</h5>
                   <div class="available-game">
-                    <!-- <p>Available escape game: {{ activityCount(company) }}</p> -->
+                    <p>Available escape game: {{ activityCount(company) }}</p>
                   </div>
                 </div>
                 <div class="card-footer">
@@ -45,9 +45,9 @@
         </Slide>
         <template #addons>
           <Pagination />
-          <!-- <Navigation /> -->
+          <Navigation />
         </template>
-      </Carousel>
+      </Carousel> -->
       <!-- Mobile responsive section -->
       <div
         class="mobile-card"
@@ -92,15 +92,15 @@
 
 <script>
 import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+// import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 export default {
   name: "WrapAround",
   components: {
-    Carousel,
-    Slide,
-    Navigation,
-    Pagination,
+    // Carousel,
+    // Slide,
+    // Navigation,
+    // Pagination,
   },
   props: {
     companies: [],
@@ -108,16 +108,16 @@ export default {
   },
   data() {
     return {
-      items: ["a", "b", "c", "d", "e", "f", "g", "h"],
-      settings: {
-        itemsToShow: 4,
-        itemsToScroll: 1,
-        snapAlign: "end",
-        transition: 1000,
-        autoplay: 3000,
-        wrapAround: false,
-      },
-      abc:[]
+      // items: ["a", "b", "c", "d", "e", "f", "g", "h"],
+      // settings: {
+      //   itemsToShow: 4,
+      //   itemsToScroll: 1,
+      //   snapAlign: "end",
+      //   transition: 1000,
+      //   autoplay: 3000,
+      //   wrapAround: false,
+      // },
+      // abc:[]
     };
   },
   methods: {
