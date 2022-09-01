@@ -8,6 +8,7 @@
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
+      <div>{{ companyDetails() }}</div>
       <!-- <div v-for="company in companies" :key="company.id"> -->
       <!-- <p>Company Name: {{ company.title }}</p>
         <p>Available escape game: {{ activityCount(company) }}</p> -->
@@ -140,17 +141,27 @@ export default {
         itemsToShow: 4,
         itemsToScroll: 1,
         transition: 700,
-        autoplay: 3000,
+        // autoplay: 3000,
         wrapAround: true,
       },
     };
   },
   methods: {
+    companyDetails(){
+      console.log(this.companies)
+
+    },
+
+
+
+
+
     activityCount(icompany){
       let activity_list = []
       for(let x=0; x<(this.activity_profiles).length; x++){
         if(this.activity_profiles[x].activity.company.id==icompany.company.id){
           activity_list.push(this.activity_profiles[x].activity)
+          console.log('yes')
         }
       }
       return activity_list.length
