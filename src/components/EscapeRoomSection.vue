@@ -92,7 +92,6 @@ export default {
 
 <style lang="scss">
 
-
 //------------------------ Under this is shakil's css---------------------------
 
 $media-mobile-sm: "only screen and (max-width : 480px)";

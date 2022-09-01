@@ -8,8 +8,13 @@
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
+      <div v-for="company in companies" :key="company.id">
+        <p>Company Name: {{ company.title }}</p>
+        <p>Available escape game: {{ activityCount(company) }}</p>
+
+      </div>
       <Carousel :settings="settings" v-show="!mobileshow()">
-        <Slide v-for=" company in companies" :key="company">
+        <Slide v-for="company in companies" :key="company">
           <!-- <Slide v-for="item in items" :key="item"> -->
           <div class="slider-container" >
             <div class="game-card" >
@@ -22,7 +27,7 @@
                 <div class="card-header">
                   <h5 >{{company.title}}</h5>
                   <div class="available-game">
-                    <p>Available escape game: {{ activityCount(company) }}</p>
+                    <!-- <p>Available escape game: {{ activityCount(company) }}</p> -->
                   </div>
                 </div>
                 <div class="card-footer">
@@ -117,24 +122,14 @@ export default {
   },
   methods: {
     activityCount(icompany){
-      // console.log("icompany:" , icompany.company)
-      // console.log(icompany.company)
-      
-      for (let x = 0; x<(this.activity_profiles).length; x++){
-        // console.log(this.activity_profiles[x].activity.company)
-        // if (this.activity_profiles.activity){
-        //   console.log()
-        // }
-        if (this.activity_profiles[x].activity.company.id == icompany.company.id){
-           let y= 0;
-           y++
-           console.log(y);
+      let activity_list = []
+      for(let x=0; x<(this.activity_profiles).length; x++){
+        if(this.activity_profiles[x].activity.company.id==icompany.company.id){
+          activity_list.push(this.activity_profiles[x].activity)
         }
-        // console.log(this.activity_profiles[x])
       }
-      // console.log(this.abc.length);
+      return activity_list.length
     },
-
 
     mobileshow() {
       // const box= document.querySelector('.companies-container')
