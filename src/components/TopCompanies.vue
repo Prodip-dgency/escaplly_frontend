@@ -8,11 +8,36 @@
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
-      <div v-for="company in companies" :key="company.id">
-        <p>Company Name: {{ company.title }}</p>
-        <p>Available escape game: {{ activityCount(company) }}</p>
+      <!-- <div v-for="company in companies" :key="company.id"> -->
+      <!-- <p>Company Name: {{ company.title }}</p>
+        <p>Available escape game: {{ activityCount(company) }}</p> -->
 
-      </div>
+      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
+      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
+      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
+      <Carousel :settings="settings">
+        <Slide v-for="company in this.companies" :key="company.id">
+          <div class="carousel__item">
+            <div>
+              <h3>{{ company.title }}</h3>
+              <p>{{ company.content }}</p>
+              <p>Available escape game: {{ activityCount(company) }}</p>
+            </div>
+            <div>
+              <p>this is a new div</p>
+            </div>
+          </div>
+        </Slide>
+
+        <template #addons>
+          <Navigation />
+        </template>
+      </Carousel>
+      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
+      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
+      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
+
+      <!-- </div> -->
       <!-- <Carousel :settings="settings" v-show="!mobileshow()">
         <Slide v-for="company in companies" :key="company">
            <Slide v-for="item in items" :key="item">
@@ -49,7 +74,7 @@
         </template>
       </Carousel> -->
       <!-- Mobile responsive section -->
-      <div
+      <!-- <div
         class="mobile-card"
         v-show="mobileshow()"
         v-for="item in items"
@@ -80,9 +105,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="footer-btn-container">
-        <a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
+        <a class="footer-btn" href="#" @click="myfunc">
+          View more escape rooms</a
+        >
         <i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
@@ -92,32 +119,30 @@
 
 <script>
 import "vue3-carousel/dist/carousel.css";
-// import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 export default {
-  name: "WrapAround",
+  name: "WrapAround1",
   components: {
-    // Carousel,
-    // Slide,
-    // Navigation,
-    // Pagination,
+    Carousel,
+    Slide,
+    Navigation,
+    Pagination,
   },
   props: {
-    companies: [],
-    activity_profiles: [],
+    companies: Array,
+    activity_profiles: Array,
   },
   data() {
     return {
       // items: ["a", "b", "c", "d", "e", "f", "g", "h"],
-      // settings: {
-      //   itemsToShow: 4,
-      //   itemsToScroll: 1,
-      //   snapAlign: "end",
-      //   transition: 1000,
-      //   autoplay: 3000,
-      //   wrapAround: false,
-      // },
-      // abc:[]
+      settings: {
+        itemsToShow: 4,
+        itemsToScroll: 1,
+        transition: 700,
+        autoplay: 3000,
+        wrapAround: true,
+      },
     };
   },
   methods: {
@@ -155,6 +180,34 @@ export default {
 </script>
 
 <style lang="scss">
+//------------------------------------------- Prodip carousel design --------------------------------------//
+//------------------------------------------- Prodip carousel design --------------------------------------//
+//------------------------------------------- Prodip carousel design --------------------------------------//
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: var(--vc-clr-primary);
+  color: var(--vc-clr-white);
+  font-size: 20px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 10px;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 5px solid white;
+}
+
+//------------------------------------------- Prodip carousel design --------------------------------------//
+//------------------------------------------- Prodip carousel design --------------------------------------//
+//------------------------------------------- Prodip carousel design --------------------------------------//
+
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .companies-container {
   margin-top: 25px;
