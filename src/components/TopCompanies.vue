@@ -126,11 +126,13 @@ export default {
         //   console.log()
         // }
         if (this.activity_profiles[x].activity.company.id == icompany.company.id){
-           this.abc=icompany.company
+           let y= 0;
+           y++
+           console.log(y);
         }
         // console.log(this.activity_profiles[x])
       }
-      console.log(this.abc);
+      // console.log(this.abc.length);
     },
 
 
@@ -175,6 +177,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       padding-top: 60px;
       font-family: "Roboto", sans-serif;
       .game-card {
+        width: 290px;
+        height: auto;
         padding: 6px 7px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
