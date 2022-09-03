@@ -5,6 +5,7 @@ import CompanyDetailsPageView from '../views/CompanyDetailsPage'
 import GameListPageView from '../views/GameListPage'
 import GameDetailsPageView from '../views/GameDetailsPage'
 import ContactPageView from '../views/ContactPage'
+import AboutPageView from '../views/AboutPage'
 
 const routes = [
   { path: '/', name: 'home', component: HomePageView },
@@ -13,6 +14,7 @@ const routes = [
   { path: '/games', name: 'game_list', component: GameListPageView },
   { path: '/game/:id', name: 'game_details', component: GameDetailsPageView },
   { path: '/contact', name: 'contact', component: ContactPageView },
+  { path: '/about', name: 'about', component: AboutPageView }
 ]
 
 const router = createRouter({
