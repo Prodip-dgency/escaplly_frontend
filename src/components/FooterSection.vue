@@ -57,16 +57,28 @@
         </div>
         <div class="footer-middle">
           <div class="mobile-responsive">
-            <div class="divider middle"><p>Terms & Conditions</p></div>
             <div class="divider middle">
-              <p class="divider">Privacy Policy</p>
+              <router-link :to="{ name: 'termsandconditions' }">
+                <p>Terms & Conditions</p>
+              </router-link>
             </div>
             <div class="divider middle">
-              <p class="divider">Cookie Policy</p>
+              <router-link :to="{ name: 'privacy-policy' }">
+                <p class="divider">Privacy Policy</p>
+              </router-link>
+            </div>
+            <div class="divider middle">
+              <router-link :to="{ name: 'cookie-policy' }">
+                <p class="divider">Cookie Policy</p>
+              </router-link>
             </div>
           </div>
           <div class="mobile-responsive2">
-            <div class="divider middle"><p class="divider">Disclaimer</p></div>
+            <div class="divider middle">
+              <router-link :to="{ name: 'disclaimer' }">
+                <p class="divider">Disclaimer</p>
+              </router-link>
+            </div>
             <div class="divider"><p>Sitemap</p></div>
           </div>
         </div>

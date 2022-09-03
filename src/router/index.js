@@ -6,6 +6,10 @@ import GameListPageView from '../views/GameListPage'
 import GameDetailsPageView from '../views/GameDetailsPage'
 import ContactPageView from '../views/ContactPage'
 import AboutPageView from '../views/AboutPage'
+import TermsandConditionsPageView from '../views/others/TermsandConditionsPage'
+import PrivacyPolicyPageView from '../views/others/PrivacyPolicyPage'
+import DisclaimerPageView from '../views/others/DisclaimerPage'
+import CookiePolicyPageView from '../views/others/CookiePolicyPage'
 
 const routes = [
   { path: '/', name: 'home', component: HomePageView },
@@ -14,7 +18,12 @@ const routes = [
   { path: '/games', name: 'game_list', component: GameListPageView },
   { path: '/game/:id', name: 'game_details', component: GameDetailsPageView },
   { path: '/contact', name: 'contact', component: ContactPageView },
-  { path: '/about', name: 'about', component: AboutPageView }
+  { path: '/about', name: 'about', component: AboutPageView },
+  { path: '/terms-and-conditions', name: 'termsandconditions', component: TermsandConditionsPageView},
+  { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicyPageView },
+  { path: '/cookie-policy', name: 'cookie-policy', component: CookiePolicyPageView },
+  { path: '/disclaimer', name: 'disclaimer', component:DisclaimerPageView }
+
 ]
 
 const router = createRouter({
