@@ -8,7 +8,7 @@
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
-      <div>{{ companyDetails() }}</div>
+      <!-- <div>{{ companyDetails() }}</div> -->
       <!-- <div v-for="company in companies" :key="company.id"> -->
       <!-- <p>Company Name: {{ company.title }}</p>
         <p>Available escape game: {{ activityCount(company) }}</p> -->
@@ -16,24 +16,25 @@
       <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
       <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
       <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
-      <Carousel :settings="settings">
-        <Slide v-for="company in this.companies" :key="company.id">
-          <div class="carousel__item">
-            <div>
-              <h3>{{ company.title }}</h3>
-              <p>{{ company.content }}</p>
-              <p>Available escape game: {{ activityCount(company) }}</p>
+      <div v-if="companies.length">
+        <Carousel :settings="settings">
+          <Slide v-for="company in this.companies" :key="company.id">
+            <div class="carousel_item">
+              <div>
+                <h3>{{ company.title }}</h3>
+                <p>{{ company.content }}</p>
+                <p>Available escape game: {{ activityCount(company) }}</p>
+              </div>
+              <div>
+                <p>this is a new div</p>
+              </div>
             </div>
-            <div>
-              <p>this is a new div</p>
-            </div>
-          </div>
-        </Slide>
-
-        <template #addons>
-          <Navigation />
-        </template>
-      </Carousel>
+          </Slide>
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
+      </div>
       <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
       <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
       <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
@@ -123,7 +124,7 @@ import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 export default {
-  name: "WrapAround1",
+  // name: "Carousel",
   components: {
     Carousel,
     Slide,
@@ -147,14 +148,9 @@ export default {
     };
   },
   methods: {
-    companyDetails(){
-      console.log(this.companies)
-
+    companyDetails() {
+      console.log(this.companies);
     },
-
-
-
-
 
     activityCount(icompany){
       let activity_list = []
@@ -183,9 +179,9 @@ export default {
         return false;
       }
     },
-    myfunc(){
+    myfunc() {
       console.log(this.companies);
-    }
+    },
   },
 };
 </script>
