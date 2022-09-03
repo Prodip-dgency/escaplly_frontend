@@ -41,7 +41,7 @@
                       <span class="material-symbols-outlined">
                         location_on
                       </span>
-                      <P>{{ companyprofile.address_line }}</P>
+                      <p>{{ companyprofile.address_line }}</p>
                     </div>
                   </div>
                   <p>
@@ -52,12 +52,14 @@
               </div>
             </div>
           </div>
+          
         </div>
       </div>
       <div class="footer-btn-container">
         <a class="footer-btn" href="#" @click="myfunc">
           View more escape rooms</a>
         <i class="fa-solid fa-chevron-right"></i>
+        
       </div>
     </div>
   </div>
@@ -171,7 +173,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             h5 {
               font-size: 26px;
               line-height: 36.4px;
-              font-weight: 500;
+              font-weight: 600;
               @media #{$media-mobile-sm} {
                 font-size: 18px;
                 line-height: 25px;
@@ -202,10 +204,9 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 
               display: flex;
               flex-direction: column;
-              justify-content: space-between;
+              gap: 3px;
               .location {
                 display: flex;
-                align-items: center;
                 gap: 6px;
                 font-weight: 400;
                 p {
@@ -221,7 +222,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
               }
               @media #{$media-mobile-sm} {
                 justify-content: inherit;
-                gap: 5px;
+                gap: 2px;
                 font-size: 16px;
                 line-height: 22px;
               }
@@ -242,6 +243,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           transition: all 1s;
         }
         @media #{$media-mobile-sm} {
+          width: inherit;
         }
       }
       @media #{$media-mobile-sm} {
