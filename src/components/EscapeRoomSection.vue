@@ -36,7 +36,7 @@
                   >
                     <div
                       class="location"
-                      v-if="activityprofile.id == companyprofile.id"
+                      v-if="activityprofile.activity.company.id == companyprofile.company.id"
                     >
                       <span class="material-symbols-outlined">
                         location_on
