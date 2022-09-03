@@ -36,7 +36,9 @@
             </li>
           </ul>
           <div>
-            <button class="btn1">Learn More</button>
+            <router-link class="btn1" :to="{ name: 'about' }">
+              Learn More
+            </router-link>
           </div>
         </div>
         <div class="owners">
@@ -66,7 +68,9 @@
             </li>
           </ul>
           <div>
-            <button class="btn2">Learn More</button>
+            <router-link class="btn2" :to="{ name: 'about' }">
+              Learn More
+            </router-link>
           </div>
         </div>
       </div>
@@ -135,11 +139,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       }
 
       button {
-        background: none;
-        padding: 15px 40px;
-        font-weight: 500;
-        font-size: 18px;
-        border-radius: 6px;
+        // background: none;
+        // padding: 15px 40px;
+        // font-weight: 500;
+        // font-size: 18px;
+        // border-radius: 6px;
       }
       .players {
         background: var(--Secondary-color-v2-dark-varient3);
@@ -150,6 +154,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         .btn1 {
           color: #53a318;
           border: 2px solid #53a318;
+          background: none;
+          padding: 15px 40px;
+          font-weight: 500;
+          font-size: 18px;
+          border-radius: 6px;
         }
         @media #{$media-mobile-sm} {
           padding: 30px 11px 40px 11px;
@@ -164,6 +173,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         .btn2 {
           color: #ff492c;
           border: 2px solid #ff492c;
+          background: none;
+          padding: 15px 40px;
+          font-weight: 500;
+          font-size: 18px;
+          border-radius: 6px;
         }
         @media #{$media-mobile-sm} {
           padding: 30px 11px 40px 11px;
