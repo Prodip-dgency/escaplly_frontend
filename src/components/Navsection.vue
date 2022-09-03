@@ -6,12 +6,18 @@
           <img src="../assets/escaplly_logo.svg" alt="" />
         </div>
         <div class="dropdown">
-          <button class="menu-bar" @click="dropdown_function"><i class="fa-solid fa-bars"></i></button>
-          <div v-show="dropdown_show" id="dropDown" class="dropdown-content">
-            <a href="#">Home</a>
-            <a href="#">Companies</a>
-            <a href="#">Escape Rooms</a>
-            <a href="#">Contact</a>
+          <button class="menu-bar" @click="dropdown_function">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="dropDown" :class="activeclass" class="dropdown-content">
+            <router-link :to="{name: 'home'}"> <i class="fa-solid fa-house"></i> Home</router-link>
+            <router-link :to="{name: 'company_list'}"> <i class="fa-solid fa-building"></i> Companies</router-link>
+             <div class="line-break"></div>
+            <router-link :to="{name: 'game_list'}"> <i class="fa-solid fa-puzzle-piece"></i> Escape Rooms</router-link>
+            <router-link :to="{name: 'contact'}"> <i class="fa-solid fa-address-book"></i> Contact</router-link>
+            <div class="line-break"></div>
+            <a href=""> <i class="fa-solid fa-circle-exclamation"></i> See Errors ?</a>
+            <a href="" class="feedback"> Give Us Feedback</a>
           </div>
         </div>
       </div>
@@ -21,24 +27,26 @@
 
 <script>
 export default {
-
-  data(){
-    return{
-      dropdown_show: false
-    }
-
+  data() {
+    return {
+      dropdown_show: false,
+      activeclass: "",
+    };
   },
   methods: {
-    dropdown_function(){
-      return this.dropdown_show = !this.dropdown_show;
-
-    }
-  }
+    dropdown_function() {
+      if (this.activeclass) {
+        this.activeclass = "";
+      } else {
+        this.activeclass = "active";
+      }
+      return (this.dropdown_show = !this.dropdown_show);
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-
 .dropdown > .menu-bar {
   position: relative;
 }
@@ -53,6 +61,12 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  font-family: "Roboto", sans-serif;
+}
+.dropdown .active {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
 }
 
 .dropdown-content {
@@ -60,14 +74,37 @@ export default {
   position: absolute;
   top: 73px;
   min-width: 250px;
+  padding: 20px 0;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 400ms;
 }
 
 .dropdown-content > a {
   display: block;
   list-style: none;
   color: inherit;
-  padding: 10px;
   text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 15px 0 15px 20px;
+}
+
+.dropdown-content > a > i{
+  margin-right: 10px;
+}
+
+a:hover {
+  background: #fff;
+}
+
+.line-break{
+  border-bottom: 2px solid #cecccc;
+  margin: 30px 0 30px 50px;
+}
+.dropdown-content > .feedback{
+  
+  color: blue;
 }
 
 $media-mobile-sm: "only screen and (max-width : 480px)";
@@ -75,9 +112,9 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   position: sticky;
   top: -1px;
   z-index: 999;
- 
+
   .main-container {
-   background: var(--text-color-light-varient8);
+    background: var(--text-color-light-varient8);
     display: flex;
     justify-content: center;
     padding: 12px 0;
@@ -87,6 +124,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       align-items: center;
       .menu-bar {
         font-size: 30px;
+        transition: all 1s;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
       @media #{$media-mobile-sm} {
         padding: 0 10px;
@@ -96,6 +137,5 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       justify-content: flex-start;
     }
   }
- 
 }
 </style>
