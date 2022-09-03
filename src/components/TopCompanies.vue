@@ -22,7 +22,7 @@
                   <div class="card-header">
                     <h5>{{ company.title }}</h5>
                     <div class="available-game">
-                      <p>Available escape game: {{ activityCount(company) }}</p>
+                      <p>Available escape game: {{ activityFunctions(company).activity_count }}</p>
                     </div>
                   </div>
                   <div class="card-footer">
@@ -32,8 +32,8 @@
                       </span>
                       <P>{{ company.address_line }}</P>
                     </div>
-                    <div class="footer-text" v-for="activity_profile in activity_profiles" :key="activity_profile.id">
-                      <p v-if="activity_profile.activity.company.id==company.company.id">From <span>${{activity_profile.price}}</span>/Person</p>
+                    <div class="footer-text">
+                      <p>From <span>${{ activityFunctions(company).lowest_price }}</span>/Person</p>
                     </div>
                   </div>
                 </div>
@@ -124,17 +124,30 @@ export default {
       console.log(this.companies);
     },
 
-    activityCount(icompany) {
+    activityFunctions(icompany) {
       let activity_list = [];
       for (let x = 0; x < this.activity_profiles.length; x++) {
         if (
           this.activity_profiles[x].activity.company.id == icompany.company.id
         ) {
-          activity_list.push(this.activity_profiles[x].activity);
-          console.log("yes");
+          activity_list.push(this.activity_profiles[x]);
         }
       }
-      return activity_list.length;
+      let lowest_price = null
+      for(let y=0; y<activity_list.length; y++){
+        if(!lowest_price){
+          lowest_price = activity_list[y].price
+        } else {
+          if(activity_list[y].price<lowest_price){
+            lowest_price = activity_list[y].price
+          }
+        }
+      }
+      let activity_count = activity_list.length
+      return {
+        'activity_count': activity_count,
+        'lowest_price': lowest_price
+      }
     },
 
     mobileshow() {
