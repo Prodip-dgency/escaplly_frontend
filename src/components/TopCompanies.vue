@@ -30,7 +30,7 @@
                       <span class="material-symbols-outlined">
                         location_on
                       </span>
-                      <P>{{ company.address_line }}</P>
+                      <p>{{ company.address_line }}</p>
                     </div>
                     <div class="footer-text">
                       <p>From <span>${{ activityFunctions(company).lowest_price }}</span>/Person</p>
@@ -51,8 +51,7 @@
       <div
         class="mobile-card"
         v-show="mobileshow()"
-        v-for="item in items"
-        :key="item"
+       
       >
         <div class="header">
           <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
@@ -71,7 +70,7 @@
             <div class="card-footer">
               <div class="location">
                 <span class="material-symbols-outlined"> location_on </span>
-                <P>New York City, US</P>
+                <p>New York City, US</p>
               </div>
               <div class="footer-text">
                 <p>From <span>$29</span>/Person</p>
