@@ -8,75 +8,47 @@
           dummy text of the text a lpsum simply text for dummy only.
         </h6>
       </div>
-      <!-- <div>{{ companyDetails() }}</div> -->
-      <!-- <div v-for="company in companies" :key="company.id"> -->
-      <!-- <p>Company Name: {{ company.title }}</p>
-        <p>Available escape game: {{ activityCount(company) }}</p> -->
-
-      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
-      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
-      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
       <div v-if="companies.length">
         <Carousel :settings="settings">
           <Slide v-for="company in this.companies" :key="company.id">
-            <div class="carousel_item">
-              <div>
-                <h3>{{ company.title }}</h3>
-                <p>{{ company.content }}</p>
-                <p>Available escape game: {{ activityCount(company) }}</p>
-              </div>
-              <div>
-                <p>this is a new div</p>
+            <div class="slider-container">
+              <div class="game-card">
+                <div class="header">
+                  <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
+                  <p><i class="fa-solid fa-person-running"></i> In Person</p>
+                </div>
+                <img :src="company.profile_image.image" alt="" />
+                <div class="card-body">
+                  <div class="card-header">
+                    <h5>{{ company.title }}</h5>
+                    <div class="available-game">
+                      <p>Available escape game: {{ activityCount(company) }}</p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="location">
+                      <span class="material-symbols-outlined">
+                        location_on
+                      </span>
+                      <P>{{ company.address_line }}</P>
+                    </div>
+                    <div class="footer-text" v-for="activity_profile in activity_profiles" :key="activity_profile.id">
+                      <p v-if="activity_profile.activity.company.id==company.company.id">From <span>${{activity_profile.price}}</span>/Person</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </Slide>
           <template #addons>
-            <Navigation />
+            <!-- <Navigation /> -->
+            <Pagination />
           </template>
         </Carousel>
       </div>
-      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
-      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
-      <!----------------------------------------------------- Prodip's Carousel------------------------------------------------- -->
-
-      <!-- </div> -->
-      <!-- <Carousel :settings="settings" v-show="!mobileshow()">
-        <Slide v-for="company in companies" :key="company">
-           <Slide v-for="item in items" :key="item">
-          <div class="slider-container" >
-            <div class="game-card" >
-              <div class="header">
-                <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
-                <p><i class="fa-solid fa-person-running"></i> In Person</p>
-              </div>
-              <img :src="company.profile_image.image" alt="" />
-              <div class="card-body">
-                <div class="card-header">
-                  <h5 >{{company.title}}</h5>
-                  <div class="available-game">
-                    <p>Available escape game: {{ activityCount(company) }}</p>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div class="location">
-                    <span class="material-symbols-outlined"> location_on </span>
-                    <P>{{company.address_line}}</P>
-                  </div>
-                  <div class="footer-text">
-                    <p>From <span>$29</span>/Person</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Slide>
-        <template #addons>
-          <Pagination />
-          <Navigation />
-        </template>
-      </Carousel> -->
+   
       <!-- Mobile responsive section -->
-      <!-- <div
+      <div
         class="mobile-card"
         v-show="mobileshow()"
         v-for="item in items"
@@ -107,7 +79,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="footer-btn-container">
         <a class="footer-btn" href="#" @click="myfunc">
           View more escape rooms</a
@@ -142,7 +114,7 @@ export default {
         itemsToShow: 4,
         itemsToScroll: 1,
         transition: 700,
-        // autoplay: 3000,
+        autoplay: 3000,
         wrapAround: true,
       },
     };
@@ -152,15 +124,17 @@ export default {
       console.log(this.companies);
     },
 
-    activityCount(icompany){
-      let activity_list = []
-      for(let x=0; x<(this.activity_profiles).length; x++){
-        if(this.activity_profiles[x].activity.company.id==icompany.company.id){
-          activity_list.push(this.activity_profiles[x].activity)
-          console.log('yes')
+    activityCount(icompany) {
+      let activity_list = [];
+      for (let x = 0; x < this.activity_profiles.length; x++) {
+        if (
+          this.activity_profiles[x].activity.company.id == icompany.company.id
+        ) {
+          activity_list.push(this.activity_profiles[x].activity);
+          console.log("yes");
         }
       }
-      return activity_list.length
+      return activity_list.length;
     },
 
     mobileshow() {
@@ -187,34 +161,6 @@ export default {
 </script>
 
 <style lang="scss">
-//------------------------------------------- Prodip carousel design --------------------------------------//
-//------------------------------------------- Prodip carousel design --------------------------------------//
-//------------------------------------------- Prodip carousel design --------------------------------------//
-.carousel__item {
-  min-height: 200px;
-  width: 100%;
-  background-color: var(--vc-clr-primary);
-  color: var(--vc-clr-white);
-  font-size: 20px;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel__slide {
-  padding: 10px;
-}
-
-.carousel__prev,
-.carousel__next {
-  box-sizing: content-box;
-  border: 5px solid white;
-}
-
-//------------------------------------------- Prodip carousel design --------------------------------------//
-//------------------------------------------- Prodip carousel design --------------------------------------//
-//------------------------------------------- Prodip carousel design --------------------------------------//
-
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .companies-container {
   margin-top: 25px;
@@ -233,7 +179,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
       font-family: "Roboto", sans-serif;
       .game-card {
         width: 290px;
-        height: auto;
+        height: 392px;
         padding: 6px 7px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
