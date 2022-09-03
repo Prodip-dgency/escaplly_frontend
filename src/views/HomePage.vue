@@ -4,7 +4,6 @@
     <uspsection />
     <escape-room-section />
     <curious-section />
-    <!-- :companies="companies" -->
     <top-companies :companies="companies" :activity_profiles="activity_profiles" />
     <mission-vision />
     <div>
