@@ -10,8 +10,8 @@
       </div>
       <div class="players-owners">
         <div class="players">
-          <img src="../assets/team1.svg" alt="" />
-          <h3>Escape Room Games</h3>
+          <img src="../assets/img/team1.svg" alt="" />
+          <h3>Escape Room Players</h3>
           <p>
             Is simply dummy text of the printing and type is a settingsetting
             industry Lorem Ipsum.
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="owners">
-          <img src="../assets/key1.svg" alt="" />
+          <img src="../assets/img/key1.svg" alt="" />
           <h3>Escape Room Owners</h3>
           <p>
             Is simply dummy text of the printing and type is a settingsetting

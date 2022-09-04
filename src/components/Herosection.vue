@@ -20,7 +20,7 @@ export default {};
 $media-mobile-sm: "only screen and (max-width : 480px)";
 .hero-container {
   height: 520px;
-  background-image: url("../assets/hero_image.jpg");
+  background-image: url("../assets/img/hero_image.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;

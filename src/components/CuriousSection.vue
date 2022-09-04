@@ -44,7 +44,7 @@ export default {
           classname: "red",
         },
         section2: {
-          title: "What is an Escaplly?",
+          title: "What is  Escaplly?",
           description:
             "Is simply dummy text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the industry's standard dummy tex ever since the 150s...",
           btn_name: "About Escaplly",

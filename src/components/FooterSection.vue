@@ -5,7 +5,7 @@
         <div class="footer-upper">
           <div class="upper1">
             <div class="logo-text">
-              <img src="../assets/escaplly_logo.svg" alt="" />
+              <img src="../assets/img/escaplly_logo.svg" alt="" />
               <p>
                 Lorem Ipsum has been the industry's dummy text ever since the
                 1500s, when an unknown printer took a galley of type and
