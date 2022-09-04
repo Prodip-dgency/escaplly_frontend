@@ -1,7 +1,7 @@
 <template>
   <div>
     <herosection />
-    <uspsection />
+    <uspsection :companies="companies" :activity_profiles="activity_profiles"/>
     <escape-room-section />
     <curious-section />
     <top-companies :companies="companies" :activity_profiles="activity_profiles" />
