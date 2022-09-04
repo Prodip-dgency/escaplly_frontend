@@ -47,28 +47,28 @@
       </div>
 
       <!-- Mobile responsive section -->
-      <div class="mobile-card" v-show="mobileshow()">
+      <div class="mobile-card" v-show="mobileshow()" v-for="company in this.companies" :key="company.id">
         <div class="header">
           <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
           <p><i class="fa-solid fa-person-running"></i> In Person</p>
         </div>
-        <div class="img-body">
-          <img src="../assets/companycard4.jpg" alt="" />
+        <div class="img-body" >
+          <img :src="company.profile_image.image" alt="" />
           <div class="card-body">
             <div class="card-header">
-              <h5>Escape Game Name</h5>
+              <h5>{{ company.title }}</h5>
               <div class="available-game">
-                <p>Available escape game: 9</p>
+                <p>Available escape game: {{ activityFunctions(company).activity_count }}</p>
               </div>
             </div>
 
             <div class="card-footer">
               <div class="location">
                 <span class="material-symbols-outlined"> location_on </span>
-                <p>New York City, US</p>
+                <p>{{ company.state }}, {{ company.city }}</p>
               </div>
               <div class="footer-text">
-                <p>From <span>$29</span>/Person</p>
+                <p>From <span>${{ activityFunctions(company).lowest_price }}</span>/Person</p>
               </div>
             </div>
           </div>
@@ -278,7 +278,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         img {
           height: 118px;
           width: 118px;
-          object-fit: cover;
+          object-fit: contain;
         }
         .card-body {
           display: flex;
@@ -317,7 +317,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
   .carousel {
     text-align: inherit;
     @media #{$media-mobile-sm} {
-      // display: none;
+      display: none;
     }
   }
   .carousel__viewport {

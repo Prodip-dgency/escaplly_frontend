@@ -7,20 +7,26 @@
         <h4>Countries</h4>
       </div>
       <div class="second-section text-section">
-        <h3>5000+</h3>
+        <h3>{{this.companies.length}}+</h3>
         <h4>Companies</h4>
       </div>
       <div class="third-section text-section">
-        <h3>20000+</h3>
+        <h3>{{this.activity_profiles.length}}+</h3>
         <h4>Games</h4>
       </div>
+      
     </div>
     <!-- </div> -->
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props:{
+     companies: Array,
+     activity_profiles: Array
+  }
+};
 </script>
 
 <style lang="scss">
@@ -40,7 +46,7 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
     top: -2.5rem;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px 1px rgba(120, 86, 195, 0.35);
 
     h3 {
       font-family: "Roboto", sans-serif;
