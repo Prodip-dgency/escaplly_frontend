@@ -4,7 +4,7 @@
       <div class="container1 body-container">
         <div class="logo">
           <router-link :to="{ name: 'home' }">
-            <img src="../assets/escaplly_logo.svg" alt="" />
+            <img src="../assets/img/escaplly_logo.svg" alt="" />
           </router-link>
         </div>
         <div class="dropdown">
