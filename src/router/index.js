@@ -26,16 +26,13 @@ const routes = [
   { path: '/about', name: 'about', component: AboutPageView },
   { path: '/escape-room-for-players', name: 'escape_room_players', component: EscapeRoomPlayersView },
   { path: '/escape-room-for-owners', name: 'escape_room_owners', component: EscapeRoomOwnersView },
-  { path: '/what-is-an-escape-room', name: 'what-is-escaperoom' },
-
-
-
+  { path: '/what-is-an-escape-room', name: 'what-is-escaperoom', component:WhatIsEscapeRoomView },
 
   { path: '/terms-and-conditions', name: 'termsandconditions', component: TermsandConditionsPageView},
   { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicyPageView },
   { path: '/cookie-policy', name: 'cookie-policy', component: CookiePolicyPageView },
   { path: '/disclaimer', name: 'disclaimer', component:DisclaimerPageView },
-
+  
 ]
 
 const router = createRouter({
