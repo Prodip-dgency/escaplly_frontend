@@ -51,6 +51,8 @@ export default {
 
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
+$media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
+
 .nav-container {
   position: sticky;
   top: -1px;
@@ -116,6 +118,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           @media #{$media-mobile-sm} {
             right: 0;
             min-width: 260px;
+          }
+          @media #{$media-tab} {
+          right: 0;
+          min-width: 300px;
           }
         }
         .active {

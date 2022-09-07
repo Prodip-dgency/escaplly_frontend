@@ -99,6 +99,7 @@
         </div>
       </div>
     </div>
+    <input type="file">
   </footer>
 </template>
 

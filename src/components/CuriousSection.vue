@@ -3,7 +3,9 @@
     <div class="container body-container">
       <div class="header-text">
         <h2 class="page-title">Curious Want To Know!</h2>
-        <h6 class="page-description">Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.</h6>
+        <h6 class="page-description">
+          Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+        </h6>
       </div>
       <div class="body-text">
         <div class="text-container" v-for="item in bodysection" :key="item.title">
@@ -30,17 +32,19 @@ export default {
       bodysection: {
         section1: {
           title: "What is an Escape Room?",
-          description: "Is simply dummy text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the industry's standard dummy tex ever since the 150s...",
+          description:
+            "Is simply dummy text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the industry's standard dummy tex ever since the 150s...",
           btn_name: "Escape Room",
           classname: "red",
-          link: "what-is-escaperoom"
+          link: "what-is-escaperoom",
         },
         section2: {
           title: "What is  Escaplly?",
-          description: "Is simply dummy text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the industry's standard dummy tex ever since the 150s...",
+          description:
+            "Is simply dummy text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the industry's standard dummy tex ever since the 150s...",
           btn_name: "About Escaplly",
           classname: "violet",
-          link: "about"
+          link: "about",
         },
       },
     };
@@ -51,6 +55,8 @@ export default {
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
 $media-mobile-ex-sm: "only screen and (max-width : 375px)";
+$media-tab-sm: "only screen and (min-width : 530px) and (max-width : 690px)";
+$media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
 .curious-container {
   margin-top: 25px;
   background: var(--text-color-light-varient3);
@@ -63,26 +69,36 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
       }
     }
     .body-text {
-      display: flex;
-      justify-content: space-between;
-      gap: 100px;
       padding-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 100px;
       .text-container {
         font-family: "Roboto", sans-serif;
         display: flex;
         flex-direction: column;
         gap: 52.5px;
+
         .text {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+          // display: flex;
+          // flex-direction: column;
+
           h4 {
             font-size: 30px;
             font-weight: 600;
             line-height: 42px;
+            margin-bottom: 20px;
             @media #{$media-mobile-sm} {
               font-size: 20px;
               line-height: 28px;
+              margin-bottom: 10px;
+            }
+            @media #{$media-tab} {
+              height: 65px;
+              line-height: 32px;
+            }
+            @media #{$media-tab-sm} {
+              height: inherit;
             }
           }
           p {
@@ -99,10 +115,11 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
         .btn-container {
           display: flex;
           align-items: center;
-          gap: 40px;
+          gap: 20px;
 
           button {
             display: flex;
+            align-items: center;
             gap: 10px;
             padding: 14px 30px;
             color: var(--text-color-light-varient3);
@@ -116,6 +133,10 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
             }
             @media #{$media-mobile-ex-sm} {
               padding: 12px 18px;
+              font-size: 16px;
+            }
+            @media #{$media-tab} {
+              padding: 12px 22px;
               font-size: 16px;
             }
           }
@@ -140,9 +161,18 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
         }
       }
       @media #{$media-mobile-sm} {
+        display: flex;
         flex-direction: column;
         gap: 60px;
         padding-top: 25px;
+      }
+      @media #{$media-tab} {
+        column-gap: 30px;
+      }
+      @media #{$media-tab-sm} {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
       }
     }
   }
