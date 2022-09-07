@@ -3,7 +3,9 @@
     <div class="container body-container">
       <div class="header-text">
         <h2 class="page-title">Top Escape Room Companies</h2>
-        <h6 class="page-description">Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.</h6>
+        <h6 class="page-description">
+          Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+        </h6>
       </div>
       <div v-if="companies.length">
         <Carousel :settings="settings">
@@ -32,7 +34,10 @@
                       <p>{{ company.state }}, {{ company.city }}</p>
                     </div>
                     <div class="footer-text">
-                      <p>From <span>${{ activityFunctions(company).lowest_price }}</span>/Person</p>
+                      <p>
+                        From <span>${{ activityFunctions(company).lowest_price }}</span
+                        >/Person
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -52,7 +57,7 @@
           <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
           <p><i class="fa-solid fa-person-running"></i> In Person</p>
         </div>
-        <div class="img-body" >
+        <div class="img-body">
           <img :src="company.profile_image.image" alt="" />
           <div class="card-body">
             <div class="card-header">
@@ -68,7 +73,10 @@
                 <p>{{ company.state }}, {{ company.city }}</p>
               </div>
               <div class="footer-text">
-                <p>From <span>${{ activityFunctions(company).lowest_price }}</span>/Person</p>
+                <p>
+                  From <span>${{ activityFunctions(company).lowest_price }}</span
+                  >/Person
+                </p>
               </div>
             </div>
           </div>
@@ -111,6 +119,12 @@ export default {
       },
     };
   },
+  mounted(){
+      let w = screen.width;
+      if (w > 480 && w<=1024) {
+        this.settings.itemsToShow = 2.3;
+      }
+  },
   methods: {
     companyDetails() {
       console.log(this.companies);
@@ -141,13 +155,6 @@ export default {
     },
 
     mobileshow() {
-      // const box= document.querySelector('.companies-container')
-      // const resizeObserver = new ResizeObserver((entries) => {
-      //     console.log(entries);
-      //   })
-
-      //   resizeObserver.observe(box);
-
       let w = screen.width;
 
       if (w <= 480) {
@@ -156,10 +163,9 @@ export default {
         return false;
       }
     },
-    myfunc() {
-      console.log(this.companies);
-    },
+
   },
+
 };
 </script>
 
