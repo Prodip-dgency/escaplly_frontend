@@ -4,22 +4,21 @@
       <div class="cookie-policy-heading">
         <h1>Privacy Policy</h1>
       </div>
-
       <h3>Last updated April 19, 2022</h3>
       <p>
-        Thank you for choosing to be part of our community at Kreeda LLC, doing business as escaperoom.com(“escaperoom.com”, “we”, “us”, or “our”). We
+        Thank you for choosing to be part of our community at Dgency LLC, doing business as escaplly.com(“escaplly.com”, “we”, “us”, or “our”). We
         are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or
-        our practices with regards to your personal information, please contact us at policy@escaperoom.com.
+        our practices with regards to your personal information, please contact us at policy@escaplly.com.
       </p>
       <p>
-        When you visit our website https://escaperoom.com, mobile application, and use our services, you trust us with your personal information. We
+        When you visit our website https://escaplly.com, mobile application, and use our services, you trust us with your personal information. We
         take your privacy very seriously. In this privacy notice, we describe our privacy policy. We seek to explain to you in the clearest way
         possible what information we collect, how we use it and what rights you have in relation to it. We hope you take some time to read through it
         carefully, as it is important. If there are any terms in this privacy policy that you do not agree with, please discontinue use of our Sites
         or Apps and our services.
       </p>
       <p>
-        This privacy policy applies to all information collected through our website (such as https://escaperoom.com), mobile application, ("Apps"),
+        This privacy policy applies to all information collected through our website (such as https://escaplly.com), mobile application, ("Apps"),
         and/or any related services, sales, marketing or events (we refer to them collectively in this privacy policy as the "Sites").
       </p>
       <p>
@@ -162,7 +161,7 @@
           <li>
             <b>To post testimonials.</b> We post testimonials on our Sites or Apps that may contain personal information. Prior to posting a
             testimonial, we will obtain your consent to use your name and testimonial. If you wish to update, or delete your testimonial, please
-            contact us at policy@escaperoom.com and be sure to include your name, testimonial location, and contact information.
+            contact us at policy@escaplly.com and be sure to include your name, testimonial location, and contact information.
           </li>
           <li>
             <b>Deliver targeted advertising to you.</b> We may use your information to develop and display content and advertising (and work with
@@ -420,7 +419,7 @@
           least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the Sites or Apps. If we learn
           that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable
           measures to promptly delete such data from our records. If you become aware of any data we have collected from children under age 18, please
-          contact us at policy@escaperoom.com.
+          contact us at policy@escaplly.com.
         </p>
       </div>
       <div id="question12" class="question-section">
@@ -514,10 +513,10 @@
           frequently to be informed of how we are protecting your information.
         </p>
       </div>
-      <div class="question-section16">
+      <div id="question16" class="question-section">
         <h3>16. HOW CAN YOU CONTACT US ABOUT THIS POLICY?</h3>
         <p>
-          If you have questions or comments about this policy, you may email us at policy@escaperoom.com
+          If you have questions or comments about this policy, you may email us at policy@escaplly.com
         </p>
       </div>
     </div>
