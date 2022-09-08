@@ -3,18 +3,17 @@
     <!-- <div class="container body-container"> -->
     <div class="inner-container">
       <div class="first-section text-section">
-        <h3>15</h3>
+        <h3>{{ country_count() }}</h3>
         <h4>Countries</h4>
       </div>
       <div class="second-section text-section">
-        <h3>{{this.companies.length}}+</h3>
+        <h3>{{ this.companies.length }}+</h3>
         <h4>Companies</h4>
       </div>
       <div class="third-section text-section">
-        <h3>{{this.activity_profiles.length}}+</h3>
+        <h3>{{ this.activity_profiles.length }}+</h3>
         <h4>Games</h4>
       </div>
-      
     </div>
     <!-- </div> -->
   </div>
@@ -22,10 +21,27 @@
 
 <script>
 export default {
-  props:{
-     companies: Array,
-     activity_profiles: Array
-  }
+  props: {
+    companies: Array,
+    activity_profiles: Array,
+  },
+  methods: {
+    country_count() {
+      if (this.companies) {
+        let countries = Array();
+        for (let x = 0; x < (this.companies).length; x++) {
+          if (!countries.length) {
+            countries.push(this.companies[x].country);
+          } else {
+            if (countries.indexOf(this.companies[x].country) == -1) {
+              countries.push(this.companies[x].country);
+            }
+          }
+        }
+        return countries.length
+      }
+    },
+  },
 };
 </script>
 
@@ -37,7 +53,6 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
   display: flex;
   justify-content: center;
   position: relative;
-  
 
   .inner-container {
     border-radius: 5px;
@@ -55,7 +70,7 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
       @media #{$media-mobile-sm} {
         font-size: 22px;
       }
-      @media #{$media-mobile-ex-sm}{
+      @media #{$media-mobile-ex-sm} {
         font-size: 18px;
       }
     }
@@ -67,7 +82,7 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
       @media #{$media-mobile-sm} {
         font-size: 18px;
       }
-       @media #{$media-mobile-ex-sm}{
+      @media #{$media-mobile-ex-sm} {
         font-size: 14px;
       }
     }
@@ -90,11 +105,9 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
     }
 
     @media #{$media-mobile-sm} {
-      
       height: 74px;
       top: -2rem;
     }
   }
-
 }
 </style>
