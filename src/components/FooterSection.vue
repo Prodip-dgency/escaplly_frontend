@@ -7,17 +7,13 @@
             <div class="logo-text">
               <img src="../assets/img/escaplly_logo.svg" alt="" />
               <p>
-                Lorem Ipsum has been the industry's dummy text ever since the
-                1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen It.
+                Lorem Ipsum has been the industry's dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                make a type specimen It.
               </p>
             </div>
             <div class="list">
               <ul>
-                <p @click="linkopen('link')">
-                  <a class="list-btn" >+</a> Escape
-                  Room Fans
-                </p>
+                <p @click="linkopen('link')"><a class="list-btn">+</a> Escape Room Fans</p>
 
                 <div :class="activeclass">
                   <li>Link 1</li>
@@ -27,10 +23,7 @@
                 </div>
               </ul>
               <ul>
-                <p @click="linkopen1('link')">
-                  <a class="list-btn">+</a> Escape
-                  Room Owner
-                </p>
+                <p @click="linkopen1('link')"><a class="list-btn">+</a> Escape Room Owner</p>
 
                 <div :class="activeclass1">
                   <li>Link 1</li>
@@ -40,10 +33,7 @@
                 </div>
               </ul>
               <ul>
-                <p @click="linkopen2('link')">
-                  <a class="list-btn" >+</a> About
-                  Company
-                </p>
+                <p @click="linkopen2('link')"><a class="list-btn">+</a> About Company</p>
 
                 <div :class="activeclass2">
                   <li>Link 1</li>
@@ -99,7 +89,6 @@
         </div>
       </div>
     </div>
-    <input type="file">
   </footer>
 </template>
 
@@ -141,6 +130,8 @@ export default {
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
 $media-mobile-ex-sm: "only screen and (max-width : 375px)";
+$media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
+
 footer {
   .footer-container {
     background: #000000;
@@ -163,13 +154,15 @@ footer {
               line-height: 25.2px;
               //   height: 103px;
             }
+            @media #{$media-tab} {
+              flex: 1.5;
+            }
           }
           .list {
             flex: 3;
             color: #ffffff;
             display: flex;
-            justify-content: center;
-            gap: 110px;
+            justify-content: space-between;
             ul {
               p {
                 font-size: 22px;
@@ -187,6 +180,9 @@ footer {
                   padding-bottom: 0;
                   font-size: 18px;
                   line-height: 21px;
+                }
+                @media #{$media-tab} {
+                  font-size: 18px;
                 }
               }
               li {
@@ -216,9 +212,15 @@ footer {
                 font-weight: 500;
               }
             }
+            @media #{$media-tab} {
+              gap: 20px;
+            }
           }
           @media #{$media-mobile-sm} {
             flex-direction: column;
+            gap: 20px;
+          }
+          @media #{$media-tab} {
             gap: 20px;
           }
         }
@@ -235,7 +237,7 @@ footer {
         padding: 25px 0;
         font-size: 17px;
         font-weight: 400;
-        
+
         .divider {
           display: flex;
           justify-content: center;
@@ -243,6 +245,9 @@ footer {
           @media #{$media-mobile-sm} {
             padding: 0 2px 0 0;
             justify-content: inherit;
+          }
+          @media #{$media-tab} {
+            padding: 0 10px;
           }
         }
         .middle {
@@ -263,14 +268,16 @@ footer {
         }
 
         @media #{$media-mobile-sm} {
-         display: inherit;
+          display: inherit;
           font-size: 15px;
           padding: 25px 0 30px 0;
         }
         @media #{$media-mobile-ex-sm} {
           font-size: 12px;
         }
-
+        // @media #{$media-tab} {
+        //   padding: inherit;
+        // }
       }
       @media #{$media-mobile-sm} {
         padding: 40px 10px 0 10px;
@@ -299,6 +306,9 @@ footer {
         @media #{$media-mobile-sm} {
           gap: 20px;
         }
+        @media #{$media-tab} {
+          gap: 18px;
+        }
       }
       @media #{$media-mobile-sm} {
         flex-direction: column;
@@ -310,6 +320,5 @@ footer {
       padding: 20px 0;
     }
   }
- 
 }
 </style>

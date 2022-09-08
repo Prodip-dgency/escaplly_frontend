@@ -3,7 +3,9 @@
     <div class="container body-container">
       <div class="header-text">
         <h2 class="page-title">Our Mission and Vision</h2>
-        <h6 class="page-description">Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.</h6>
+        <h6 class="page-description">
+          Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+        </h6>
       </div>
       <div class="players-owners">
         <div class="players">
@@ -17,7 +19,7 @@
             <li><i class="fa-solid fa-check"></i> Review feed for sharing your escape room expriences.</li>
             <li><i class="fa-solid fa-check"></i> Review feed for sharing your escape room expriences.</li>
           </ul>
-          <div>
+          <div class="button">
             <router-link class="btn1" :to="{ name: 'escape_room_players' }"> Learn More </router-link>
           </div>
         </div>
@@ -32,7 +34,7 @@
             <li><i class="fa-solid fa-check"></i> Review feed for sharing your escape room expriences.</li>
             <li><i class="fa-solid fa-check"></i> Review feed for sharing your escape room expriences.</li>
           </ul>
-          <div>
+          <div class="button">
             <router-link class="btn2" :to="{ name: 'escape_room_owners' }">Learn More</router-link>
           </div>
         </div>
@@ -47,6 +49,8 @@ export default {};
 
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
+$media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
+
 .mission-container {
   margin-top: 25px;
   background: var(--text-color-light-varient3);
@@ -68,6 +72,9 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           line-height: 28px;
           margin-bottom: 5px;
         }
+        @media #{$media-tab} {
+          font-size: 28px;
+        }
       }
       p {
         font-weight: 400;
@@ -77,6 +84,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         @media #{$media-mobile-sm} {
           font-size: 18px;
           line-height: 25px;
+        }
+        @media #{$media-tab} {
+          font-size: 20px;
+          line-height: 28px;
         }
       }
       ul {
@@ -93,20 +104,24 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           @media #{$media-mobile-sm} {
             padding-bottom: 5px;
           }
+          @media #{$media-tab} {
+            align-items: inherit;
+            line-height: 22px;
+          }
         }
         @media #{$media-mobile-sm} {
           margin: 20px 0 20px 0;
+        }
+        @media #{$media-tab} {
+          margin: 20px 0 25px 0;
         }
       }
       img {
       }
 
-      button {
-        // background: none;
-        // padding: 15px 40px;
-        // font-weight: 500;
-        // font-size: 18px;
-        // border-radius: 6px;
+      .button{
+        display: flex;
+        flex-direction: row;
       }
       .players {
         background: var(--Secondary-color-v2-dark-varient3);
@@ -122,9 +137,15 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           font-weight: 500;
           font-size: 18px;
           border-radius: 6px;
+          // @media #{$media-tab} {
+          //   padding: 10px 20px;
+          // }
         }
         @media #{$media-mobile-sm} {
           padding: 30px 11px 40px 11px;
+        }
+        @media #{$media-tab} {
+          padding: 10px 7px 20px 7px;
         }
       }
       .owners {
@@ -145,11 +166,17 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         @media #{$media-mobile-sm} {
           padding: 30px 11px 40px 11px;
         }
+        @media #{$media-tab} {
+          padding: 10px 5px;
+        }
       }
       @media #{$media-mobile-sm} {
         flex-direction: column;
         padding-top: 20px;
         gap: 10px;
+      }
+      @media #{$media-tab} {
+        gap: 15px;
       }
     }
   }
