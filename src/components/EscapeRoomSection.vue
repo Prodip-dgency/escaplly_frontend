@@ -88,6 +88,9 @@ export default {
 //------------------------ Under this is shakil's css---------------------------
 
 $media-mobile-sm: "only screen and (max-width : 480px)";
+$media-tab-sm: "only screen and (min-width : 530px) and (max-width : 690px)";
+$media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
+
 .escape-container {
   background: #ffffff;
   display: flex;
@@ -109,6 +112,10 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           font-size: 24px;
           text-align: start;
         }
+        @media #{$media-tab} {
+          font-size: 32px;
+          line-height: 40px;
+        }
       }
       h6 {
         font-family: "Roboto", sans-serif;
@@ -122,22 +129,28 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           line-height: 25px;
           text-align: start;
         }
+        @media #{$media-tab} {
+          font-size: 23px;
+          margin-top: 0.6rem;
+        }
       }
       @media #{$media-mobile-sm} {
         padding: 70px 10px 30px 20px;
         gap: 30px;
       }
+      @media #{$media-tab} {
+        padding: 90px 10px 30px 10px;
+      }
     }
 
     .inner-container {
       font-family: "Roboto", sans-serif;
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       justify-items: center;
+      row-gap: 20px;
       .game-card {
-        width: calc(25% - 20px);
         padding: 6px 7px;
-        margin: 10px;
         border-radius: 5px;
         box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
         .header {
@@ -145,15 +158,23 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
           gap: 15px;
           color: var(--text-color-light-varient4);
           font-size: 16px;
-          padding: 1px 0 4px 0;
+          padding: 0 0 4px 0;
         }
         .img-body {
-          img {
-            width: 276px;
-            height: 180px;
-            @media #{$media-mobile-sm} {
-              width: 152px;
-              height: 118px;
+          div {
+            img {
+              width: 276px;
+              height: 180px;
+              @media #{$media-mobile-sm} {
+                width: 152px;
+                height: 118px;
+              }
+              @media #{$media-tab} {
+                width: 210px;
+              }
+            }
+            @media #{$media-tab} {
+              width: 211px;
             }
           }
           .card-body {
@@ -166,8 +187,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
               line-height: 36.4px;
               font-weight: 600;
               @media #{$media-mobile-sm} {
-                font-size: 18px;
-                line-height: 25px;
+                font-size: 16px;
+                line-height: 20px;
               }
             }
             .company-name {
@@ -183,10 +204,14 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
                 font-style: italic;
                 text-decoration: underline;
                 font-weight: 400;
+                @media #{$media-mobile-sm} {
+                  font-size: 16px;
+                  line-height: 20px;
+                }
               }
               @media #{$media-mobile-sm} {
                 font-size: 16px;
-                line-height: 22px;
+                line-height: 20px;
               }
             }
             .card-footer {
@@ -213,7 +238,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
               }
               @media #{$media-mobile-sm} {
                 justify-content: inherit;
-                gap: 2px;
+                gap: 0px;
                 font-size: 16px;
                 line-height: 22px;
               }
@@ -241,15 +266,24 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
         display: flex;
         flex-direction: column;
         gap: 20px;
-        margin-left: 10px;
+        padding: 0 10px;
+      }
+      @media #{$media-tab} {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media #{$media-tab-sm} {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
-    @media #{$media-mobile-sm} {
-      padding-right: 10px;
-    }
+    // @media #{$media-mobile-sm} {
+    //   padding-right: 10px;
+    // }
   }
   @media #{$media-mobile-sm} {
     padding-bottom: 47px;
+  }
+  @media #{$media-tab} {
+    padding-bottom: 50px;
   }
 }
 </style>

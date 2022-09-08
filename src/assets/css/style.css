@@ -85,9 +85,14 @@ a {
     font-weight: 500;
     color: var( --link-and-icon-color);
   }
+  .footer-btn{
+    text-decoration: none;
+    color: var( --link-and-icon-color);
+  }
+
   @media only screen and (max-width: 480px){
     .body-container{
-      width: 90%;
+      
     }
     .container{
       padding: 40px 10px;
@@ -113,7 +118,26 @@ a {
     }
   }
 
- .footer-btn{
-    text-decoration: none;
-    color: var( --link-and-icon-color);
+  @media only screen and (min-width: 530px) and (max-width: 1024px){
+    .body-container{
+      width: 95%;
+    }
+    .container{
+      padding: 60px 0;
+    }
+    .header-text{
+      align-items: inherit;
+      text-align: inherit;
+      gap: 15px;
+    }
+    .page-title{
+      line-height: 33px;
+      font-size: 36px;
+    }
+    .page-description{
+      padding: 0;
+       font-size: 23px;
+       line-height: 33px;
+    }
   }
+

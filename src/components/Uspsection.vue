@@ -25,6 +25,7 @@ export default {
     companies: Array,
     activity_profiles: Array,
   },
+
   methods: {
     country_count() {
       if (this.companies) {
@@ -42,12 +43,14 @@ export default {
       }
     },
   },
+
 };
 </script>
 
 <style lang="scss">
 $media-mobile-sm: "only screen and (max-width : 480px)";
 $media-mobile-ex-sm: "only screen and (max-width : 375px)";
+$media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
 
 .usp-container {
   display: flex;
@@ -73,6 +76,9 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
       @media #{$media-mobile-ex-sm} {
         font-size: 18px;
       }
+      @media #{$media-tab} {
+        font-size: 26px;
+      }
     }
     h4 {
       font-family: "Roboto", sans-serif;
@@ -85,6 +91,9 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
       @media #{$media-mobile-ex-sm} {
         font-size: 14px;
       }
+      @media #{$media-tab} {
+        font-size: 22px;
+      }
     }
     .text-section {
       padding: 0 120px;
@@ -95,6 +104,10 @@ $media-mobile-ex-sm: "only screen and (max-width : 375px)";
       margin: 20px 0;
       @media #{$media-mobile-sm} {
         padding: 0 20px;
+      }
+      @media #{$media-tab} {
+        padding: 0 35px;
+        margin: 20px 0;
       }
     }
     .first-section {
