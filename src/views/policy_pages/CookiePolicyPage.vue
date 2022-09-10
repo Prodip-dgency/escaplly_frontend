@@ -140,4 +140,22 @@
 export default {};
 </script>
 
-<style src="@/assets/css/views/cookiepolicystyle.scss" lang="scss"></style>
+<style lang="scss">
+
+.cookie-policy {
+  margin: 50px 0 100px 0;
+  h1 {
+    margin: 50px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
+</style>
+
+
