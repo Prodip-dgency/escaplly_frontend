@@ -121,8 +121,12 @@ export default {
   },
   mounted(){
       let w = screen.width;
-      if (w > 480 && w<=1024) {
+      if (w > 730 && w<=1024) {
         this.settings.itemsToShow = 2.3;
+      }else{
+        if(w > 480 && w <= 730){
+          this.settings.itemsToShow = 1.5;
+        }
       }
   },
   methods: {

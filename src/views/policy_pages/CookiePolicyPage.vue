@@ -141,13 +141,16 @@ export default {};
 </script>
 
 <style lang="scss">
-
-
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .cookie-policy {
   margin: 50px 0 100px 0;
   h1 {
     margin: 50px;
     text-align: center;
+    @media #{$media-mobile-sm} {
+      margin: 0 20px 20px 20px;
+      font-size: 24px;
+    }
   }
   h3 {
     font-size: 20px;
@@ -155,6 +158,16 @@ export default {};
   }
   p {
     margin-bottom: 30px;
+    @media #{$media-mobile-sm} {
+      font-size: 16px;
+    }
+  }
+  @media #{$media-mobile-sm} {
+    margin: 0;
+    padding: 30px 10px;
+  }
+  ul{
+    list-style: inside;
   }
 }
 </style>
