@@ -8,11 +8,11 @@
       <p>AGREEMENT TO TERMS</p>
       <p>
         These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and Dgency
-        LLC, doing business as escaplly.com ("escaplly.com", “we”, “us”, or “our”), concerning your access to and use of the
-        https://escaplly.com website as well as any other media form, media channel, mobile website or mobile application related, linked, or
-        otherwise connected thereto (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be
-        bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE
-        AND YOU MUST DISCONTINUE USE IMMEDIATELY.
+        LLC, doing business as escaplly.com ("escaplly.com", “we”, “us”, or “our”), concerning your access to and use of the https://escaplly.com
+        website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto
+        (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of
+        Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE
+        IMMEDIATELY.
       </p>
       <p>
         The Site advertises, promotes, and aggregates users reviews (“Services”) of companies that provide escape room experiences, which includes,
@@ -91,109 +91,114 @@
         connection with any commercial endeavors except those that are specifically endorsed or approved by us.
       </p>
       <p>As a user of the Site, you agree not to:</p>
-      <ol>
-        <li>
-          Systematically retrieve data or other content from the Site to create or compile, directly or indirectly, a collection, compilation,
-          database, or directory without written permission from us.
-        </li>
-        <li>
-          Make any unauthorized use of the Site, including collecting usernames and/or email addresses of users by electronic or other means for the
-          purpose of sending unsolicited email, or creating user accounts by automated means or under false pretenses.
-        </li>
-        <li>Use a buying agent or purchasing agent to make purchases on the Site.</li>
-        <li>Use the Site to advertise or offer to sell goods and services.</li>
-        <li>
-          Circumvent, disable, or otherwise interfere with security-related features of the Site, including features that prevent or restrict the use
-          or copying of any Content or enforce limitations on the use of the Site and/or the Content contained therein.
-        </li>
-        <li>Engage in unauthorized framing of or linking to the Site.</li>
-        <li>
-          Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords.
-        </li>
-        <li>Make improper use of our support services or submit false reports of abuse or misconduct.</li>
-        <li>
-          Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar
-          data gathering and extraction tools.
-        </li>
-        <li>Interfere with, disrupt, or create an undue burden on the Site or the networks or services connected to the Site.</li>
-        <li>Attempt to impersonate another user or person or use the username of another user.</li>
-        <li>Sell or otherwise transfer your profile.</li>
-        <li>Use any information obtained from the Site in order to harass, abuse, or harm another person.</li>
-        <li>
-          Use the Site as part of any effort to compete with us or otherwise use the Site and/or the Content for any revenue-generating endeavor or
-          commercial enterprise.
-        </li>
-        <li>Attempt to bypass any measures of the Site designed to prevent or restrict access to the Site, or any portion of the Site.</li>
-        <li>Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Site.</li>
-        <li>Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the Site to you.</li>
-        <li>Delete the copyright or other proprietary rights notice from any Content.</li>
-        <li>Copy or adapt the Site’s software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
-        <li>
-          Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material, including excessive use of capital
-          letters and spamming (continuous posting of repetitive text), that interferes with any party’s uninterrupted use and enjoyment of the Site
-          or modifies, impairs, disrupts, alters, or interferes with the use, features, functions, operation, or maintenance of the Site.
-        </li>
-        <li>
-          Upload or transmit (or attempt to upload or to transmit) any material that acts as a passive or active information collection or
-          transmission mechanism, including without limitation, clear graphics interchange formats (“gifs”), 1×1 pixels, web bugs, cookies, or other
-          similar devices (sometimes referred to as “spyware” or “passive collection mechanisms” or “pcms”).
-        </li>
-        <li>
-          Except as may be the result of standard search engine or Internet browser usage, use, launch, develop, or distribute any automated system,
-          including without limitation, any spider, robot, cheat utility, scraper, or offline reader that accesses the Site, or using or launching any
-          unauthorized script or other software.
-        </li>
-        <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Site.</li>
-        <li>Use the Site in a manner inconsistent with any applicable laws or regulations.</li>
-      </ol>
+      <div class="list">
+        <ol>
+          <li>
+            Systematically retrieve data or other content from the Site to create or compile, directly or indirectly, a collection, compilation,
+            database, or directory without written permission from us.
+          </li>
+          <li>
+            Make any unauthorized use of the Site, including collecting usernames and/or email addresses of users by electronic or other means for the
+            purpose of sending unsolicited email, or creating user accounts by automated means or under false pretenses.
+          </li>
+          <li>Use a buying agent or purchasing agent to make purchases on the Site.</li>
+          <li>Use the Site to advertise or offer to sell goods and services.</li>
+          <li>
+            Circumvent, disable, or otherwise interfere with security-related features of the Site, including features that prevent or restrict the
+            use or copying of any Content or enforce limitations on the use of the Site and/or the Content contained therein.
+          </li>
+          <li>Engage in unauthorized framing of or linking to the Site.</li>
+          <li>
+            Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords.
+          </li>
+          <li>Make improper use of our support services or submit false reports of abuse or misconduct.</li>
+          <li>
+            Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or
+            similar data gathering and extraction tools.
+          </li>
+          <li>Interfere with, disrupt, or create an undue burden on the Site or the networks or services connected to the Site.</li>
+          <li>Attempt to impersonate another user or person or use the username of another user.</li>
+          <li>Sell or otherwise transfer your profile.</li>
+          <li>Use any information obtained from the Site in order to harass, abuse, or harm another person.</li>
+          <li>
+            Use the Site as part of any effort to compete with us or otherwise use the Site and/or the Content for any revenue-generating endeavor or
+            commercial enterprise.
+          </li>
+          <li>Attempt to bypass any measures of the Site designed to prevent or restrict access to the Site, or any portion of the Site.</li>
+          <li>Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Site.</li>
+          <li>Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the Site to you.</li>
+          <li>Delete the copyright or other proprietary rights notice from any Content.</li>
+          <li>Copy or adapt the Site’s software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
+          <li>
+            Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material, including excessive use of capital
+            letters and spamming (continuous posting of repetitive text), that interferes with any party’s uninterrupted use and enjoyment of the Site
+            or modifies, impairs, disrupts, alters, or interferes with the use, features, functions, operation, or maintenance of the Site.
+          </li>
+          <li>
+            Upload or transmit (or attempt to upload or to transmit) any material that acts as a passive or active information collection or
+            transmission mechanism, including without limitation, clear graphics interchange formats (“gifs”), 1×1 pixels, web bugs, cookies, or other
+            similar devices (sometimes referred to as “spyware” or “passive collection mechanisms” or “pcms”).
+          </li>
+          <li>
+            Except as may be the result of standard search engine or Internet browser usage, use, launch, develop, or distribute any automated system,
+            including without limitation, any spider, robot, cheat utility, scraper, or offline reader that accesses the Site, or using or launching
+            any unauthorized script or other software.
+          </li>
+          <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Site.</li>
+          <li>Use the Site in a manner inconsistent with any applicable laws or regulations.</li>
+        </ol>
+      </div>
       <p>When you create or make available any Contributions, you thereby represent and warrant that:</p>
-      <ol>
-        <li>
-          The creation, distribution, transmission, public display, or performance, and the accessing, downloading, or copying of your Contributions
-          do not and will not infringe the proprietary rights, including but not limited to the copyright, patent, trademark, trade secret, or moral
-          rights of any third party.
-        </li>
-        <li>
-          You are the creator and owner of or have the necessary licenses, rights, consents, releases, and permissions to use and to authorize us, the
-          Site, and other users of the Site to use your Contributions in any manner contemplated by the Site and these Terms of Use.
-        </li>
-        <li>
-          You have the written consent, release, and/or permission of each and every identifiable individual person in your Contributions to use the
-          name or likeness of each and every such identifiable individual person to enable inclusion and use of your Contributions in any manner
-          contemplated by the Site and these Terms of Use.
-        </li>
-        <li>Your Contributions are not false, inaccurate, or misleading.</li>
-        <li>
-          Your Contributions are not unsolicited or unauthorized advertising, promotional materials, pyramid schemes, chain letters, spam, mass
-          mailings, or other forms of solicitation.
-        </li>
-        <li>
-          Your Contributions are not obscene, lewd, lascivious, filthy, violent, harassing, libelous, slanderous, or otherwise objectionable (as
-          determined by us).
-        </li>
-        <li>Your Contributions do not ridicule, mock, disparage, intimidate, or abuse anyone.</li>
-        <li>
-          Your Contributions do not advocate the violent overthrow of any government or incite, encourage, or threaten physical harm against another.
-        </li>
-        <li>Your Contributions do not violate any applicable law, regulation, or rule.</li>
-        <li>Your Contributions do not violate the privacy or publicity rights of any third party.</li>
-        <li>
-          Your Contributions do not contain any material that solicits personal information from anyone under the age of 18 or exploits people under
-          the age of 18 in a sexual or violent manner.
-        </li>
-        <li>
-          Your Contributions do not violate any federal or state law concerning child pornography, or otherwise intended to protect the health or
-          well-being of minors;
-        </li>
-        <li>
-          Your Contributions do not include any offensive comments that are connected to race, national origin, gender, sexual preference, or physical
-          handicap.
-        </li>
-        <li>
-          Your Contributions do not otherwise violate, or link to material that violates, any provision of these Terms of Use, or any applicable law
-          or regulation.
-        </li>
-      </ol>
+      <div class="list">
+        <ol>
+          <li>
+            The creation, distribution, transmission, public display, or performance, and the accessing, downloading, or copying of your Contributions
+            do not and will not infringe the proprietary rights, including but not limited to the copyright, patent, trademark, trade secret, or moral
+            rights of any third party.
+          </li>
+          <li>
+            You are the creator and owner of or have the necessary licenses, rights, consents, releases, and permissions to use and to authorize us,
+            the Site, and other users of the Site to use your Contributions in any manner contemplated by the Site and these Terms of Use.
+          </li>
+          <li>
+            You have the written consent, release, and/or permission of each and every identifiable individual person in your Contributions to use the
+            name or likeness of each and every such identifiable individual person to enable inclusion and use of your Contributions in any manner
+            contemplated by the Site and these Terms of Use.
+          </li>
+          <li>Your Contributions are not false, inaccurate, or misleading.</li>
+          <li>
+            Your Contributions are not unsolicited or unauthorized advertising, promotional materials, pyramid schemes, chain letters, spam, mass
+            mailings, or other forms of solicitation.
+          </li>
+          <li>
+            Your Contributions are not obscene, lewd, lascivious, filthy, violent, harassing, libelous, slanderous, or otherwise objectionable (as
+            determined by us).
+          </li>
+          <li>Your Contributions do not ridicule, mock, disparage, intimidate, or abuse anyone.</li>
+          <li>
+            Your Contributions do not advocate the violent overthrow of any government or incite, encourage, or threaten physical harm against
+            another.
+          </li>
+          <li>Your Contributions do not violate any applicable law, regulation, or rule.</li>
+          <li>Your Contributions do not violate the privacy or publicity rights of any third party.</li>
+          <li>
+            Your Contributions do not contain any material that solicits personal information from anyone under the age of 18 or exploits people under
+            the age of 18 in a sexual or violent manner.
+          </li>
+          <li>
+            Your Contributions do not violate any federal or state law concerning child pornography, or otherwise intended to protect the health or
+            well-being of minors;
+          </li>
+          <li>
+            Your Contributions do not include any offensive comments that are connected to race, national origin, gender, sexual preference, or
+            physical handicap.
+          </li>
+          <li>
+            Your Contributions do not otherwise violate, or link to material that violates, any provision of these Terms of Use, or any applicable law
+            or regulation.
+          </li>
+        </ol>
+      </div>
       <p>
         Any use of the Site in violation of the foregoing violates these Terms of Use and may result in, among other things, termination or suspension
         of your rights to use the Site.
@@ -303,19 +308,21 @@
         In terms of the Guidelines of the Federal Trade Commission, please assume the following about all links, posts, photos, and other material on
         the Site:
       </p>
-      <ul>
-        <li>
-          This is a “for-profit” website that generates revenue through a number of different means (Google Ads, physical or digital product
-          offerings, subscriptions, etc.), which includes the marketing of Escape Rooms that are participants in the Partner Program;
-        </li>
-        <li>Partner Program Escape Rooms published on the Site may pay a commission to us for marketing and promoting the Escape Room;</li>
-        <li>
-          The opinion and views of actual or purported Escape Room participants are published on the Site from various online sources available to the
-          public, and does not reflect the opinion of the Site, its directors, shareholders, employees, representatives, or duly authorized agents
-          unless specifically stated otherwise; and
-        </li>
-        <li>Commissions paid to us by Escape Rooms are at no additional cost to you.</li>
-      </ul>
+      <div class="list">
+        <ul>
+          <li>
+            This is a “for-profit” website that generates revenue through a number of different means (Google Ads, physical or digital product
+            offerings, subscriptions, etc.), which includes the marketing of Escape Rooms that are participants in the Partner Program;
+          </li>
+          <li>Partner Program Escape Rooms published on the Site may pay a commission to us for marketing and promoting the Escape Room;</li>
+          <li>
+            The opinion and views of actual or purported Escape Room participants are published on the Site from various online sources available to
+            the public, and does not reflect the opinion of the Site, its directors, shareholders, employees, representatives, or duly authorized
+            agents unless specifically stated otherwise; and
+          </li>
+          <li>Commissions paid to us by Escape Rooms are at no additional cost to you.</li>
+        </ul>
+      </div>
       <p>ADVERTISERS</p>
       <p>
         We allow advertisers to display their advertisements and other information in certain areas of the Site, such as sidebar advertisements or
@@ -577,7 +584,10 @@
         seek all remedies available in law and equity for such violations
       </p>
       <p>CONTACT US</p>
-      <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at policy@escaplly.com</p>
+      <p>
+        In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at
+        policy@escaplly.com
+      </p>
     </div>
   </div>
 </template>
