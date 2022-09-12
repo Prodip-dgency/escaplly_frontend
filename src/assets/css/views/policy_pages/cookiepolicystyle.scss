@@ -1,0 +1,28 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
+.cookie-policy {
+  margin: 50px 0 100px 0;
+  h1 {
+    margin: 50px;
+    text-align: center;
+    @media #{$media-mobile-sm} {
+      margin: 0 10px 20px 10px;
+      font-size: 24px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 30px;
+    @media #{$media-mobile-sm} {
+      font-size: 16px;
+    }
+  }
+  .list {
+    margin-left: 24px;
+  }
+  @media #{$media-mobile-sm} {
+    margin: 30px 10px 40px 10px;
+  }
+}

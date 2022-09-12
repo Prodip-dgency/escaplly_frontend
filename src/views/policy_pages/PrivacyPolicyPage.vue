@@ -6,9 +6,9 @@
       </div>
       <h3>Last updated April 19, 2022</h3>
       <p>
-        Thank you for choosing to be part of our community at Dgency LLC, doing business as escaplly.com(“escaplly.com”, “we”, “us”, or “our”). We
-        are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or
-        our practices with regards to your personal information, please contact us at policy@escaplly.com.
+        Thank you for choosing to be part of our community at Dgency LLC, doing business as escaplly.com(“escaplly.com”, “we”, “us”, or “our”). We are
+        committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our
+        practices with regards to your personal information, please contact us at policy@escaplly.com.
       </p>
       <p>
         When you visit our website https://escaplly.com, mobile application, and use our services, you trust us with your personal information. We
@@ -25,24 +25,26 @@
         <b>Please read this privacy policy carefully as it will help you make informed decisions about sharing your personal information with us.</b>
       </p>
       <p><b>TABLE OF CONTENTS</b></p>
-      <ol>
-        <li><a href="#question1">WHAT INFORMATION DO WE COLLECT?</a></li>
-        <li><a href="#question2">HOW DO WE USE YOUR INFORMATION?</a></li>
-        <li><a href="#question3">WILL YOUR INFORMATION BE SHARED WITH ANYONE?</a></li>
-        <li><a href="#question4">WHO WILL YOUR INFORMATION BE SHARED WITH?</a></li>
-        <li><a href="#question5">DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></li>
-        <li><a href="#question6">DO WE USE GOOGLE MAPS?</a></li>
-        <li><a href="#question7">HOW DO WE HANDLE YOUR SOCIAL LOGINS?</a></li>
-        <li><a href="#question8">IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?</a></li>
-        <li><a href="#question9">HOW LONG DO WE KEEP YOUR INFORMATION?</a></li>
-        <li><a href="#question10">HOW DO WE KEEP YOUR INFORMATION SAFE?</a></li>
-        <li><a href="#question11">DO WE COLLECT INFORMATION FROM MINORS?</a></li>
-        <li><a href="#question12">WHAT ARE YOUR PRIVACY RIGHTS?</a></li>
-        <li><a href="#question13">CONTROLS FOR DO-NOT-TRACK FEATURES</a></li>
-        <li><a href="#question14">DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></li>
-        <li><a href="#question15">DO WE MAKE UPDATES TO THIS POLICY?</a></li>
-        <li><a href="#question16">HOW CAN YOU CONTACT US ABOUT THIS POLICY?</a></li>
-      </ol>
+      <div class="list">
+        <ol>
+          <li><a href="#question1">WHAT INFORMATION DO WE COLLECT?</a></li>
+          <li><a href="#question2">HOW DO WE USE YOUR INFORMATION?</a></li>
+          <li><a href="#question3">WILL YOUR INFORMATION BE SHARED WITH ANYONE?</a></li>
+          <li><a href="#question4">WHO WILL YOUR INFORMATION BE SHARED WITH?</a></li>
+          <li><a href="#question5">DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></li>
+          <li><a href="#question6">DO WE USE GOOGLE MAPS?</a></li>
+          <li><a href="#question7">HOW DO WE HANDLE YOUR SOCIAL LOGINS?</a></li>
+          <li><a href="#question8">IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?</a></li>
+          <li><a href="#question9">HOW LONG DO WE KEEP YOUR INFORMATION?</a></li>
+          <li><a href="#question10">HOW DO WE KEEP YOUR INFORMATION SAFE?</a></li>
+          <li><a href="#question11">DO WE COLLECT INFORMATION FROM MINORS?</a></li>
+          <li><a href="#question12">WHAT ARE YOUR PRIVACY RIGHTS?</a></li>
+          <li><a href="#question13">CONTROLS FOR DO-NOT-TRACK FEATURES</a></li>
+          <li><a href="#question14">DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></li>
+          <li><a href="#question15">DO WE MAKE UPDATES TO THIS POLICY?</a></li>
+          <li><a href="#question16">HOW CAN YOU CONTACT US ABOUT THIS POLICY?</a></li>
+        </ol>
+      </div>
       <div id="question1" class="question-section">
         <h3>1. WHAT INFORMATION DO WE COLLECT?</h3>
         <p><b>Personal information you disclose to us</b></p>
@@ -94,26 +96,28 @@
         <p><b>Information collected through our Apps</b></p>
         <p><b>In Short:</b> We may collect information regarding your geo-location, mobile device, push notifications, when you use our apps.</p>
         <p>If you use our Apps, we may also collect the following information:</p>
-        <ul>
-          <li>
-            Geo-Location Information.We may request access or permission to and track location-based information from your mobile device, either
-            continuously or while you are using our mobile application, to provide location-based services. If you wish to change our access or
-            permissions, you may do so in your device’s settings.
-          </li>
-          <li>
-            Mobile Device Access.We may request access or permission to certain features from your mobile device, including your mobile device’s
-            calendar, bluetooth, camera, contacts, microphone, reminders, sensors, sms messages, social media accounts, storage, and other features.
-            If you wish to change our access or permissions, you may do so in your device’s settings.
-          </li>
-          <li>
-            Mobile Device Data.We may automatically collect device information (such as your mobile device ID, model and manufacturer), operating
-            system, version information and IP address.
-          </li>
-          <li>
-            Push Notifications.We may request to send you push notifications regarding your account or the mobile application. If you wish to opt-out
-            from receiving these types of communications, you may turn them off in your device’s settings.
-          </li>
-        </ul>
+        <div class="list">
+          <ul>
+            <li>
+              Geo-Location Information.We may request access or permission to and track location-based information from your mobile device, either
+              continuously or while you are using our mobile application, to provide location-based services. If you wish to change our access or
+              permissions, you may do so in your device’s settings.
+            </li>
+            <li>
+              Mobile Device Access.We may request access or permission to certain features from your mobile device, including your mobile device’s
+              calendar, bluetooth, camera, contacts, microphone, reminders, sensors, sms messages, social media accounts, storage, and other features.
+              If you wish to change our access or permissions, you may do so in your device’s settings.
+            </li>
+            <li>
+              Mobile Device Data.We may automatically collect device information (such as your mobile device ID, model and manufacturer), operating
+              system, version information and IP address.
+            </li>
+            <li>
+              Push Notifications.We may request to send you push notifications regarding your account or the mobile application. If you wish to
+              opt-out from receiving these types of communications, you may turn them off in your device’s settings.
+            </li>
+          </ul>
+        </div>
         <p><b>Information collected from other sources</b></p>
         <p>
           <b>In Short:</b> We may collect limited data from public databases, marketing partners, social media platforms, and other outside sources.
@@ -139,125 +143,132 @@
           listed below.
         </p>
         <p>We use the information we collect or receive:</p>
-        <ul>
-          <li>
-            <b>To facilitate account creation and logon process.</b> If you choose to link your account with us to a third party account *(such as
-            your Google or Facebook account), we use the information you allowed us to collect from those third parties to facilitate account creation
-            and logon process. See the section below headed "HOW DO WE HANDLE YOUR SOCIAL LOGINS " for further information.
-          </li>
-          <li>
-            <b>To send you marketing and promotional communications.</b> We and/or our third party marketing partners may use the personal information
-            you send to us for our marketing purposes, if this is in accordance with your marketing preferences. You can opt-out of our marketing
-            emails at any time (see the "WHAT ARE YOUR PRIVACY RIGHTS" below).
-          </li>
-          <li>
-            <b>To send administrative information to you.</b> We may use your personal information to send you product, service and new feature
-            information and/or information about changes to our terms, conditions, and policies.
-          </li>
-          <li>
-            <b>Fulfill and manage your orders.</b> We may use your information to fulfill and manage your orders, payments, returns, and exchanges
-            made through the Sites or Apps.
-          </li>
-          <li>
-            <b>To post testimonials.</b> We post testimonials on our Sites or Apps that may contain personal information. Prior to posting a
-            testimonial, we will obtain your consent to use your name and testimonial. If you wish to update, or delete your testimonial, please
-            contact us at policy@escaplly.com and be sure to include your name, testimonial location, and contact information.
-          </li>
-          <li>
-            <b>Deliver targeted advertising to you.</b> We may use your information to develop and display content and advertising (and work with
-            third parties who do so) tailored to your interests and/or location and to measure its effectiveness.
-          </li>
-          <li>
-            <b>Administer prize draws and competitions.</b> We may use your information to administer prize draws and competitions when you elect to
-            participate in competitions.
-          </li>
-          <li><b>Request Feedback.</b> We may use your information to request feedback and to contact you about your use of our Sites or Apps.</li>
-          <li>
-            <b>To protect our Sites.</b> We may use your information as part of our efforts to keep our Sites or Apps safe and secure (for example,
-            for fraud monitoring and prevention).
-          </li>
-          <li>
-            <b>To enable user-to-user communications.</b> We may use your information in order to enable user-to-user communications with each user's
-            consent.
-          </li>
-          <li><b>To enforce our terms, conditions and policies.</b></li>
-          <li>
-            <b>To respond to legal requests and prevent harm.</b> If we receive a subpoena or other legal request, we may need to inspect the data we
-            hold to determine how to respond.
-          </li>
-          <li>
-            <b>For other Business Purposes.</b> We may use your information for other Business Purposes, such as data analysis, identifying usage
-            trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Sites or Apps, products, services,
-            marketing and your experience.
-          </li>
-        </ul>
+        <div class="list">
+          <ul>
+            <li>
+              <b>To facilitate account creation and logon process.</b> If you choose to link your account with us to a third party account *(such as
+              your Google or Facebook account), we use the information you allowed us to collect from those third parties to facilitate account
+              creation and logon process. See the section below headed "HOW DO WE HANDLE YOUR SOCIAL LOGINS " for further information.
+            </li>
+            <li>
+              <b>To send you marketing and promotional communications.</b> We and/or our third party marketing partners may use the personal
+              information you send to us for our marketing purposes, if this is in accordance with your marketing preferences. You can opt-out of our
+              marketing emails at any time (see the "WHAT ARE YOUR PRIVACY RIGHTS" below).
+            </li>
+            <li>
+              <b>To send administrative information to you.</b> We may use your personal information to send you product, service and new feature
+              information and/or information about changes to our terms, conditions, and policies.
+            </li>
+            <li>
+              <b>Fulfill and manage your orders.</b> We may use your information to fulfill and manage your orders, payments, returns, and exchanges
+              made through the Sites or Apps.
+            </li>
+            <li>
+              <b>To post testimonials.</b> We post testimonials on our Sites or Apps that may contain personal information. Prior to posting a
+              testimonial, we will obtain your consent to use your name and testimonial. If you wish to update, or delete your testimonial, please
+              contact us at policy@escaplly.com and be sure to include your name, testimonial location, and contact information.
+            </li>
+            <li>
+              <b>Deliver targeted advertising to you.</b> We may use your information to develop and display content and advertising (and work with
+              third parties who do so) tailored to your interests and/or location and to measure its effectiveness.
+            </li>
+            <li>
+              <b>Administer prize draws and competitions.</b> We may use your information to administer prize draws and competitions when you elect to
+              participate in competitions.
+            </li>
+            <li><b>Request Feedback.</b> We may use your information to request feedback and to contact you about your use of our Sites or Apps.</li>
+            <li>
+              <b>To protect our Sites.</b> We may use your information as part of our efforts to keep our Sites or Apps safe and secure (for example,
+              for fraud monitoring and prevention).
+            </li>
+            <li>
+              <b>To enable user-to-user communications.</b> We may use your information in order to enable user-to-user communications with each
+              user's consent.
+            </li>
+            <li><b>To enforce our terms, conditions and policies.</b></li>
+            <li>
+              <b>To respond to legal requests and prevent harm.</b> If we receive a subpoena or other legal request, we may need to inspect the data
+              we hold to determine how to respond.
+            </li>
+            <li>
+              <b>For other Business Purposes.</b> We may use your information for other Business Purposes, such as data analysis, identifying usage
+              trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Sites or Apps, products, services,
+              marketing and your experience.
+            </li>
+          </ul>
+        </div>
       </div>
       <div id="question3" class="question-section">
         <h3>3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?</h3>
         <b>In Short:</b> We only share information with your consent, to comply with laws, to protect your rights, or to fulfill business obligations.
         <p>We may process or share data based on the following legal basis:</p>
-        <ul>
-          <li>
-            <b>Consent:</b> We may process your data if you have given us specific consent to use your personal information in a specific purpose.
-          </li>
-          <li><b>Legitimate Interests:</b> We may process your data when it is reasonably necessary to achieve our legitimate business interests.</li>
-          <li>
-            <b>Performance of a Contract:</b> Where we have entered into a contract with you, we may process your personal information to fulfill the
-            terms of our contract.
-          </li>
-          <li>
-            <b>Legal Obligations:</b> We may disclose your information where we are legally required to do so in order to comply with applicable law,
-            governmental requests, a judicial proceeding, court order, or legal process, such as in response to a court order or a subpoena (including
-            in response to public authorities to meet national security or law enforcement requirements).
-          </li>
-          <li>
-            <b>Vital Interests: </b> We may disclose your information where we believe it is necessary to investigate, prevent, or take action
-            regarding potential violations of our policies, suspected fraud, situations involving potential threats to the safety of any person and
-            illegal activities, or as evidence in litigation in which we are involved.
-          </li>
-          <p>More specifically, we may need to process your data or share your personal information in the following situations:</p>
-          <li>
-            <b>Vendors, Consultants and Other Third-Party Service Providers.</b> We may share your data with third party vendors, service providers,
-            contractors or agents who perform services for us or on our behalf and require access to such information to do that work. Examples
-            include: payment processing, data analysis, email delivery, hosting services, customer service and marketing efforts. We may allow
-            selected third parties to use tracking technology on the Sites or Apps, which will enable them to collect data about how you interact with
-            the Sites or Apps over time. This information may be used to, among other things, analyze and track data, determine the popularity of
-            certain content and better understand online activity. Unless described in this Policy, we do not share, sell, rent or trade any of your
-            information with third parties for their promotional purposes.
-          </li>
-          <li>
-            <b>Business Transfers. </b>We may share or transfer your information in connection with, or during negotiations of, any merger, sale of
-            company assets, financing, or acquisition of all or a portion of our business to another company.
-          </li>
-          <li>
-            <b>Third-Party Advertisers.</b> We may use third-party advertising companies to serve ads when you visit the Sites or Apps. These
-            companies may use information about your visits to our Website(s) and other websites that are contained in web cookies and other tracking
-            technologies in order to provide advertisements about goods and services of interest to you.
-          </li>
-          <li>
-            <b>Affiliates.</b> We may share your information with our affiliates, in which case we will require those affiliates to honor this privacy
-            policy. Affiliates include our parent company and any subsidiaries, joint venture partners or other companies that we control or that are
-            under common control with us.
-          </li>
-          <li>
-            <b>Business Partners.</b> We may share your information with our business partners to offer you certain products, services or promotions.
-          </li>
-          <li>
-            <b>Other Users.</b> When you share personal information (for example, by posting comments, contributions or other content to the Sites or
-            Apps) or otherwise interact with public areas of the Sites or Apps, such personal information may be viewed by all users and may be
-            publicly distributed outside theSites or Apps in perpetuity. If you interact with other users of our Sites or Apps and register through a
-            social network (such as Facebook), your contacts on the social network will see your name, profile photo, and descriptions of your
-            activity. Similarly, other users will be able to view descriptions of your activity, communicate with you within our Sites or Apps, and
-            view your profile.
-          </li>
-          <li>
-            <b>Offer Wall.</b> Our Apps may display a third-party hosted “offer wall.” Such an offer wall allows third-party advertisers to offer
-            virtual currency, gifts, or other items to users in return for acceptance and completion of an advertisement offer. Such an offer wall may
-            appear in our mobile application and be displayed to you based on certain data, such as your geographic area or demographic information.
-            When you click on an offer wall, you will leave our mobile application. A unique identifier, such as your user ID, will be shared with the
-            offer wall provider in order to prevent fraud and properly credit your account.
-          </li>
-        </ul>
+        <div class="list">
+          <ul>
+            <li>
+              <b>Consent:</b> We may process your data if you have given us specific consent to use your personal information in a specific purpose.
+            </li>
+            <li>
+              <b>Legitimate Interests:</b> We may process your data when it is reasonably necessary to achieve our legitimate business interests.
+            </li>
+            <li>
+              <b>Performance of a Contract:</b> Where we have entered into a contract with you, we may process your personal information to fulfill
+              the terms of our contract.
+            </li>
+            <li>
+              <b>Legal Obligations:</b> We may disclose your information where we are legally required to do so in order to comply with applicable
+              law, governmental requests, a judicial proceeding, court order, or legal process, such as in response to a court order or a subpoena
+              (including in response to public authorities to meet national security or law enforcement requirements).
+            </li>
+            <li>
+              <b>Vital Interests: </b> We may disclose your information where we believe it is necessary to investigate, prevent, or take action
+              regarding potential violations of our policies, suspected fraud, situations involving potential threats to the safety of any person and
+              illegal activities, or as evidence in litigation in which we are involved.
+            </li>
+            <p>More specifically, we may need to process your data or share your personal information in the following situations:</p>
+            <li>
+              <b>Vendors, Consultants and Other Third-Party Service Providers.</b> We may share your data with third party vendors, service providers,
+              contractors or agents who perform services for us or on our behalf and require access to such information to do that work. Examples
+              include: payment processing, data analysis, email delivery, hosting services, customer service and marketing efforts. We may allow
+              selected third parties to use tracking technology on the Sites or Apps, which will enable them to collect data about how you interact
+              with the Sites or Apps over time. This information may be used to, among other things, analyze and track data, determine the popularity
+              of certain content and better understand online activity. Unless described in this Policy, we do not share, sell, rent or trade any of
+              your information with third parties for their promotional purposes.
+            </li>
+            <li>
+              <b>Business Transfers. </b>We may share or transfer your information in connection with, or during negotiations of, any merger, sale of
+              company assets, financing, or acquisition of all or a portion of our business to another company.
+            </li>
+            <li>
+              <b>Third-Party Advertisers.</b> We may use third-party advertising companies to serve ads when you visit the Sites or Apps. These
+              companies may use information about your visits to our Website(s) and other websites that are contained in web cookies and other
+              tracking technologies in order to provide advertisements about goods and services of interest to you.
+            </li>
+            <li>
+              <b>Affiliates.</b> We may share your information with our affiliates, in which case we will require those affiliates to honor this
+              privacy policy. Affiliates include our parent company and any subsidiaries, joint venture partners or other companies that we control or
+              that are under common control with us.
+            </li>
+            <li>
+              <b>Business Partners.</b> We may share your information with our business partners to offer you certain products, services or
+              promotions.
+            </li>
+            <li>
+              <b>Other Users.</b> When you share personal information (for example, by posting comments, contributions or other content to the Sites
+              or Apps) or otherwise interact with public areas of the Sites or Apps, such personal information may be viewed by all users and may be
+              publicly distributed outside theSites or Apps in perpetuity. If you interact with other users of our Sites or Apps and register through
+              a social network (such as Facebook), your contacts on the social network will see your name, profile photo, and descriptions of your
+              activity. Similarly, other users will be able to view descriptions of your activity, communicate with you within our Sites or Apps, and
+              view your profile.
+            </li>
+            <li>
+              <b>Offer Wall.</b> Our Apps may display a third-party hosted “offer wall.” Such an offer wall allows third-party advertisers to offer
+              virtual currency, gifts, or other items to users in return for acceptance and completion of an advertisement offer. Such an offer wall
+              may appear in our mobile application and be displayed to you based on certain data, such as your geographic area or demographic
+              information. When you click on an offer wall, you will leave our mobile application. A unique identifier, such as your user ID, will be
+              shared with the offer wall provider in order to prevent fraud and properly credit your account.
+            </li>
+          </ul>
+        </div>
       </div>
       <div id="question4" class="question-section">
         <h3>4. WHO WILL YOUR INFORMATION BE SHARED WITH?</h3>
@@ -267,52 +278,54 @@
           understand the purpose of our data collection and processing practices. If we have processed your data based on your consent and you wish to
           revoke your consent, please contact us.
         </p>
-        <ul>
-          <li>
-            <b>Allow Users to Connect to their Third-Party Accounts</b> <br />, Google account, Facebook account, Instagram account, LinkedIn account
-            and Twitter account
-          </li>
-          <li>
-            <b>Communicate and Chat with Users</b> <br />
-            Tawk.to
-          </li>
-          <li>
-            <b>Content Optimization</b><br />
-            Google Site Search, Google Calendar widget , Google Fonts, Gravatar, Instagram embed, Vimeo video and YouTube video embed
-          </li>
-          <li>
-            <b>Data Backup and Security</b><br />
-            Google Drive Backup, Dropbox Backup and Amazon Glacier
-          </li>
-          <li>
-            <b>Functionality and Infrastructure Optimization</b><br />
-            Akamai Content Delivery Network, Amazon Web Services, Microsoft Azure and Google Cloud Storage
-          </li>
-          <li>
-            <b>Invoice and Billing</b><br />
-            Amazon Payments, PayPal, Android Pay, Apple Pay, Google Wallet, Skrill, Square and Stripe
-          </li>
-          <li>
-            <b>User Account Registration and Authentication</b><br />
-            Google OAuth 2.0, Facebook Login, Login with Amazon, Twitter OAuth, Google Sign-In, Instagram Authentication and LinkedIn OAuth 2.0
-          </li>
-          <li>
-            <b>Web and Mobile Analytics</b><br />
-            Google Analytics, Crazy Egg and Google Tag Manager
-          </li>
-          <li>
-            <b>Website Hosting</b><br />
-            A2 Hosting and Vultr Hosting
-          </li>
-          <li>
-            <b>Website Performance Monitoring</b><br />
-            Datadog and Pingdom
-          </li>
-          <li>
-            <b>Website Testing</b>
-            Google Website Optimizer
-          </li>
-        </ul>
+        <div class="list">
+          <ul>
+            <li>
+              <b>Allow Users to Connect to their Third-Party Accounts</b> <br />, Google account, Facebook account, Instagram account, LinkedIn
+              account and Twitter account
+            </li>
+            <li>
+              <b>Communicate and Chat with Users</b> <br />
+              Tawk.to
+            </li>
+            <li>
+              <b>Content Optimization</b><br />
+              Google Site Search, Google Calendar widget , Google Fonts, Gravatar, Instagram embed, Vimeo video and YouTube video embed
+            </li>
+            <li>
+              <b>Data Backup and Security</b><br />
+              Google Drive Backup, Dropbox Backup and Amazon Glacier
+            </li>
+            <li>
+              <b>Functionality and Infrastructure Optimization</b><br />
+              Akamai Content Delivery Network, Amazon Web Services, Microsoft Azure and Google Cloud Storage
+            </li>
+            <li>
+              <b>Invoice and Billing</b><br />
+              Amazon Payments, PayPal, Android Pay, Apple Pay, Google Wallet, Skrill, Square and Stripe
+            </li>
+            <li>
+              <b>User Account Registration and Authentication</b><br />
+              Google OAuth 2.0, Facebook Login, Login with Amazon, Twitter OAuth, Google Sign-In, Instagram Authentication and LinkedIn OAuth 2.0
+            </li>
+            <li>
+              <b>Web and Mobile Analytics</b><br />
+              Google Analytics, Crazy Egg and Google Tag Manager
+            </li>
+            <li>
+              <b>Website Hosting</b><br />
+              A2 Hosting and Vultr Hosting
+            </li>
+            <li>
+              <b>Website Performance Monitoring</b><br />
+              Datadog and Pingdom
+            </li>
+            <li>
+              <b>Website Testing</b>
+              Google Website Optimizer
+            </li>
+          </ul>
+        </div>
       </div>
       <div id="question5" class="question-section">
         <h3>5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</h3>
@@ -446,10 +459,12 @@
         </p>
         <p><b>Account Information</b></p>
         <p>If you would at any time like to review or change the information in your account or terminate your account, you can:</p>
-        <ul>
-          <li>Contact us using the contact information provided.</li>
-          <li>Log into your account settings and update your user account.</li>
-        </ul>
+        <div class="list">
+          <ul>
+            <li>Contact us using the contact information provided.</li>
+            <li>Log into your account settings and update your user account.</li>
+          </ul>
+        </div>
         <p>
           Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases. However,
           some information may be retained in our files to prevent fraud, troubleshoot problems, assist with any investigations, enforce our Terms of
@@ -467,11 +482,13 @@
           – however, we will still need to send you service-related emails that are necessary for the administration and use of your account. To
           otherwise opt-out, you may:
         </p>
-        <ul>
-          <li>Note your preferences when you register an account with the site.</li>
-          <li>Access your account settings and update preferences.</li>
-          <li>Contact us using the contact information provided.</li>
-        </ul>
+        <div class="list">
+          <ul>
+            <li>Note your preferences when you register an account with the site.</li>
+            <li>Access your account settings and update preferences.</li>
+            <li>Contact us using the contact information provided.</li>
+          </ul>
+        </div>
       </div>
       <div id="question13" class="question-section">
         <h3>13. CONTROLS FOR DO-NOT-TRACK FEATURES</h3>
@@ -515,9 +532,7 @@
       </div>
       <div id="question16" class="question-section">
         <h3>16. HOW CAN YOU CONTACT US ABOUT THIS POLICY?</h3>
-        <p>
-          If you have questions or comments about this policy, you may email us at policy@escaplly.com
-        </p>
+        <p>If you have questions or comments about this policy, you may email us at policy@escaplly.com</p>
       </div>
     </div>
   </div>
