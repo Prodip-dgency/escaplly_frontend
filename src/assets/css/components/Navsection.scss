@@ -30,6 +30,29 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
           &:hover {
             transform: scale(1.2);
           }
+          span{
+            margin-top: 3px;
+            font-size: 40px;
+            font-weight: 500;
+            transition:  1.3s;
+          //   @keyframes rotate{
+          //     0%{
+          //         transform: rotate(0deg);
+          //     }
+          //     50%{
+          //         transform: rotate(180deg);
+          //     }
+          //     100%{
+          //         transform: rotate(360deg);
+          //     }
+          // }
+
+            &:hover{
+              // animation: rotate .5s linear;
+              transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+            }
+          }
         }
         .dropdown-content {
           background: #f3f3f3;

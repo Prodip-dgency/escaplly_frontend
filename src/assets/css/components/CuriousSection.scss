@@ -73,6 +73,7 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
             font-family: "Roboto", sans-serif;
             font-size: 18px;
             font-weight: 500;
+            cursor: pointer;
             @media #{$media-mobile-sm} {
               padding: 12px 26px;
             }
@@ -97,9 +98,16 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
         }
         .red {
           background: var(--Secondary-color-light-varient3);
+          &:hover {
+            box-shadow: 0 5px 5px 2px #b600008e;
+          }
         }
         .violet {
           background: var(--primary-color);
+          &:hover {
+            box-shadow: 0 5px 5px 2px  #2100698c;
+            ;
+          }
         }
         @media #{$media-mobile-sm} {
           gap: 30px;

@@ -69,7 +69,7 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
       img {
       }
 
-      .button{
+      .button {
         display: flex;
         flex-direction: row;
       }
@@ -90,6 +90,10 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
           // @media #{$media-tab} {
           //   padding: 10px 20px;
           // }
+          &:hover {
+            color: #ffffff;
+            background: #53a318;
+          }
         }
         @media #{$media-mobile-sm} {
           padding: 30px 11px 40px 11px;
@@ -112,6 +116,10 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
           font-weight: 500;
           font-size: 18px;
           border-radius: 6px;
+          &:hover {
+            color: #ffffff;
+            background: #ff492c;
+          }
         }
         @media #{$media-mobile-sm} {
           padding: 30px 11px 40px 11px;

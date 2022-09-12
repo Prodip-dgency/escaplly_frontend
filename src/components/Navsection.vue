@@ -9,9 +9,10 @@
         </div>
         <div class="dropdown">
           <button class="menu-bar" @click="dropdown_function">
-            <i class="fa-solid fa-bars"></i>
+            <i v-show="dropdown_show" class="fa-solid fa-bars"></i>
+            <span v-show="!dropdown_show" class="material-symbols-outlined"> cancel </span>
           </button>
-          <div  :class="activeclass" class="dropdown-content">
+          <div :class="activeclass" class="dropdown-content">
             <router-link :to="{ name: 'home' }"> <i class="fa-solid fa-house"></i> Home</router-link>
             <router-link :to="{ name: 'company_list' }"> <i class="fa-solid fa-building"></i> Companies</router-link>
             <div class="line-break"></div>
@@ -32,7 +33,7 @@
 export default {
   data() {
     return {
-      dropdown_show: false,
+      dropdown_show: true,
       activeclass: "",
     };
   },
@@ -49,6 +50,4 @@ export default {
 };
 </script>
 
-<style src="@/assets/css/components/Navsection.scss" lang="scss">
-
-</style>
+<style src="@/assets/css/components/Navsection.scss" lang="scss"></style>
