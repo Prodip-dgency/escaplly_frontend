@@ -144,7 +144,9 @@
 					</p>
 				</div>
 				<div class="game-card">
-					
+
+							<game-card />
+
 				</div>
 			</div>
 		</section>
@@ -152,7 +154,26 @@
 </template>
 
 <script>
-export default {};
+
+import GameCard from "../components/companydetailspage/GameCard.vue";
+export default {
+	components: {
+		GameCard,
+	},
+
+	data() {
+		return {
+			settings: {
+				itemsToShow: 4,
+				itemsToScroll: 1,
+				transition: 700,
+				autoplay: 3000,
+				wrapAround: true,
+				
+			},
+		};
+	},
+};
 </script>
 
 <style src="@/assets/css/views/CompanyDetailsPage.scss" lang="scss"></style>
