@@ -1,0 +1,236 @@
+.company-detail {
+ //page global design//
+	.title-top--gray {
+		color: var(--text-color-light-varient4);
+		font-weight: 500;
+	}
+	h2 {
+		font-size: 50px;
+		line-height: 70px;
+	}
+
+	.g-description--light{
+		font-size: 24px;
+		line-height: 33px;
+		color: var(--text-color-light-varient4);
+		padding: 20px 0 80px 0;
+	}
+
+ //section//
+	.bread-crumb {
+		color: #9a9a9a;
+		padding: 10px 0;
+
+		.is-active {
+			color: black;
+		}
+	}
+//section//
+	.profile-detail {
+		background: #ffffff;
+		img {
+			height: 250px;
+			width: 100%;
+			object-fit: cover;
+		}
+		.profile-header {
+			position: relative;
+			.profile-header__img {
+				img {
+					height: 250px;
+					width: 250px;
+					position: absolute;
+					top: -70px;
+					border: 1px solid #9a9a9a;
+				}
+			}
+			.profile-header__details {
+				margin: 20px 0 0 265px;
+				p {
+					font-size: 22px;
+					color: var(--text-color-light-varient4);
+					line-height: 30px;
+				}
+
+				.profile-header-info {
+					display: flex;
+					p {
+						margin-top: 20px;
+						font-size: 26px;
+						color: var(--text-color-light-varient4);
+					}
+					button {
+						background: var(--link-and-icon-color);
+						border: none;
+						color: white;
+						margin: auto;
+						padding: 10px 155px 10px 155px;
+					}
+				}
+			}
+			.profile-header__overview {
+				width: 100%;
+				// border: 1px solid #9a9a9a;
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+				display: flex;
+				margin-top: 55px;
+				padding: 7px 0;
+
+				p {
+					margin-left: 74px;
+					cursor: pointer;
+				}
+			}
+
+			.profile-header__derection-call {
+				border-bottom: 1px solid #cccccc;
+				padding: 25px 0;
+				display: flex;
+				color: var(--link-and-icon-color);
+				.cta__location {
+					height: 40px;
+					width: 40px;
+					border: 1.5px solid var(--link-and-icon-color);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 50%;
+					i {
+						font-size: 20px;
+					}
+				}
+
+				.profile-header-cta {
+					margin-left: 74px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+		}
+	}
+ //section//
+	.company-info {
+		background: #ffffff;
+
+		span {
+			color: var(--link-and-icon-color);
+		}
+		i {
+			color: var(--link-and-icon-color);
+		}
+		.item--display {
+			display: flex;
+			gap: 34px;
+			align-items: center;
+		}
+		.company-info__about {
+			padding: 60px 0px;
+
+			h4 {
+				font-size: 30px;
+				margin-top: 30px;
+			}
+			.about-text {
+				color: var(--Text-color-dark-varient2);
+				margin-top: 15px;
+			}
+		}
+		.company-info__details {
+			width: 70%;
+			font-size: 22px;
+
+			.details-item {
+				display: flex;
+				gap: 100px;
+				justify-content: center;
+				padding: 20px 25px;
+				border-bottom: 1px solid #cccccc;
+			}
+
+			.location-web__location {
+				flex: 1;
+			}
+			.location-web__web {
+				flex: 1;
+			}
+
+			.time-contact__time {
+				flex: 1;
+			}
+			.time-contact__contact {
+				flex: 1;
+			}
+		}
+		.company-info__highlights {
+			padding: 60px 0;
+			width: 70%;
+			.highlights-item {
+				display: flex;
+				gap: 100px;
+				padding: 15px 25px;
+				border-bottom: 1px solid #cccccc;
+			}
+
+			.games-age{
+				margin-top: 35px;
+				border-top: 1px solid #cccccc;
+				.games-age__games {
+					flex: 1;
+					
+				}
+				.games-age__age {
+					flex: 1;
+				}
+			}
+
+			.team-accompany__team {
+				flex: 1;
+			}
+			.team-accompany__accompany {
+				flex: 1;
+			}
+		}
+	}
+ //section//
+	.escapelly-advantages{
+		background: #ffffff;
+		margin-top: 25px;
+		.advantages-innerbox{
+			padding: 100px 0;
+			width: 60%;
+			text-align: center;
+			margin: auto;
+
+			.advantages-innerbox__iconbox{
+				display: flex;
+				justify-content: space-around;
+				span{
+					font-size: 70px;
+				}
+				i{
+					font-size: 70px;
+				}
+				h5{
+					margin-top: 18px;
+					font-size: 26px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+ //section//
+    .available-game{
+		background: #ffffff;
+		margin-top: 25px;
+		.available-game__main{
+			text-align: center;
+			.header-box{
+				width: 70%;
+				margin: auto;
+				padding-top: 100px;
+			}
+	
+		}	
+	}	
+}

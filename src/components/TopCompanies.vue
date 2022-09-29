@@ -35,7 +35,7 @@
                     </div>
                     <div class="footer-text">
                       <p>
-                        From <span>${{ activityFunctions(company).lowest_price }}</span
+                        From <span class="game_price">${{ activityFunctions(company).lowest_price }}</span
                         >/Person
                       </p>
                     </div>
@@ -173,6 +173,6 @@ export default {
 };
 </script>
 
-<style src="@/assets/css/components/TopCompanies.scss" lang="scss">
+<style src="@/assets/css/components/TopCompanies.scss" lang="scss" >
 
 </style>

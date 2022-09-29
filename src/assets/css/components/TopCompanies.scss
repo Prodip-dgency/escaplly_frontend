@@ -55,7 +55,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             }
           }
           .card-footer {
-            font-size: 18px;
+            font-size: 22px;
             display: flex;
             flex-direction: column;
             gap: 6px;
@@ -72,7 +72,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
               display: flex;
               p {
                 font-weight: 400;
-                span {
+                .game_price {
+                  font-size: 22px;
                   font-weight: 700;
                   color: var(--secondary-color);
                 }
@@ -139,6 +140,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
             }
             .footer-text {
               span {
+                font-size: 22px;
                 color: var(--secondary-color);
                 font-weight: 700;
               }

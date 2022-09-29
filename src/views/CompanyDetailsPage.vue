@@ -1,13 +1,158 @@
 <template>
-  <h1>Company details</h1>
+	<div class="company-detail">
+		<section class="bread-crumb body-container">
+			<span class="bread-crumb__item">
+				<a href=""> Home </a>
+				>
+				<a href=""> West Nyack, NY </a>
+			</span>
+			<span class="bread-crumb__item is-active">
+				<a href="">> Mystery Room</a>
+			</span>
+			<!-- <span class="crumb">Home </span><span class="crumb">> West Nyack, NY </span><span>> Mystery Room</span> -->
+		</section>
+		<section class="profile-detail">
+			<img src="../assets/img/hero_image.jpg" alt="" />
+			<div class="profile-header body-container">
+				<div class="profile-header__img">
+					<img src="../assets/img/companycard3.jpg" alt="" />
+				</div>
+				<div class="profile-header__details">
+					<p>WEST NYACK, NY</p>
+					<h2>Mystery Room</h2>
+					<div class="profile-header-info">
+						<p>Available escape game: 9</p>
+						<button>Book Now</button>
+					</div>
+				</div>
+				<div class="profile-header__overview">
+					<p>overview</p>
+					<p>games</p>
+				</div>
+				<div class="profile-header__derection-call">
+					<div class="profile-header-cta">
+						<div class="cta__location"><i class="fa-solid fa-location-dot"></i></div>
+						<p>DERECTION</p>
+					</div>
+					<div class="profile-header-cta">
+						<div class="cta__location"><i class="fa-solid fa-phone"></i></div>
+						<p>CALL</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="company-info">
+			<div class="body-container">
+				<div class="company-info__about">
+					<p class="title-top--gray">MYSTERY ROOM</p>
+					<h2>About</h2>
+					<h4>What is Mystery Room?</h4>
+					<p class="about-text">
+						Is simply dummy text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the
+						industry's standard dummy tex ever since the 150s... Has been the industry's standard dummy tex ever since the 150s. simply dummy text of
+						the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the industry's...
+					</p>
+				</div>
+				<div class="company-info__details">
+					<p class="title-top--gray">MYSTERY ROOM</p>
+					<h2>Details</h2>
+					<img src="" alt="" />
+					<div class="location-web details-item">
+						<div class="location-web__location item--display">
+							<span class="material-symbols-outlined"> location_on </span>
+							<p>3681 Palisades Center Dr, West Nyack, NY 10994, United States</p>
+						</div>
+						<div class="location-web__web item--display">
+							<span class="material-symbols-outlined"> language </span>
+							<p>https://mysteryroom.com/</p>
+						</div>
+					</div>
+					<div class="time-contact details-item">
+						<div class="time-contact__time item--display">
+							<span class="material-symbols-outlined"> schedule </span>
+							<p>Closed ⋅ Opens 10AM</p>
+						</div>
+						<div class="time-contact__contact item--display">
+							<i class="fa-solid fa-phone"></i>
+							<p>+1 845-208-2919</p>
+						</div>
+					</div>
+				</div>
+				<div class="company-info__highlights">
+					<p class="title-top--gray">MYSTERY ROOM</p>
+					<h2>Highlights</h2>
+					<div class="games-age highlights-item">
+						<div class="games-age__games item--display">
+							<span class="material-symbols-outlined"> directions_run </span>
+							<p>Games Available: 8 Escape Rooms</p>
+						</div>
+						<div class="games-age__age item--display">
+							<span class="material-symbols-outlined"> diversity_3 </span>
+							<p>Age: 16+</p>
+						</div>
+					</div>
+					<div class="team-accompany highlights-item">
+						<div class="team-accompany__team item--display">
+							<span class="material-symbols-outlined"> group </span>
+							<p>Game Team Size: 2-10 Person</p>
+						</div>
+						<div class="team-accompany__accompany item--display">
+							<span class="material-symbols-outlined"> escalator_warning </span>
+							<p>Accompany: 8+</p>
+						</div>
+					</div>
+					<div class="game-duration highlights-item">
+						<div class="game-duration__duration item--display">
+							<span class="material-symbols-outlined"> schedule </span>
+							<p>Game Duration: 60 Minutes</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="escapelly-advantages">
+			<div class="escapelly-advantages__main body-container">
+				<div class="advantages-innerbox">
+					<h2>Escaplly Advantages</h2>
+					<p class="g-description--light">
+						Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+					</p>
+					<div class="advantages-innerbox__iconbox">
+						<div class="find-easily">
+							<span class="material-symbols-outlined"> travel_explore </span>
+							<h5>Find Easily</h5>
+						</div>
+						<div class="get-deals">
+							<i class="fa-solid fa-handshake"></i>
+							<h5>Get Deals</h5>
+						</div>
+						<div class="book-fast">
+							<i class="fa-regular fa-calendar-days"></i>
+							<h5>Book Fast</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="available-game">
+			<div class="available-game__main body-container">
+				<div class="header-box">
+					<p class="title-top--gray">MYSTERY ROOM</p>
+					<h2>4 Escape Game Available</h2>
+					<p class="g-description--light">
+						Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+					</p>
+				</div>
+				<div class="game-card">
+					
+				</div>
+			</div>
+		</section>
+	</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style src="@/assets/css/views/CompanyDetailsPage.scss" lang="scss"></style>
