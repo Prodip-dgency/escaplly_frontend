@@ -144,7 +144,8 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
               p {
                 font-weight: 400;
                 span {
-                  font-weight: 700;
+                  font-size: 22px;
+                  font-weight: 800;
                   color: var(--secondary-color);
                 }
               }
@@ -168,7 +169,8 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
         }
         &:hover {
           box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.25);
-          transition: all 1s;
+          transition: all 0.3s;
+          transform: scale(1.05);
         }
         @media #{$media-mobile-sm} {
           width: inherit;

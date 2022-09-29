@@ -46,9 +46,6 @@ a {
     
   }
 
-
-
-
 .header-text {
     display: flex;
     flex-direction: column;
@@ -90,6 +87,15 @@ a {
     color: var( --link-and-icon-color);
   }
 
+  /*company details page*/
+
+  .title-top--gray{
+    color: var(--text-color-light-varient4);
+    font-weight: 500;
+  }
+
+
+ /**/
   @media only screen and (max-width: 480px){
     .body-container{
       width:100%;
