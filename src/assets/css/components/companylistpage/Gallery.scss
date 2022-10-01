@@ -1,0 +1,27 @@
+.gallery-tab {
+    text-align: center;
+}
+
+.gallery-tab__button-wrapper {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+.gallery-tab__buttons {
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+.gallery-tab__buttons:hover {
+    background-color: #ddd;
+}
+
+.gallery-tab__buttons.active {
+    background-color: #ccc;
+}
+
+.gallery-tab__content {
+    display: none;
+}
