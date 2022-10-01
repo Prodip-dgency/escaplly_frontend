@@ -144,21 +144,24 @@
 					</p>
 				</div>
 				<div class="game-card">
-
-							<game-card />
-
+					<game-card />
 				</div>
 			</div>
+		</section>
+		<section class="gallery">
+			<div class="gallery-header"></div>
+			<gallery />
 		</section>
 	</div>
 </template>
 
 <script>
-
 import GameCard from "../components/companydetailspage/GameCard.vue";
+import Gallery from "../components/companydetailspage/Gallery.vue";
 export default {
 	components: {
 		GameCard,
+		Gallery,
 	},
 
 	data() {
@@ -169,7 +172,6 @@ export default {
 				transition: 700,
 				autoplay: 3000,
 				wrapAround: true,
-				
 			},
 		};
 	},
