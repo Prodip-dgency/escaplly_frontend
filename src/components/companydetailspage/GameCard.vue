@@ -80,6 +80,7 @@ export default {
 				itemsToShow: 3.3,
 				itemsToScroll: 1,
 				transition: 700,
+				
 			},
 		};
 	},

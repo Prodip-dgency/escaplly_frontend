@@ -1,0 +1,23 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+.companies-container {
+	margin-top: 25px;
+	background: var(--text-color-light-varient3);
+	display: flex;
+	justify-content: center;
+	@media #{$media-mobile-sm} {
+		padding-bottom: 7px;
+	}
+
+    .container {
+        .header-text {
+          @media #{$media-mobile-sm} {
+            margin-bottom: 30px;
+          }
+        }
+        @media #{$media-mobile-sm} {
+            padding: 40px 10px;
+            display: block;
+          }
+    }
+}

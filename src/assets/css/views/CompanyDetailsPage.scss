@@ -1,5 +1,11 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .company-detail {
- //page global design//
+	//page global design//
+	.g-section--structure {
+		background: #ffffff;
+		margin-top: 25px;
+		padding: 100px 0;
+	}
 	.title-top--gray {
 		color: var(--text-color-light-varient4);
 		font-weight: 500;
@@ -7,16 +13,26 @@
 	h2 {
 		font-size: 50px;
 		line-height: 70px;
+		@media #{$media-mobile-sm} {
+			font-size: 24px;
+			line-height: 33px;
+		}
 	}
 
-	.g-description--light{
+	.g-description--light {
 		font-size: 24px;
 		line-height: 33px;
 		color: var(--text-color-light-varient4);
 		padding: 20px 0 80px 0;
 	}
 
- //section//
+	.g-section-header--structure {
+		width: 70%;
+		margin: auto;
+		text-align: center;
+	}
+
+	//section//
 	.bread-crumb {
 		color: #9a9a9a;
 		padding: 10px 0;
@@ -24,14 +40,20 @@
 		.is-active {
 			color: black;
 		}
+		@media #{$media-mobile-sm} {
+			padding: 10px 10px;
+		}
 	}
-//section//
+	//section//
 	.profile-detail {
 		background: #ffffff;
 		img {
 			height: 250px;
 			width: 100%;
 			object-fit: cover;
+			@media #{$media-mobile-sm} {
+				height: 155px;
+			}
 		}
 		.profile-header {
 			position: relative;
@@ -42,30 +64,61 @@
 					position: absolute;
 					top: -70px;
 					border: 1px solid #9a9a9a;
+					@media #{$media-mobile-sm} {
+						height: 126px;
+						width: 125px;
+						object-fit: cover;
+						left: 10px;
+						top: -50px;
+					}
 				}
 			}
 			.profile-header__details {
-				margin: 20px 0 0 265px;
-				p {
-					font-size: 22px;
-					color: var(--text-color-light-varient4);
-					line-height: 30px;
-				}
-
+				display: flex;
 				.profile-header-info {
-					display: flex;
+					// display: flex;
+					margin: 20px 0 0 265px;
+					.profile-header-info__location {
+						font-size: 22px;
+						color: var(--text-color-light-varient4);
+						line-height: 30px;
+						@media #{$media-mobile-sm} {
+							font-size: 14px;
+							line-height: 15px;
+						}
+					}
+
 					p {
 						margin-top: 20px;
 						font-size: 26px;
 						color: var(--text-color-light-varient4);
+						@media #{$media-mobile-sm} {
+							font-size: 18px;
+							margin-top: 5px;
+						}
 					}
-					button {
-						background: var(--link-and-icon-color);
-						border: none;
-						color: white;
-						margin: auto;
-						padding: 10px 155px 10px 155px;
+
+					@media #{$media-mobile-sm} {
+						margin: 0 0 0 143px;
 					}
+				}
+				button {
+					height: 40px;
+					background: var(--link-and-icon-color);
+					border: none;
+					color: white;
+					margin: 140px auto 0 auto;
+					padding: 0 155px;
+					font-size: 18px;
+					@media #{$media-mobile-sm} {
+						margin:20px 0 0 8px;
+						padding: inherit;
+						width: 95%;
+					}
+				}
+				@media #{$media-mobile-sm} {
+					display: block;
+					
 				}
 			}
 			.profile-header__overview {
@@ -109,7 +162,7 @@
 			}
 		}
 	}
- //section//
+	//section//
 	.company-info {
 		background: #ffffff;
 
@@ -172,12 +225,11 @@
 				border-bottom: 1px solid #cccccc;
 			}
 
-			.games-age{
+			.games-age {
 				margin-top: 35px;
 				border-top: 1px solid #cccccc;
 				.games-age__games {
 					flex: 1;
-					
 				}
 				.games-age__age {
 					flex: 1;
@@ -192,26 +244,23 @@
 			}
 		}
 	}
- //section//
-	.escapelly-advantages{
-		background: #ffffff;
-		margin-top: 25px;
-		.advantages-innerbox{
-			padding: 100px 0;
+	//section//
+	.escapelly-advantages {
+		.advantages-innerbox {
 			width: 60%;
 			text-align: center;
 			margin: auto;
 
-			.advantages-innerbox__iconbox{
+			.advantages-innerbox__iconbox {
 				display: flex;
 				justify-content: space-around;
-				span{
+				span {
 					font-size: 70px;
 				}
-				i{
+				i {
 					font-size: 70px;
 				}
-				h5{
+				h5 {
 					margin-top: 18px;
 					font-size: 26px;
 					font-weight: 500;
@@ -219,19 +268,16 @@
 			}
 		}
 	}
- //section//
-    .available-game{
-		background: #ffffff;
-		margin-top: 25px;
-		.available-game__main{
-			
-			.header-box{
-				width: 70%;
-				margin: auto;
-				padding-top: 100px;
-				text-align: center;
+	//section//
+
+	//section//
+
+	//section//
+	.escape-companies {
+		.escape-companies__main-box {
+			.escape-companies-header__description {
+				padding: 20px 0 0 0;
 			}
-	
-		}	
-	}	
+		}
+	}
 }
