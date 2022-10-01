@@ -1,5 +1,4 @@
 .company-game-card {
-	padding-bottom: 50px;
 	display: flex;
 
 	.game-card__inner-container {
@@ -87,7 +86,7 @@
 						background: var(--link-and-icon-color);
 						padding: 10px 30px;
 						border: none;
-						border-radius: 10px;
+						border-radius: 5px;
 						color: white;
 					}
 					a {
@@ -115,11 +114,16 @@
 	.carousel__track {
 		gap: 25px;
 	}
+	.carousel__pagination{
+		width: 82%;
+		
+	}
 	.carousel__pagination-button {
 		background: var(--text-color-light-varient6);
 		height: 12px;
 		width: 12px;
 		border-radius: 50%;
+		
 	}
 	.carousel__pagination-button--active {
 		background: var(--text-color-light-varient4);

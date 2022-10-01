@@ -1,15 +1,28 @@
 <template>
-  <div>
-    <herosection />
-    <uspsection :companies="companies" :activity_profiles="activity_profiles"/>
-    <escape-room-section />
-    <curious-section />
-    <top-companies :companies="companies" :activity_profiles="activity_profiles" />
-    <mission-vision />
-    <div>
-      
-    </div>
-  </div>
+	<div>
+		<herosection />
+		<uspsection :companies="companies" :activity_profiles="activity_profiles" />
+		<escape-room-section />
+		<curious-section />
+		<div class="companies-container">
+			<div class="container body-container">
+				<div class="header-text">
+					<h2 class="page-title">Top Escape Room Companies</h2>
+					<h6 class="page-description">
+						Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+					</h6>
+				</div>
+
+				<top-companies :companies="companies" :activity_profiles="activity_profiles" />
+
+				<div class="footer-btn-container">
+					<a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
+					<i class="fa-solid fa-chevron-right"></i>
+				</div>
+			</div>
+		</div>
+		<mission-vision />
+	</div>
 </template>
 
 <script>
@@ -21,34 +34,22 @@ import TopCompanies from "../components/TopCompanies.vue";
 import MissionVision from "../components/MissionVision.vue";
 
 export default {
-  components: {
-    Herosection,
-    Uspsection,
-    EscapeRoomSection,
-    CuriousSection,
-    TopCompanies,
-    MissionVision,
-  },
-  data(){
-    return {
-      companies: [],
-      activity_profiles: [],
-    }
-  },
-  methods: {
-    
-  },
-  mounted(){
-    fetch("http://159.203.95.1/company/viewset/company-profile/")
-    .then((res) => res.json())
-    .then((data) => this.companies = data)
+	props: {
+		companies: Array,
+		activity_profiles: Array,
+	},
+	components: {
+		Herosection,
+		Uspsection,
+		EscapeRoomSection,
+		CuriousSection,
+		TopCompanies,
+		MissionVision,
+	},
 
-    fetch("http://159.203.95.1/activity/viewset/activityprofile/")
-    .then((res) => res.json())
-    .then((data) => this.activity_profiles = data)
-  }
+	methods: {},
+
 };
 </script>
 
-<style>
-</style>
+<style src="@/assets/css/views/HomePage.scss" lang="scss"></style>

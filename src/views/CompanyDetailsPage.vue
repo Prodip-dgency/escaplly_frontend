@@ -18,12 +18,12 @@
 					<img src="../assets/img/companycard3.jpg" alt="" />
 				</div>
 				<div class="profile-header__details">
-					<p>WEST NYACK, NY</p>
-					<h2>Mystery Room</h2>
 					<div class="profile-header-info">
+						<p class="profile-header-info__location">WEST NYACK, NY</p>
+						<h2>Mystery Room</h2>
 						<p>Available escape game: 9</p>
-						<button>Book Now</button>
 					</div>
+					<button>Book Now</button>
 				</div>
 				<div class="profile-header__overview">
 					<p>overview</p>
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="escapelly-advantages">
+		<section class="escapelly-advantages g-section--structure">
 			<div class="escapelly-advantages__main body-container">
 				<div class="advantages-innerbox">
 					<h2>Escaplly Advantages</h2>
@@ -134,9 +134,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="available-game">
+		<section class="available-game g-section--structure">
 			<div class="available-game__main body-container">
-				<div class="header-box">
+				<div class="header-box g-section-header--structure">
 					<p class="title-top--gray">MYSTERY ROOM</p>
 					<h2>4 Escape Game Available</h2>
 					<p class="g-description--light">
@@ -148,9 +148,33 @@
 				</div>
 			</div>
 		</section>
-		<section class="gallery">
-			<div class="gallery-header"></div>
-			<gallery />
+		<section class="gallery g-section--structure">
+			<div class="gallery__main-box body-container">
+				<div class="gallery-header g-section-header--structure">
+					<p class="title-top--gray">MYSTERY ROOM</p>
+					<h2>Gallery</h2>
+					<p class="g-description--light">
+						Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+					</p>
+				</div>
+				<gallery />
+			</div>
+		</section>
+		<section class="escape-companies g-section--structure">
+			<div class="escape-companies__main-box body-container">
+				<div class="escape-companies-header g-section-header--structure">
+					<h2>More Escape Room Companies</h2>
+					<p class="escape-companies-header__description g-description--light">
+						Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+					</p>
+				</div>
+
+				<top-companies :companies="companies" :activity_profiles="activity_profiles" />
+				<div class="footer-btn-container">
+					<a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
+					<i class="fa-solid fa-chevron-right"></i>
+				</div>
+			</div>
 		</section>
 	</div>
 </template>
@@ -158,10 +182,17 @@
 <script>
 import GameCard from "../components/companydetailspage/GameCard.vue";
 import Gallery from "../components/companydetailspage/Gallery.vue";
+import TopCompanies from "../components/TopCompanies.vue";
+
 export default {
+	props: {
+		companies: Array,
+		activity_profiles: Array,
+	},
 	components: {
 		GameCard,
 		Gallery,
+		TopCompanies,
 	},
 
 	data() {
