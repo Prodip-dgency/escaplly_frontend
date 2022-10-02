@@ -206,13 +206,16 @@ export default {
 
 	data() {
 		return {
-			settings: {
-				itemsToShow: 4,
-				itemsToScroll: 1,
-				transition: 700,
-				autoplay: 3000,
-				wrapAround: true,
-			},
+			// settings: {
+			// 	itemsToShow: 4,
+			// 	itemsToScroll: 1,
+			// 	transition: 700,
+			// 	autoplay: 3000,
+			// 	wrapAround: true,
+			// },
+
+			companyDetails: [],
+			companyDetailsId: this.$route.params.id
 		};
 	},
 
@@ -223,12 +226,21 @@ export default {
 				buttons[i].className = buttons[i].className.replace("active", "")
 			}
 			e.currentTarget.className += " active";
-			console.log(e);
-		}
+			console.log(this.companyDetails);
+		},
+
+
+		
+
+
 	},
     
 	mounted(){
 		document.getElementById('defaultselected').click()
+		
+		fetch("http://159.203.95.1/company/viewset/company-profile/" + this.companyDetailsId)
+		.then(res=>res.json())
+		.then((data)=>this.companyDetails = data)
 	}
 
 };
