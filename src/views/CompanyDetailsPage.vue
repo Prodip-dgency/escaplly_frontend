@@ -26,8 +26,14 @@
 					<button>Book Now</button>
 				</div>
 				<div class="profile-header__overview">
-					<p>overview</p>
-					<p>games</p>
+					<p id="defaultselected" class="overview__button" @click="selectButton($event)">
+						<p>overview</p>
+						<div></div>
+					</p>
+					<p class="overview__button"  @click="selectButton($event)">
+						<p>games</p>
+						<div></div>
+					 </p>
 				</div>
 				<div class="profile-header__derection-call">
 					<div class="profile-header-cta">
@@ -144,7 +150,8 @@
 					</p>
 				</div>
 				<div class="game-card">
-					<game-card />
+					<company-carousel />
+					
 				</div>
 			</div>
 		</section>
@@ -159,11 +166,6 @@
 				</div>
 				<gallery />
 			</div>
-		</section>
-		<section class="swiper-slider g-section--structure">
-			<company-carousel />
-
-			
 		</section>
 		<section class="escape-companies g-section--structure">
 			<div class="escape-companies__main-box body-container">
@@ -213,6 +215,22 @@ export default {
 			},
 		};
 	},
+
+	methods:{
+		selectButton(e){
+			let buttons = document.getElementsByClassName("overview__button")
+			for(let i=0;i<buttons.length;i++){
+				buttons[i].className = buttons[i].className.replace("active", "")
+			}
+			e.currentTarget.className += " active";
+			console.log(e);
+		}
+	},
+    
+	mounted(){
+		document.getElementById('defaultselected').click()
+	}
+
 };
 </script>
 
