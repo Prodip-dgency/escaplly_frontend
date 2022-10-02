@@ -160,6 +160,11 @@
 				<gallery />
 			</div>
 		</section>
+		<section class="swiper-slider g-section--structure">
+			<company-carousel />
+
+			
+		</section>
 		<section class="escape-companies g-section--structure">
 			<div class="escape-companies__main-box body-container">
 				<div class="escape-companies-header g-section-header--structure">
@@ -183,6 +188,7 @@
 import GameCard from "../components/companydetailspage/GameCard.vue";
 import Gallery from "../components/companydetailspage/Gallery.vue";
 import TopCompanies from "../components/TopCompanies.vue";
+import CompanyCarousel from "@/components/companydetailspage/GameCarousel.vue"
 
 export default {
 	props: {
@@ -193,6 +199,7 @@ export default {
 		GameCard,
 		Gallery,
 		TopCompanies,
+		CompanyCarousel
 	},
 
 	data() {
