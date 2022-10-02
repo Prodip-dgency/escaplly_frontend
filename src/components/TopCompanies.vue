@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div >
+		<div v-if="this.companies.length">
 			<Carousel :settings="settings">
 				<Slide v-for="company in this.companies" :key="company.id">
 					<div class="slider-container">
