@@ -1,5 +1,6 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
 .company-game-card {
-	display: flex;
+	// display: flex;
 
 	.game-card__inner-container {
 		padding: 6px 7px;
@@ -102,6 +103,9 @@
 		//     transition: all 0.3s;
 		//     transform: scale(1.05);
 		// }
+		@media #{$media-mobile-sm} {
+			margin-bottom: 25px;
+		}
 	}
 	// .carousel {
 	// 	text-align: inherit;
@@ -135,6 +139,9 @@
 	.swiper-wrapper {
 		margin: 3px 5px 60px 5px;
 		height: inherit;
+		@media #{$media-mobile-sm} {
+			margin: inherit;
+		}
 	}
     
 	.swiper-slide{
