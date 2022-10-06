@@ -1,0 +1,133 @@
+.company-game-card {
+	.game-card__main {
+		width: 290px;
+		// height: 392px;
+		padding: 6px 10px 15px 10px;
+		border-radius: 5px;
+		box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+		.header {
+			display: flex;
+			gap: 15px;
+			color: var(--text-color-light-varient4);
+			font-size: 16px;
+			padding: 1px 0 4px 0;
+		}
+		img {
+			height: 160px;
+			width: 100%;
+			object-fit: contain;
+			border: 1px solid #dcdcdc;
+			padding: 15px 20px;
+		}
+		.card-body {
+			padding: 7px 0 0 0;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.card-header {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				h5 {
+					font-size: 26px;
+					line-height: 36.4px;
+				}
+				.available-game {
+					font-size: 18px;
+					line-height: 25.2px;
+					opacity: 80%;
+					p {
+						font-weight: 400;
+					}
+				}
+			}
+			.card-footer {
+				font-size: 22px;
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				.location {
+					display: flex;
+					// align-items: center;
+					gap: 6px;
+					font-weight: 400;
+					p {
+						color: var(--text-color-light-varient4);
+					}
+				}
+				.footer-text {
+					display: flex;
+					p {
+						font-weight: 400;
+						.game_price {
+							font-size: 22px;
+							font-weight: 700;
+							color: var(--secondary-color);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// card design for movile
+
+	.mobile-card {
+		padding: 6px 7px;
+		border-radius: 5px;
+		box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+		font-family: "Roboto", sans-serif;
+		margin-bottom: 20px;
+
+		.header {
+			display: flex;
+			gap: 15px;
+			color: var(--text-color-light-varient4);
+			font-size: 16px;
+			padding: 1px 0 6px 0;
+		}
+		.img-body {
+			display: flex;
+			gap: 10px;
+
+			img {
+				height: 118px;
+				width: 118px;
+				object-fit: contain;
+				border: 1px solid #dcdcdc;
+			}
+			.card-body {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				.card-header {
+					h5 {
+						font-size: 18px;
+						line-height: 25px;
+					}
+					p {
+						font-size: 16px;
+						line-height: 22px;
+						font-weight: 400;
+					}
+				}
+				.card-footer {
+					.location {
+						display: flex;
+						gap: 3px;
+						p {
+							color: var(--text-color-light-varient4);
+						}
+					}
+					.footer-text {
+						span {
+							font-size: 22px;
+							color: var(--secondary-color);
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+	}
+}

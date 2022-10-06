@@ -87,4 +87,4 @@ export default {
 };
 </script>
 
-<style src="@/assets/css/components/companylistpage/GameCard.scss" lang="scss"></style>
+<style lang="scss"></style>

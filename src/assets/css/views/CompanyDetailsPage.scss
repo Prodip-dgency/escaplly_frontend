@@ -49,17 +49,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 	// }
 
 	//section//
-	.bread-crumb {
-		color: #9a9a9a;
-		padding: 10px 0;
 
-		.is-active {
-			color: black;
-		}
-		@media #{$media-mobile-sm} {
-			padding: 10px 10px;
-		}
-	}
 	//section//
 	.profile-detail {
 		background: #ffffff;

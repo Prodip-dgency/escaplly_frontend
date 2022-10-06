@@ -89,7 +89,13 @@ a {
 
   /*company details page*/
 
-
+	.bread-crumb {
+		color: #9a9a9a;
+		padding: 10px 0;
+	}
+  .is-active {
+    color: black;
+  }
 
 
  /**/
@@ -118,6 +124,9 @@ a {
       padding: 0;
        font-size: 18px;
        line-height: 25px;
+    }
+    .bread-crumb {
+      padding: 10px 10px;
     }
   }
 

@@ -174,4 +174,4 @@ export default {
 };
 </script>
 
-<style src="@/assets/css/components/companylistpage/GameCard.scss" lang="scss"></style>
+<style src="@/assets/css/components/companydetailspage/GameCard.scss" lang="scss"></style>
