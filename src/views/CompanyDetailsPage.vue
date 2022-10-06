@@ -60,55 +60,55 @@
 					</p>
 				</div>
 				<div class="company-info__details">
-					<p class="title-top--gray">MYSTERY ROOM</p>
-					<h2>Details</h2>
+					<p class="title-top--gray local-g--structure">MYSTERY ROOM</p>
+					<h2 class="local-g--structure">Details</h2>
 					<img src="" alt="" />
 					<div class="location-web details-item">
-						<div class="location-web__location item--display">
+						<div class="location-web__location details-item__single item--display">
 							<span class="material-symbols-outlined"> location_on </span>
 							<p>3681 Palisades Center Dr, West Nyack, NY 10994, United States</p>
 						</div>
-						<div class="location-web__web item--display">
+						<div class="location-web__web details-item__single item--display">
 							<span class="material-symbols-outlined"> language </span>
 							<p>https://mysteryroom.com/</p>
 						</div>
 					</div>
 					<div class="time-contact details-item">
-						<div class="time-contact__time item--display">
+						<div class="time-contact__time details-item__single item--display">
 							<span class="material-symbols-outlined"> schedule </span>
 							<p>Closed ⋅ Opens 10AM</p>
 						</div>
-						<div class="time-contact__contact item--display">
+						<div class="time-contact__contact details-item__single item--display">
 							<i class="fa-solid fa-phone"></i>
 							<p>+1 845-208-2919</p>
 						</div>
 					</div>
 				</div>
 				<div class="company-info__highlights">
-					<p class="title-top--gray">MYSTERY ROOM</p>
-					<h2>Highlights</h2>
+					<p class="title-top--gray local-g--structure">MYSTERY ROOM</p>
+					<h2 class="local-g--structure">Highlights</h2>
 					<div class="games-age highlights-item">
-						<div class="games-age__games item--display">
+						<div class="games-age__games highlights-item__single item--display">
 							<span class="material-symbols-outlined"> directions_run </span>
 							<p>Games Available: 8 Escape Rooms</p>
 						</div>
-						<div class="games-age__age item--display">
+						<div class="games-age__age highlights-item__single item--display">
 							<span class="material-symbols-outlined"> diversity_3 </span>
 							<p>Age: 16+</p>
 						</div>
 					</div>
 					<div class="team-accompany highlights-item">
-						<div class="team-accompany__team item--display">
+						<div class="team-accompany__team highlights-item__single item--display">
 							<span class="material-symbols-outlined"> group </span>
 							<p>Game Team Size: 2-10 Person</p>
 						</div>
-						<div class="team-accompany__accompany item--display">
+						<div class="team-accompany__accompany highlights-item__single item--display">
 							<span class="material-symbols-outlined"> escalator_warning </span>
 							<p>Accompany: 8+</p>
 						</div>
 					</div>
 					<div class="game-duration highlights-item">
-						<div class="game-duration__duration item--display">
+						<div class="game-duration__duration highlights-item__single item--display">
 							<span class="material-symbols-outlined"> schedule </span>
 							<p>Game Duration: 60 Minutes</p>
 						</div>
@@ -124,15 +124,15 @@
 						Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
 					</p>
 					<div class="advantages-innerbox__iconbox">
-						<div class="find-easily">
+						<div class="find-easily iconbox--center">
 							<span class="material-symbols-outlined"> travel_explore </span>
 							<h5>Find Easily</h5>
 						</div>
-						<div class="get-deals">
+						<div class="get-deals iconbox--center">
 							<i class="fa-solid fa-handshake"></i>
 							<h5>Get Deals</h5>
 						</div>
-						<div class="book-fast">
+						<div class="book-fast iconbox--center">
 							<i class="fa-regular fa-calendar-days"></i>
 							<h5>Book Fast</h5>
 						</div>
@@ -206,16 +206,9 @@ export default {
 
 	data() {
 		return {
-			// settings: {
-			// 	itemsToShow: 4,
-			// 	itemsToScroll: 1,
-			// 	transition: 700,
-			// 	autoplay: 3000,
-			// 	wrapAround: true,
-			// },
-
 			companyDetails: [],
 			companyDetailsId: this.$route.params.id
+			
 		};
 	},
 
