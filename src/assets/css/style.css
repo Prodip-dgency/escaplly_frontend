@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    
-
+}
+html{
+  scroll-behavior: smooth;
 }
 body{
     background: #eeeeee;   
@@ -87,17 +88,27 @@ a {
     color: var( --link-and-icon-color);
   }
 
-  /*company details page*/
-
-	.bread-crumb {
-		color: #9a9a9a;
-		padding: 10px 0;
+  /* all page section basic design */
+  .title-top--gray {
+		color: var(--text-color-light-varient4);
+		font-weight: 500;
 	}
-  .is-active {
-    color: black;
-  }
-
-
+  .g-section--structure {
+		background: #ffffff;
+		margin-top: 25px;
+		padding: 100px 0;
+	}
+  .g-description--light {
+		font-size: 24px;
+		line-height: 33px;
+		color: var(--text-color-light-varient4);
+		padding: 20px 0 80px 0;
+	}
+  .g-section-header--structure {
+		width: 70%;
+		margin: auto;
+		text-align: center;
+	}
  /**/
   @media only screen and (max-width: 480px){
     .body-container{
@@ -125,8 +136,16 @@ a {
        font-size: 18px;
        line-height: 25px;
     }
-    .bread-crumb {
-      padding: 10px 10px;
+
+    .g-section--structure{
+      padding: 40px 10px;
+    }
+    .g-description--light{
+      padding: 20px 0 45px 0;
+    }
+    .g-section-header--structure{
+      width: inherit;	
+			text-align: inherit;
     }
   }
 

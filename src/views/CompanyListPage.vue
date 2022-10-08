@@ -1,14 +1,7 @@
 <template>
 	<div class="company-list">
-		<section class="bread-crumb body-container">
-			<span class="bread-crumb__item">
-				<a href="#"> Home </a>
-				<i class="fa-solid fa-chevron-right"></i>
-				<a href="#"> West Nyack, NY </a>
-			</span>
-			<span class="bread-crumb__item is-active">
-				<a href="#"><i class="fa-solid fa-chevron-right"></i> Company List</a>
-			</span>
+		<section >
+			<bread-crumb />
 			<!-- <span class="crumb">Home </span><span class="crumb">> West Nyack, NY </span><span>> Mystery Room</span> -->
 		</section>
 		<section class="all-companysection">
@@ -33,6 +26,7 @@
 
 <script>
 import Company from "../components/companylistpage/Company.vue";
+import BreadCrumb from "@/components/BreadCrumb.vue"
 export default {
 	props: {
 		companies: Array,
@@ -40,6 +34,7 @@ export default {
 	},
 	components: {
 		Company,
+		BreadCrumb
 	},
 	methods: {
 		myfunc() {

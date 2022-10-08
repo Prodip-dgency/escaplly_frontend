@@ -103,7 +103,6 @@ export default {
 		},
 		mobileshow() {
 			let w = screen.width;
-            console.log(w);
 			if (w <= 480) {
 				return true;
 			} else {
