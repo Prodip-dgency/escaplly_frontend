@@ -72,5 +72,5 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../../assets/css/components/companylistpage/ImageGallerySlider.scss"></style>
+<style lang="scss" src="../../assets/css/components/companydetailspage/ImageGallerySlider.scss"></style>
 

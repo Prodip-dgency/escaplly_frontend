@@ -1,0 +1,71 @@
+.gamedetails-section {
+	
+	.gamedetails-section__profile {
+        background: #ffffff;
+		.profile-main {
+			padding: 40px 0 120px 0;
+			.profile-main__header {
+				display: flex;
+				gap: 15px;
+				.profile-img {
+					img {
+						width: 200px;
+						height: 201px;
+					}
+				}
+				.profile-description {
+					p {
+						margin-top: 5px;
+						font-size: 24px;
+						color: var(--text-color-light-varient4);
+					}
+					button {
+						padding: 10px 80px;
+						color: white;
+						font-size: 24px;
+						border: none;
+						background-color: var(--link-and-icon-color);
+						margin-top: 30px;
+					}
+				}
+			}
+			.profile-header__overview {
+				width: 100%;
+				// border: 1px solid #9a9a9a;
+				box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.15);
+				display: flex;
+				margin-top: 55px;
+				padding: 7px 0 0 0;
+				// border-top: 2px solid #cccccc;
+				gap: 10px;
+                color: var(--text-color-light-varient4);
+
+				.active {
+					color: var(--link-and-icon-color);
+
+					div {
+						width: 70%;
+						border-bottom: 3px solid var(--link-and-icon-color);
+						margin: 3px auto 0 auto;
+					}
+				}
+
+				.overview__button {
+					margin-left: 74px;
+					cursor: pointer;
+
+					// @media #{$media-mobile-sm} {
+					// 	margin-left: 10px;
+					// }
+				}
+			}
+
+            .game-gallery{
+                .game-gallery__header{
+                    padding-top: 80px;
+                    
+                }
+            }
+		}
+	}
+}

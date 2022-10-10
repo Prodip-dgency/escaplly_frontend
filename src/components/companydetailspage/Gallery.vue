@@ -60,4 +60,4 @@ export default {
 };
 </script>
 
-<style lang="scss" src="../../assets/css/components/companylistpage/Gallery.scss"></style>
+<style lang="scss" src="../../assets/css/components/companydetailspage/Gallery.scss"></style>

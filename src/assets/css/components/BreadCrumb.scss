@@ -1,0 +1,14 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+.bread-crumb-section {
+	.bread-crumb-section__main {
+		color: #9a9a9a;
+		padding: 10px 0;
+		.is-active {
+			color: black;
+		}
+		@media #{$media-mobile-sm} {
+			padding: 10px 10px;
+		}
+	}
+}
