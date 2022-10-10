@@ -1,14 +1,7 @@
 <template>
   <div class="company-detail">
-    <section class="bread-crumb body-container">
-      <span class="bread-crumb__item">
-        <a href=""> Home </a>
-        >
-        <a href=""> {{ companyDetails.city }}, {{ companyDetails.state }} </a>
-      </span>
-      <span class="bread-crumb__item is-active">
-        <a href=""> > {{ companyDetails.title }}</a>
-      </span>
+    <section >
+      <bread-crumb />
       <!-- <span class="crumb">Home </span><span class="crumb">> West Nyack, NY </span><span>> Mystery Room</span> -->
     </section>
     <section class="profile-detail">
@@ -70,11 +63,11 @@
           <div class="location-web details-item">
             <div class="location-web__location details-item__single item--display">
               <span class="material-symbols-outlined"> location_on </span>
-              <p>3681 Palisades Center Dr, West Nyack, NY 10994, United States</p>
+              <p>{{companyDetails.address_line}}</p>
             </div>
             <div class="location-web__web details-item__single item--display">
               <span class="material-symbols-outlined"> language </span>
-              <p>https://mysteryroom.com/</p>
+              <p>{{companyDetails.website_url}}</p>
             </div>
           </div>
           <div class="time-contact details-item">
@@ -84,7 +77,7 @@
             </div>
             <div class="time-contact__contact details-item__single item--display">
               <i class="fa-solid fa-phone"></i>
-              <p>+1 845-208-2919</p>
+              <p>{{companyDetails.phone_number}}</p>
             </div>
           </div>
         </div>
@@ -192,10 +185,10 @@
 </template>
 
 <script>
-import GameCard from "../components/companydetailspage/GameCard.vue";
 import Gallery from "../components/companydetailspage/Gallery.vue";
 import TopCompanies from "../components/TopCompanies.vue";
 import CompanyCarousel from "@/components/companydetailspage/GameCarousel.vue";
+import BreadCrumb from "@/components/BreadCrumb.vue"
 
 export default {
   props: {
@@ -203,10 +196,10 @@ export default {
     activity_profiles: Array,
   },
   components: {
-    GameCard,
     Gallery,
     TopCompanies,
     CompanyCarousel,
+    BreadCrumb
   },
 
   data() {

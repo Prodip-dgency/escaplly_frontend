@@ -12,9 +12,7 @@
 						Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
 					</h6>
 				</div>
-
-				<top-companies :companies="companies" :activity_profiles="activity_profiles" />
-
+					<top-companies :companies="companies" :activity_profiles="activity_profiles" />
 				<div class="footer-btn-container">
 					<a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
 					<i class="fa-solid fa-chevron-right"></i>
@@ -33,6 +31,8 @@ import CuriousSection from "../components/CuriousSection.vue";
 import TopCompanies from "../components/TopCompanies.vue";
 import MissionVision from "../components/MissionVision.vue";
 
+
+
 export default {
 	props: {
 		companies: Array,
@@ -45,6 +45,11 @@ export default {
 		CuriousSection,
 		TopCompanies,
 		MissionVision,
+	},
+	data(){
+		return{
+		
+		}
 	},
 
 	methods: {},
