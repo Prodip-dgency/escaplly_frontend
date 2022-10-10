@@ -25,7 +25,7 @@
           <div class="profile-header-info">
             <p class="profile-header-info__location">{{ companyDetails.city }}, {{ companyDetails.state }}</p>
             <h2>{{ companyDetails.title }}</h2>
-            <p>Available escape game: 9</p>
+            <p>Available escape game: {{ ownGames.length }}</p>
           </div>
           <button>Book Now</button>
         </div>
@@ -186,6 +186,8 @@
         </div>
       </div>
     </section>
+    {{ this.myfunc() }}
+    {{ getOwnActivity }}
   </div>
 </template>
 
@@ -209,32 +211,66 @@ export default {
 
   data() {
     return {
-      companyDetails: [],
-      companyProfileId: this.$route.params.id,
+      companyDetails: Object,
+      activityProfiles: Array,
+      ownGames: []   
     };
+  },
+  computed: {
+    getOwnActivity() {
+      if(this.activityProfiles != null){
+        for(let i = 0; i<(this.activityProfiles).length; i++) {
+          if(this.activityProfiles[i]){
+            if(this.activityProfiles[i].activity.company.id == this.companyDetails.company.id) {
+              this.ownGames.push(this.activityProfiles[i]);
+            }
+          }
+        }
+      }
+    },
+
   },
 
   methods: {
+    
+    getCompanyProfiles() {
+      fetch("http://159.203.95.1/company/viewset/company-profile/" + this.$route.params.id + "/")
+      .then((result) => result.json())
+      .then((data) => (this.companyDetails = data));
+    },
+    getActivityProfiles() {
+      fetch("http://159.203.95.1/activity/viewset/activityprofile/")
+      .then((result) => result.json())
+      .then((data) => (this.activityProfiles = data));
+    },
+    myfunc() {
+      // console.log(this.companyDetails);
+      // console.log(this.activityProfiles);
+      console.log(this.ownGames)
+    },
     selectButton(e) {
       let buttons = document.getElementsByClassName("overview__button");
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].className = buttons[i].className.replace("active", "");
       }
       e.currentTarget.className += " active";
-      console.log(this.companyDetails);
     },
+    
+    // getOwnGames() {
+      // 	if(this.companyDetails.)
+      // }
+      
 
-    getCompanyDetails() {
-      fetch("http://159.203.95.1/company/viewset/company-profile/" + this.companyProfileId + "/")
-        .then((result) => result.json())
-        .then((data) => (this.companyDetails = data));
-    },
   },
 
   mounted() {
-    this.getCompanyDetails();
+    this.getCompanyProfiles();
+    this.getActivityProfiles();
     document.getElementById("defaultselected").click();
   },
+  created() {
+    
+  }
 };
 </script>
 
