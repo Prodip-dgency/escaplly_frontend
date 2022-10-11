@@ -1,0 +1,35 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
+	.escapelly-advantages {
+		.advantages-innerbox {
+			width: 60%;
+			text-align: center;
+			margin: auto;
+
+			.advantages-innerbox__iconbox {
+				display: flex;
+				justify-content: space-around;
+				.iconbox--center {
+					span {
+						font-size: 70px;
+					}
+					i {
+						font-size: 70px;
+					}
+					h5 {
+						margin-top: 18px;
+						font-size: 26px;
+						font-weight: 500;
+						@media #{$media-mobile-sm} {
+						}
+					}
+					@media #{$media-mobile-sm} {
+						text-align: center;
+					}
+				}
+			}
+			@media #{$media-mobile-sm} {
+				width: inherit;
+				text-align: inherit;
+			}
+		}
+	}

@@ -1,7 +1,8 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
 .gamedetails-section {
-	
 	.gamedetails-section__profile {
-        background: #ffffff;
+		background: #ffffff;
 		.profile-main {
 			padding: 40px 0 120px 0;
 			.profile-main__header {
@@ -38,7 +39,7 @@
 				padding: 7px 0 0 0;
 				// border-top: 2px solid #cccccc;
 				gap: 10px;
-                color: var(--text-color-light-varient4);
+				color: var(--text-color-light-varient4);
 
 				.active {
 					color: var(--link-and-icon-color);
@@ -60,12 +61,98 @@
 				}
 			}
 
-            .game-gallery{
-                .game-gallery__header{
-                    padding-top: 80px;
-                    
-                }
-            }
+			.game-gallery {
+				.game-gallery__header {
+					padding-top: 80px;
+				}
+			}
+			.storyline-details {
+				background: #fafafa;
+				display: flex;
+				padding: 45px 38px 60px 38px;
+				margin-top: 180px;
+				position: relative;
+				.storyline-details__story {
+					flex: 1;
+					padding-right: 15px;
+					h4 {
+						font-size: 30px;
+						margin-bottom: 20px;
+					}
+					p {
+						font-size: 24px;
+						line-height: 30px;
+						color: #191919;
+					}
+				}
+				.storyline-details__details {
+					flex: 1;
+					padding-left: 25px;
+					.details-list {
+						.details-list__item {
+							display: flex;
+							gap: 25px;
+							align-items: center;
+							padding: 16px 0;
+							border-bottom: 1px solid #CCCCCC;
+							p{
+								font-size: 22px;
+								span{
+									color: var(--secondary-color);
+									font-weight: 600;
+								}
+							}
+							span{
+								font-size: 24px;
+								color: var(--link-and-icon-color);
+							}
+						}
+					}
+				}
+				.gamedetails-page-btn {
+					// margin: -75% 0 0 38px;
+					position: absolute;
+					bottom: 45px;
+					padding: 10px 50px;
+					font-size: 18px;
+					background: var(--link-and-icon-color);
+					color: #ffffff;
+					border: none;
+				}
+			}
+		}
+	}
+	.game-guideline{
+		.game-guidelain__main{
+			img{
+				height: 350px;
+				width: 70%;	
+				margin: auto;	
+				display: block;	
+			}
+			.guideline-details{
+				width: 60%;
+				margin: auto;
+				font-size: 22px;
+				line-height: 30px;
+				ul{
+					margin-top: 30px;
+					li{
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+	// section//
+	.escape-companies1 {
+		.escape-companies__main-box1 {
+			.escape-companies-header__description1 {
+				padding: 20px 0 0 0;
+				@media #{$media-mobile-sm} {
+					padding: 20px 0 45px 0;
+				}
+			}
 		}
 	}
 }
