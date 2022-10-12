@@ -109,7 +109,7 @@
 			<escapelly-advantages />
 		</section>
 		<section id="games" class="g-section--structure">
-			<available-game />
+			<!-- <available-game :ownGame="ownGames"/> -->
 		</section>
 		<section class="escape-companies1 g-section--structure">
 			<div class="escape-companies__main-box1 body-container">
@@ -140,6 +140,7 @@ export default {
 	props: {
     companies: Array,
     activity_profiles: Array,
+	
   },
 	components: {
 		BreadCrumb,

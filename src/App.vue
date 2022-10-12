@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <navsection />
+	<div>
+		<navsection />
 
-    <router-view :companies="companies" :activity_profiles="activity_profiles"/>
+		<router-view :companies="companies" :activity_profiles="activity_profiles" />
 
-    <footer-section />
-  </div>
+		<footer-section />
+	</div>
 </template>
 
 <script>
@@ -13,19 +13,20 @@ import Navsection from "./components/Navsection.vue";
 import FooterSection from "./components/FooterSection.vue";
 
 export default {
-  components: {
-    Navsection,
-    FooterSection,
-  },
+	components: {
+		Navsection,
+		FooterSection,
+	},
 
-  data() {
+	data() {
 		return {
 			companies: [],
 			activity_profiles: [],
 		};
 	},
 
-  mounted() {
+
+	mounted() {
 		fetch("http://159.203.95.1/company/viewset/company-profile/")
 			.then((res) => res.json())
 			.then((data) => (this.companies = data));
@@ -35,8 +36,6 @@ export default {
 			.then((data) => (this.activity_profiles = data));
 	},
 };
-
-
 </script>
 
 <style>

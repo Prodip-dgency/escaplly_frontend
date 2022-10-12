@@ -87,7 +87,7 @@
           <div class="games-age highlights-item">
             <div class="games-age__games highlights-item__single item--display">
               <span class="material-symbols-outlined"> directions_run </span>
-              <p>Games Available: 8 Escape Rooms</p>
+              <p>Games Available: {{ownGames.length}} Escape Rooms</p>
             </div>
             <div class="games-age__age highlights-item__single item--display">
               <span class="material-symbols-outlined"> diversity_3 </span>
@@ -97,7 +97,7 @@
           <div class="team-accompany highlights-item">
             <div class="team-accompany__team highlights-item__single item--display">
               <span class="material-symbols-outlined"> group </span>
-              <p>Game Team Size: 2-10 Person</p>
+              <p>Game Team Size: {{}}-10 Person</p>
             </div>
             <div class="team-accompany__accompany highlights-item__single item--display">
               <span class="material-symbols-outlined"> escalator_warning </span>
@@ -117,7 +117,7 @@
       <escapelly-advantages />
     </section>
     <section id="games" class="g-section--structure">
-      <available-game />
+      <available-game :ownGame="ownGames"/>
     </section>
     <section class="gallery g-section--structure">
       <div class="gallery__main-box body-container">

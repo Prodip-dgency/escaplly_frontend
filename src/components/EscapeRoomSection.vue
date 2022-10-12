@@ -8,7 +8,7 @@
             <h6>Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.</h6>
           </div>
           <div class="inner-container">
-            <div class="game-card" v-for="activityprofile in activityprofiles" :key="activityprofile.id">
+            <router-link :to="{name: 'game_details', params: {id: activityprofile.id}}" class="game-card" v-for="activityprofile in activityprofiles" :key="activityprofile.id">
               <div class="header">
                 <p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
                 <p><i class="fa-solid fa-person-running"></i> In Person</p>
@@ -46,7 +46,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
         <div class="footer-btn-container">
