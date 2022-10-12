@@ -141,6 +141,12 @@ export default {
     companies: Array,
     activity_profiles: Array,
 	
+	
+  },
+  data (){
+	return{
+		ownGames:[]
+	}
   },
 	components: {
 		BreadCrumb,
@@ -148,6 +154,21 @@ export default {
 		EscapellyAdvantages,
 		AvailableGame,
 		TopCompanies
+	},
+	computed:{
+		getActivity(){
+			if(this.activity_profiles !=null){
+				for(let i=0;i<(this.activity_profiles).length;i++){
+					if(this.activity_profiles[i].activity.company.id == this.companies.id){
+
+					}
+				}
+			}
+		}
+	},
+
+	methods:{
+
 	},
 };
 </script>
