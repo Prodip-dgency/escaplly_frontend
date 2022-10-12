@@ -9,36 +9,34 @@
 			:modules="modules"
 			class=""
 		>
-			<swiper-slide v-for="item in 6" :key="item" v-show="desktopshow()">
+			<swiper-slide v-for="game in ownGame" :key="game.id" v-show="desktopshow()">
 				<div class="game-card__inner-container">
 					<div class="card-img">
-						<img src="@/assets/img/cardimg1.jpg" alt="" />
+						<img :src="game.main_image.image" alt="" />
 						<div class="card-img__footer">
 							<div>
 								<span class="material-symbols-outlined"> group </span>
-								<p>2-8</p>
+								<p>{{ game.minimum_participant }}-{{ game.maximum_participant }}</p>
 							</div>
 							<div>
 								<span class="material-symbols-outlined"> schedule </span>
-								<p>60 min</p>
+								<p>{{ game.duration }} min</p>
 							</div>
 							<div>
 								<span class="material-symbols-outlined"> directions_run </span>
-								<p>Medium</p>
+								<p>{{ game.difficulty.title }}</p>
 							</div>
 							<div>
 								<span class="material-symbols-outlined"> diversity_3 </span>
-								<p>18+</p>
+								<p>{{ game.mimimum_age }}+</p>
 							</div>
 						</div>
 					</div>
 					<div class="card-body">
 						<div class="card-body__header">
 							<p>ESCAPE ROOM</p>
-							<h4>Zombi Apocalypse</h4>
-							<p class="header-description">
-								Escape room events and parties are perfect for is an birthday parties,building lorem... <span>more</span>
-							</p>
+							<h4>{{ game.title }}</h4>
+							<p id="storyline" class="header-description">{{ game.storyline }}... <span @click="collupsdescription()">more</span></p>
 						</div>
 						<div class="card-body__footer">
 							<div class="footer-header">
@@ -52,7 +50,9 @@
 								</div>
 								<div class="footer-header__price footer-header__list">
 									<span class="material-symbols-outlined"> monetization_on </span>
-									<p>Starts at <span class="list-price--color">$29/Person</span></p>
+									<p>
+										Starts at <span class="list-price--color">${{ game.price }}/Person</span>
+									</p>
 								</div>
 							</div>
 							<div class="footer-btn">
@@ -124,6 +124,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</div>
 </template>
 
@@ -142,6 +143,9 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 export default {
+	props: {
+		ownGame: Array,
+	},
 	components: {
 		Swiper,
 		SwiperSlide,
@@ -153,6 +157,27 @@ export default {
 	},
 
 	methods: {
+		collupsdescription() {
+			var x = document.getElementById("storyline").innerHTML;
+			function countword(str) {
+				let wordarr = str.split(" ")
+				let y = []
+				var show = document.createElement("p")
+				for(let i=0;i<=16;i++){
+					y.push(wordarr[i])
+				}
+				show.innerHTML = y;
+				let para = show.innerHTML
+				// let finalshow = show
+				// for(let j =0; j<=16; j++){
+				// 	para.replace("," , " ")
+				// }
+
+				return para
+				
+			}
+			console.log(countword(x));
+		},
 		mobileshow() {
 			let w = screen.width;
 

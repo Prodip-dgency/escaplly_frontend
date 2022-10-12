@@ -87,7 +87,7 @@
           <div class="games-age highlights-item">
             <div class="games-age__games highlights-item__single item--display">
               <span class="material-symbols-outlined"> directions_run </span>
-              <p>Games Available: 8 Escape Rooms</p>
+              <p>Games Available: {{ownGames.length}} Escape Rooms</p>
             </div>
             <div class="games-age__age highlights-item__single item--display">
               <span class="material-symbols-outlined"> diversity_3 </span>
@@ -97,7 +97,7 @@
           <div class="team-accompany highlights-item">
             <div class="team-accompany__team highlights-item__single item--display">
               <span class="material-symbols-outlined"> group </span>
-              <p>Game Team Size: 2-10 Person</p>
+              <p>Game Team Size: {{}}-10 Person</p>
             </div>
             <div class="team-accompany__accompany highlights-item__single item--display">
               <span class="material-symbols-outlined"> escalator_warning </span>
@@ -113,43 +113,11 @@
         </div>
       </div>
     </section>
-    <section class="escapelly-advantages g-section--structure">
-      <div class="escapelly-advantages__main body-container">
-        <div class="advantages-innerbox">
-          <h2>Escaplly Advantages</h2>
-          <p class="g-description--light">
-            Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
-          </p>
-          <div class="advantages-innerbox__iconbox">
-            <div class="find-easily iconbox--center">
-              <span class="material-symbols-outlined"> travel_explore </span>
-              <h5>Find Easily</h5>
-            </div>
-            <div class="get-deals iconbox--center">
-              <i class="fa-solid fa-handshake"></i>
-              <h5>Get Deals</h5>
-            </div>
-            <div class="book-fast iconbox--center">
-              <i class="fa-regular fa-calendar-days"></i>
-              <h5>Book Fast</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="g-section--structure">
+      <escapelly-advantages />
     </section>
-    <section id="games" class="available-game g-section--structure">
-      <div class="available-game__main body-container">
-        <div class="header-box g-section-header--structure">
-          <p class="title-top--gray">MYSTERY ROOM</p>
-          <h2>4 Escape Game Available</h2>
-          <p class="g-description--light">
-            Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
-          </p>
-        </div>
-        <div class="game-card">
-          <company-carousel />
-        </div>
-      </div>
+    <section id="games" class="g-section--structure">
+      <available-game :ownGame="ownGames"/>
     </section>
     <section class="gallery g-section--structure">
       <div class="gallery__main-box body-container">
@@ -187,8 +155,9 @@
 <script>
 import Gallery from "../components/companydetailspage/Gallery.vue";
 import TopCompanies from "../components/TopCompanies.vue";
-import CompanyCarousel from "@/components/companydetailspage/GameCarousel.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue"
+import EscapellyAdvantages from "@/components/companydetailspage/EscapellyAdvantages.vue"
+import AvailableGame from "@/components/companydetailspage/AvailableGame.vue"
 
 export default {
   props: {
@@ -198,8 +167,9 @@ export default {
   components: {
     Gallery,
     TopCompanies,
-    CompanyCarousel,
-    BreadCrumb
+    BreadCrumb,
+    EscapellyAdvantages,
+    AvailableGame
   },
 
   data() {
