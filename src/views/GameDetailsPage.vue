@@ -168,7 +168,6 @@ export default {
 	},
 	
 	myfunc() {
-		console.log(this.ownGames)
 		this.getOwnCompany()
 		this.getOtherGames
 	}
