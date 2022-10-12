@@ -12,7 +12,7 @@
 			<swiper-slide v-for="game in ownGame" :key="game.id" v-show="desktopshow()">
 				<div class="game-card__inner-container">
 					<div class="card-img">
-						<img :src="game.main_image.image" alt="" />
+						<img v-if="game.main_image" :src="game.main_image.image" alt="" />
 						<div class="card-img__footer">
 							<div>
 								<span class="material-symbols-outlined"> group </span>
@@ -24,7 +24,7 @@
 							</div>
 							<div>
 								<span class="material-symbols-outlined"> directions_run </span>
-								<p>{{ game.difficulty.title }}</p>
+								<p v-if="game.difficulty">{{ game.difficulty.title }}</p>
 							</div>
 							<div>
 								<span class="material-symbols-outlined"> diversity_3 </span>
