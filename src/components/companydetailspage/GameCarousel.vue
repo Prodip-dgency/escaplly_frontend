@@ -36,7 +36,7 @@
 						<div class="card-body__header">
 							<p>ESCAPE ROOM</p>
 							<h4>{{ game.title }}</h4>
-							<p id="storyline" class="header-description">{{ game.storyline }}... <span @click="collupsdescription()">more</span></p>
+							<p class="header-description"><span id="storyline">{{ game.storyline.slice(0,100) }}</span> <span @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
 						</div>
 						<div class="card-body__footer">
 							<div class="footer-header">
@@ -143,6 +143,11 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 export default {
+	data() {
+		return {
+			more_btn: 'more'
+		}
+	},	
 	props: {
 		ownGame: Array,
 	},
@@ -157,26 +162,18 @@ export default {
 	},
 
 	methods: {
-		collupsdescription() {
-			var x = document.getElementById("storyline").innerHTML;
-			function countword(str) {
-				let wordarr = str.split(" ")
-				let y = []
-				var show = document.createElement("p")
-				for(let i=0;i<=16;i++){
-					y.push(wordarr[i])
-				}
-				show.innerHTML = y;
-				let para = show.innerHTML
-				// let finalshow = show
-				// for(let j =0; j<=16; j++){
-				// 	para.replace("," , " ")
-				// }
+		textCollaps(storyline) {
+			let text = document.getElementById('storyline').innerHTML
+			console.log(text.length)
 
-				return para
-				
+			if(text.length > 100) {
+				document.getElementById('storyline').innerHTML = text.slice(0,100)
+				this.more_btn = 'more'
+			} else {
+				document.getElementById('storyline').innerHTML = storyline
+				this.more_btn = 'less'
 			}
-			console.log(countword(x));
+
 		},
 		mobileshow() {
 			let w = screen.width;
@@ -196,6 +193,8 @@ export default {
 			}
 		},
 	},
+	mounted() {
+	}
 };
 </script>
 
