@@ -36,7 +36,7 @@
 						<div class="card-body__header">
 							<p>ESCAPE ROOM</p>
 							<h4>{{ game.title }}</h4>
-							<p class="header-description"><span id="storyline">{{ game.storyline.slice(0,100) }}</span> <span @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
+							<p class="header-description" :class="active_class"><span id="storyline">{{ game.storyline.slice(0,100) }}</span> <span @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
 						</div>
 						<div class="card-body__footer">
 							<div class="footer-header">
@@ -145,7 +145,8 @@ import { Pagination } from "swiper";
 export default {
 	data() {
 		return {
-			more_btn: 'more'
+			more_btn: 'more' ,
+			active_class: ''
 		}
 	},	
 	props: {
@@ -169,9 +170,12 @@ export default {
 			if(text.length > 100) {
 				document.getElementById('storyline').innerHTML = text.slice(0,100)
 				this.more_btn = 'more'
+				this.active_class = ''
 			} else {
 				document.getElementById('storyline').innerHTML = storyline
-				this.more_btn = 'less'
+				this.more_btn = 'less';
+				this.active_class = 'active'
+
 			}
 
 		},
