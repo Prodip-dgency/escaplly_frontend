@@ -140,7 +140,7 @@
           </p>
         </div>
 
-        <top-companies :companies="companies" :activity_profiles="activity_profiles" />
+        <top-companies :companies="this.otherCompanies" :activity_profiles="activity_profiles" />
         <div class="footer-btn-container">
           <a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
           <i class="fa-solid fa-chevron-right"></i>
@@ -149,6 +149,7 @@
     </section>
     {{ this.myfunc() }}
     {{ getOwnActivity }}
+    {{getOtherCompany}}
   </div>
 </template>
 
@@ -176,7 +177,8 @@ export default {
     return {
       companyDetails: Object,
       activityProfiles: Array,
-      ownGames: []   
+      ownGames: [],
+      otherCompanies: []   
     };
   },
   computed: {
@@ -184,14 +186,23 @@ export default {
       if(this.activityProfiles != null){
         for(let i = 0; i<(this.activityProfiles).length; i++) {
           if(this.activityProfiles[i]){
-            if(this.activityProfiles[i].activity.company.id == this.companyDetails.company.id) {
-              this.ownGames.push(this.activityProfiles[i]);
+            if(this.companyDetails.company){
+              if(this.activityProfiles[i].activity.company.id == this.companyDetails.company.id) {
+                this.ownGames.push(this.activityProfiles[i]);
+              }
             }
           }
         }
       }
     },
 
+    getOtherCompany(){
+      for(let i=0;i<this.companies.length;i++){
+        if(this.companies[i].company.id != this.$route.params.id){
+          this.otherCompanies.push(this.companies[i]);
+        }
+      }
+    }
   },
 
   methods: {
@@ -209,7 +220,7 @@ export default {
     myfunc() {
       // console.log(this.companyDetails);
       // console.log(this.activityProfiles);
-      console.log(this.ownGames)
+      // console.log(this.ownGames)
     },
     selectButton(e) {
       let buttons = document.getElementsByClassName("overview__button");
