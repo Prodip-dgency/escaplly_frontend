@@ -32,11 +32,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="card-body">
+					<div class="card-body" :class="blur_cls">
 						<div class="card-body__header">
 							<p>ESCAPE ROOM</p>
 							<h4>{{ game.title }}</h4>
-							<p class="header-description" :class="active_class"><span id="storyline">{{ game.storyline.slice(0,100) }}</span> <span @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
+							<p class="header-description" :class="active_class"><span id="storyline">{{ game.storyline.slice(0,100) }}</span> <span class="more-btn" @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
 						</div>
 						<div class="card-body__footer">
 							<div class="footer-header">
@@ -70,36 +70,34 @@
 		</swiper>
 
 		<!-- mobile-responsive -->
-		<div class="game-carousel-mobileresponsive" v-for="item in 6" :key="item">
-			<div class="game-card__inner-container" v-show="mobileshow()">
+		<div  v-for="game in ownGame" :key="game.id" v-show="mobileshow()">
+			<div class="game-card__inner-container" >
 				<div class="card-img">
-					<img src="@/assets/img/cardimg1.jpg" alt="" />
+					<img v-if="game.main_image" :src="game.main_image.image" alt="" />
 					<div class="card-img__footer">
 						<div>
 							<span class="material-symbols-outlined"> group </span>
-							<p>2-8</p>
+							<p>{{ game.minimum_participant }}-{{ game.maximum_participant }}</p>
 						</div>
 						<div>
 							<span class="material-symbols-outlined"> schedule </span>
-							<p>60 min</p>
+							<p>{{ game.duration }} min</p>
 						</div>
 						<div>
 							<span class="material-symbols-outlined"> directions_run </span>
-							<p>Medium</p>
+							<p v-if="game.difficulty">{{ game.difficulty.title }}</p>
 						</div>
 						<div>
 							<span class="material-symbols-outlined"> diversity_3 </span>
-							<p>18+</p>
+							<p>{{ game.mimimum_age }}+</p>
 						</div>
 					</div>
 				</div>
-				<div class="card-body">
+				<div class="card-body" :class="blur_cls">
 					<div class="card-body__header">
 						<p>ESCAPE ROOM</p>
-						<h4>Zombi Apocalypse</h4>
-						<p class="header-description">
-							Escape room events and parties are perfect for is an birthday parties,building lorem... <span>more</span>
-						</p>
+						<h4>{{ game.title }}</h4>
+						<p class="header-description" :class="active_class"><span id="mbl-storyline">{{game.storyline.slice(0,100)}}</span> <span class="more-btn" @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
 					</div>
 					<div class="card-body__footer">
 						<div class="footer-header">
@@ -146,7 +144,8 @@ export default {
 	data() {
 		return {
 			more_btn: 'more' ,
-			active_class: ''
+			active_class: '',
+			blur_cls: ''
 		}
 	},	
 	props: {
@@ -164,17 +163,23 @@ export default {
 
 	methods: {
 		textCollaps(storyline) {
-			let text = document.getElementById('storyline').innerHTML
-			console.log(text.length)
+			let text = document.getElementById('storyline').innerHTML;
+			let mbl_text = document.getElementById('mbl-storyline').innerHTML;
+			
 
-			if(text.length > 100) {
+			if(text.length > 100 || mbl_text.length >100) {
 				document.getElementById('storyline').innerHTML = text.slice(0,100)
+				document.getElementById('mbl-storyline').innerHTML = text.slice(0,100)
 				this.more_btn = 'more'
 				this.active_class = ''
-			} else {
-				document.getElementById('storyline').innerHTML = storyline
+				this.blur_cls = ''
+			} else  {
+				document.getElementById('storyline').innerText = storyline;
+				document.getElementById('mbl-storyline').innerText = storyline;
 				this.more_btn = 'less';
 				this.active_class = 'active'
+				this.blur_cls = 'blur-active'
+				
 
 			}
 

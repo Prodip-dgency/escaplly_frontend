@@ -141,7 +141,9 @@ a {
       padding: 40px 10px;
     }
     .g-description--light{
-      padding: 20px 0 45px 0;
+      padding: 20px 0 35px 0;
+      font-size: 18px;
+      line-height: 25px;
     }
     .g-section-header--structure{
       width: inherit;	

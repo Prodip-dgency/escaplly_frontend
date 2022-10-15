@@ -30,7 +30,7 @@
         <div class="game-gallery">
           <div class="game-gallery__header g-section-header--structure">
             <p class="title-top--gray">STORYLINE</p>
-            <h2 class="page-title">Escape From Alcatraz</h2>
+            <h2 class="page-title">{{activity.title}}</h2>
             <p class="g-description--light">
               Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
             </p>
@@ -39,26 +39,24 @@
         </div>
         <div class="storyline-details">
           <div class="storyline-details__story">
-            <h4>Story about escape from alcatraz</h4>
+            <h4>Story about {{activity.title}}</h4>
             <p>
-              Is simply dummy text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been
-              the industry's standard dummy tex ever since the 150s... Has been the industry's standard dummy tex ever since the 150s. simply dummy
-              text of the printing and is the typesetti Jum has been the industry's standard dummy tex ever since the 150s. Has been the industry's...
+              {{activity.storyline}}...
             </p>
           </div>
           <div class="storyline-details__details">
             <div class="details-list">
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> monetization_on </span>
-                <p>Starts at <span>$29/Person</span></p>
+                <p>Starts at <span>${{activity.price}}/Person</span></p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> group </span>
-                <p>Game Team Size: 2-10 Person</p>
+                <p>Game Team Size: {{activity.minimum_participant}}-{{activity.maximum_participant}} Person</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> schedule </span>
-                <p>Game Duration: 60 Minutes</p>
+                <p>Game Duration: {{activity.duration}} Minutes</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> directions_run </span>
@@ -66,15 +64,15 @@
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> diversity_3 </span>
-                <p>Age: 16+</p>
+                <p>Age: {{activity.mimimum_age}}+</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> escalator_warning </span>
-                <p>Accompany: 8+</p>
+                <p>Accompany: Under {{activity.accompany_age}} Years</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> location_on </span>
-                <p>3681 Palisades Center Dr, West Nyack, NY 10994, United States</p>
+                <p>{{ownCompany.address_line}}</p>
               </div>
             </div>
           </div>
