@@ -8,11 +8,11 @@
           </router-link>
         </div>
         <div class="dropdown">
-          <button class="menu-bar" @click="dropdown_function">
+          <button class="menu-bar" @click="dropdown_function()">
             <i v-show="dropdown_show" class="fa-solid fa-bars"></i>
             <span v-show="!dropdown_show" class="material-symbols-outlined"> cancel </span>
           </button>
-          <div :class="activeclass" class="dropdown-content">
+          <div id="dropmenu" :class="activeclass" class="dropdown-content">
             <router-link :to="{ name: 'home' }"> <i class="fa-solid fa-house"></i> Home</router-link>
             <router-link :to="{ name: 'company_list' }"> <i class="fa-solid fa-building"></i> Companies</router-link>
             <div class="line-break"></div>
@@ -30,7 +30,11 @@
 </template>
 
 <script>
+
+
+
 export default {
+
   data() {
     return {
       dropdown_show: true,
@@ -42,11 +46,24 @@ export default {
       if (this.activeclass) {
         this.activeclass = "";
       } else {
-        this.activeclass = "active";
+        this.activeclass = 'active';
       }
+       
+      document.querySelector("#mainsection").addEventListener("click" , ()=>{
+         this.activeclass = ""
+         this.dropdown_show = true
+      })
+      document.querySelector("#dropmenu").addEventListener("click" , ()=>{
+         this.activeclass = ""
+         this.dropdown_show = true
+      })
       return (this.dropdown_show = !this.dropdown_show);
     },
+    
   },
+
+  
+
 };
 </script>
 

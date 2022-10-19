@@ -1,7 +1,7 @@
 <template>
   <div class="usp-container">
     <!-- <div class="container body-container"> -->
-    <div class="inner-container">
+    <div class="usp-container__main">
       <div class="first-section text-section">
         <h3>{{ country_count() }}</h3>
         <h4>Countries</h4>
@@ -47,6 +47,6 @@ export default {
 };
 </script>
 
-<style src="@/assets/css/components/Uspsection.scss" lang="scss">
+<style src="@/assets/css/components/Uspsection.scss" lang="scss" scoped>
 
 </style>

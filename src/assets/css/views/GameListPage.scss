@@ -10,6 +10,13 @@
             }
             .gamelist-allgame{
                 margin-top: 50px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: center;
+                row-gap: 20px;
+                .gamelist-allgame__card{
+                  
+                }
             }
         }
     }

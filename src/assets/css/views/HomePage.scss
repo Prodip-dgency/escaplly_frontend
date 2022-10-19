@@ -53,6 +53,13 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
       }
     }
 
+    .escapegame__main{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      row-gap: 20px;
+    }
+
 
     // @media #{$media-mobile-sm} {
     //   padding-right: 10px;

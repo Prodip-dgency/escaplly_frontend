@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<herosection />
-		<uspsection :companies="companies" :activity_profiles="activity_profiles"  />
+		<uspsection :companies="companies" :activity_profiles="activity_profiles" />
 		<div>
 			<div class="escape-container">
 				<div class="body-container">
@@ -10,12 +10,16 @@
 							<h2 class="page-title">Top Escape Room And Fun Activities</h2>
 							<h6>Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.</h6>
 						</div>
-            <escape-room-section :activityprofiles= "activity_profiles" :companyprofiles="companies"/>
+						<div class="escapegame__main">
+							<div v-for="activityprofile in activity_profiles" :key="activityprofile.id">
+								<escape-room-section :activityprofile="activityprofile" :activityprofiles="activity_profiles" :companyprofiles="companies" />
+							</div>
+						</div>
 					</div>
-          <div class="footer-btn-container">
-            <a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
+					<router-link :to="{ name: 'game_list' }" class="footer-btn-container" @click="loadmorepage">
+						<a class="footer-btn" href="#"> View more escape rooms</a>
+						<i class="fa-solid fa-chevron-right"></i>
+					</router-link>
 				</div>
 			</div>
 		</div>
@@ -62,14 +66,12 @@ export default {
 		MissionVision,
 	},
 	data() {
-		return {
-  
-    };
+		return {};
 	},
 
-
-
-	methods: {},
+	methods: {
+		loadmorepage() {},
+	},
 };
 </script>
 
