@@ -2,7 +2,7 @@
 	<div>
 		<navsection />
 
-		<router-view :companies="companies" :activity_profiles="activity_profiles" />
+		<router-view :companies="companies" :activity_profiles="activity_profiles" id="mainsection"/>
 
 		<footer-section />
 	</div>

@@ -62,8 +62,12 @@ footer {
                 font-size: 18px;
                 line-height: 25px;
                 padding-bottom: 10px;
+                cursor: pointer;
                 @media #{$media-mobile-sm} {
                   padding-left: 20px;
+                }
+                &:hover{
+                  color:  #7856c3;
                 }
               }
               .link {
@@ -114,7 +118,7 @@ footer {
           padding: 0 20px;
           p {
             &:hover{
-              color: #E1D3FF;
+              color: #7856c3;
             }
           }
           @media #{$media-mobile-sm} {

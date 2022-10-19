@@ -4,8 +4,7 @@
 			<router-link
 				:to="{ name: 'game_details', params: { id: activityprofile.id } }"
 				class="game-card"
-				v-for="activityprofile in activityprofiles"
-				:key="activityprofile.id"
+				
 			>
 				<div class="header">
 					<p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
@@ -52,8 +51,8 @@
 <script>
 export default {
   props:{
-    activityprofiles: Array,
-    companyprofiles:Array
+    companyprofiles:Array,
+	activityprofile: Object
   },
 	data() {
 		return {
@@ -64,7 +63,7 @@ export default {
 
 	methods: {
 		myfunc() {
-			console.log(this.activityprofiles);
+			
 		},
 	},
 };
