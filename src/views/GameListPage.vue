@@ -16,10 +16,10 @@
 						<escape-room-section :activityprofile="activityprofile" :companyprofiles="companies" />
 					</div>
 				</div>
-			</div>
-			<div class="footer-btn-container" @click="limited()">
-				<a class="footer-btn" href="#"> View more escape rooms</a>
-				<i class="fa-solid fa-chevron-right"></i>
+				<div class="footer-btn-container" @click.prevent="limited()">
+					<a class="footer-btn" href=""> View more escape rooms</a>
+					<i class="fa-solid fa-chevron-right"></i>
+				</div>
 			</div>
 		</section>
 	</div>
@@ -40,12 +40,13 @@ export default {
 	},
   data(){
     return{
-      limit: 2 
+      limit: 2 ,
     }
   },
   methods:{
     limited(){
-     this.limit = this.limit+1
+     this.limit = this.limit+1;
+	 
      
     }
   },

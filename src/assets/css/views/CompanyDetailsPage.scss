@@ -25,14 +25,16 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 		.profile-header {
 			position: relative;
 			.profile-header__img {
+				
 				img {
+					background: #ffffff;
 					height: 250px;
 					width: 250px;
 					position: absolute;
 					top: -70px;
 					border: 2px solid #cccccc;
 					object-fit: contain;
-					padding: 5px;
+					padding: 10px;
 					@media #{$media-mobile-sm} {
 						height: 126px;
 						width: 125px;

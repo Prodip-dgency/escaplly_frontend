@@ -2,7 +2,7 @@
 	<div>
 		<navsection />
 
-		<router-view :companies="companies" :activity_profiles="activity_profiles" id="mainsection"/>
+		<router-view :companies="companies" :activity_profiles="activity_profiles" id="mainsection" :key="$route.fullPath"/>
 
 		<footer-section />
 	</div>

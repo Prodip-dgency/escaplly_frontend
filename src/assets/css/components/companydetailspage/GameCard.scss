@@ -51,7 +51,7 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 					font-size: 16px;
 					color: var(--text-color-light-varient4);
 				}
-				h4 {
+				.game-title {
 					font-size: 26px;
 					line-height: 36px;
 				}
@@ -59,8 +59,12 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 					font-size: 18px;
 					color: #191919;
 					line-height: 25px;
+					// display: flex;
 					.more-btn {
 						cursor: pointer;
+						// position: absolute;
+						// right: 0;
+						// bottom: 0;
 						color: var(--link-and-icon-color);
 					}
 					#storyline{

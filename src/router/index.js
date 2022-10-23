@@ -19,7 +19,7 @@ const routes = [
   { path: '/', name: 'home', component: HomePageView },
   { path: '/companies', name: 'company_list', component: CompanyListPageView },
   { path: '/company/:id', name: 'company_details', component: CompanyDetailsPageView },
-  { path: '/escaperooms', name: 'game_list', component: GameListPageView },
+  { path: '/escaperooms', name: 'game_list', component: GameListPageView,  },
   { path: '/escaperoom/:id', name: 'game_details', component: GameDetailsPageView },
 
   { path: '/contact', name: 'contact', component: ContactPageView },
@@ -32,6 +32,8 @@ const routes = [
   { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicyPageView },
   { path: '/cookie-policy', name: 'cookie-policy', component: CookiePolicyPageView },
   { path: '/disclaimer', name: 'disclaimer', component:DisclaimerPageView },
+
+
   
 ]
 
@@ -39,13 +41,24 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    if(savedPosition) {
-      return savedPosition
-    } else {
-      return {
-        top: 0
-      }
+    // if (to.matched.some(m => m.meta.disableScroll)) return;
+    // in routes component : meta: { disableScroll: true }
+
+    const position = {
+      left: 0,
+      top: 0
+    };
+  
+    if (savedPosition) {
+      position.left = savedPosition.x;
+      position.top = savedPosition.y;
     }
+  
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(position)
+      }, 200)
+    })
   }
 })
 

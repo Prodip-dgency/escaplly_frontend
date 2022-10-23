@@ -19,7 +19,7 @@
 					<div class="card-body">
 						<div>
 							<router-link :to="{ name: 'game_details', params: { id: activityprofile.id } }">
-								<h5>{{ activityprofile.title }}</h5>
+								<h5 id="escape-game">{{ activityprofile.title}}{{titleshort( activityprofile.title)}}</h5>
 							</router-link>
 							<div class="company-name">
 								<span>by </span>
@@ -62,9 +62,26 @@ export default {
 	},
 
 	methods: {
-		myfunc() {
+		
+		titleshort(title) {
+			if(title){
+
+				let text= title.slice(0,23)
+				let x = document.querySelector('#escape-game')
+				if(title.length > 23){
+					x.innerHTML = title.slice(0,20)
+					console.log(title.length, x);
+				} else {
+				
+					console.log(title.length);
+					
+				}
+			}
 			
 		},
+	},
+	mounted() {
+		
 	},
 };
 </script>
