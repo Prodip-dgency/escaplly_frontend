@@ -11,7 +11,7 @@
 		>
 			<swiper-slide v-for="game in ownGame" :key="game.id" v-show="desktopshow()">
 				<div class="game-card__inner-container">
-					<div class="card-img">
+					<router-link :to="{ name: 'game_details', params: { id: game.id } }" class="card-img">
 						<img v-if="game.main_image" :src="game.main_image.image" alt="" />
 						<div class="card-img__footer">
 							<div>
@@ -31,12 +31,15 @@
 								<p>{{ game.mimimum_age }}+</p>
 							</div>
 						</div>
-					</div>
-					<div class="card-body" :class="blur_cls">
+					</router-link>
+					<div class="card-body" >
 						<div class="card-body__header">
 							<p>ESCAPE ROOM</p>
-							<h4>{{ game.title }}</h4>
-							<p class="header-description" :class="active_class"><span id="storyline">{{ game.storyline.slice(0,100) }}</span> <span class="more-btn" @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
+							<router-link :to="{ name: 'game_details', params: { id: game.id } }" class="game-title">{{ game.title }}</router-link>
+							<p class="header-description" id="description">
+								<span>{{ game.short_description.slice(0, 100) }}</span>
+								<span class="more-btn" @click="textCollaps($event, game.short_description)">... more</span>
+							</p>
 						</div>
 						<div class="card-body__footer">
 							<div class="footer-header">
@@ -57,7 +60,9 @@
 							</div>
 							<div class="footer-btn">
 								<button>Book Now</button>
-								<a href="#">Learn more <span class="material-symbols-outlined"> keyboard_arrow_right </span></a>
+								<router-link :to="{ name: 'game_details', params: { id: game.id } }" href=""
+									>Learn more <span class="material-symbols-outlined"> keyboard_arrow_right </span></router-link
+								>
 							</div>
 						</div>
 					</div>
@@ -70,8 +75,8 @@
 		</swiper>
 
 		<!-- mobile-responsive -->
-		<div  v-for="game in ownGame" :key="game.id" v-show="mobileshow()">
-			<div class="game-card__inner-container" >
+		<div v-for="game in ownGame" :key="game.id" v-show="mobileshow()">
+			<div class="game-card__inner-container">
 				<div class="card-img">
 					<img v-if="game.main_image" :src="game.main_image.image" alt="" />
 					<div class="card-img__footer">
@@ -97,14 +102,17 @@
 					<div class="card-body__header">
 						<p>ESCAPE ROOM</p>
 						<h4>{{ game.title }}</h4>
-						<p class="header-description" :class="active_class"><span id="mbl-storyline">{{game.storyline.slice(0,100)}}</span> <span class="more-btn" @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span></p>
+						<p class="header-description" :class="active_class">
+							<span id="mbl-storyline">{{ game.storyline.slice(0, 100) }}</span>
+							<span class="more-btn" @click="textCollaps(game.storyline)">...{{ this.more_btn }}</span>
+						</p>
 					</div>
 					<div class="card-body__footer">
 						<div class="footer-header">
-							<div class="footer-header__suspence footer-header__list">
+							<router-link :to="{ name: 'game_details', params: { id: game.id } }" class="footer-header__suspence footer-header__list">
 								<span class="material-symbols-outlined"> tips_and_updates </span>
 								<p>Suspense/ Detective</p>
-							</div>
+							</router-link>
 							<div class="footer-header__person footer-header__list">
 								<span class="material-symbols-outlined"> directions_run </span>
 								<p>In Person</p>
@@ -116,13 +124,12 @@
 						</div>
 						<div class="footer-btn">
 							<button>Book Now</button>
-							<a href="#">Learn more <span class="material-symbols-outlined"> keyboard_arrow_right </span></a>
+							<a href="">Learn more <span class="material-symbols-outlined"> keyboard_arrow_right </span></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </template>
 
@@ -143,11 +150,11 @@ import { Pagination } from "swiper";
 export default {
 	data() {
 		return {
-			more_btn: 'more' ,
-			active_class: '',
-			blur_cls: ''
-		}
-	},	
+			more_btn: "more",
+			active_class: "",
+			blur_cls: "",
+		};
+	},
 	props: {
 		ownGame: Array,
 	},
@@ -162,27 +169,45 @@ export default {
 	},
 
 	methods: {
-		textCollaps(storyline) {
-			let text = document.getElementById('storyline').innerHTML;
-			let mbl_text = document.getElementById('mbl-storyline').innerHTML;
+		textCollaps(e, short_description ) {
+			// let text = document.getElementById("storyline").innerHTML;
+			let text = e.path[1].childNodes[0].innerHTML
+			let mbl_text = document.getElementById("mbl-storyline").innerHTML;
+			let detailshtml = document.getElementById("description");
+			// const parent = e.currentTarget.parentNode
+		     
+			 console.log(e);
+
+				  if (text.length > 100 ) {
+					//   document.getElementById("storyline").innerHTML = text.slice(0, 100);
+					e.path[1].childNodes[0].innerHTML  = text.slice(0, 100);
+					//   document.getElementById("mbl-storyline").innerHTML = text.slice(0, 100);
+					  e.path[1].classList.remove("active")
+					  e.path[3].classList.remove("blur-active")
+					//   e.target.parentElement.parentElement.parentElement.classList.remove("blur-active")
+					  e.target.innerText = "...more"
+					  
+					//   this.more_btn = "more";
+					//   this.active_class = "";
+					//   this.blur_cls = "";
+				  } else {
+					  // document.getElementById("storyline").innerHTML = storyline;
+					//  
+					//   document.getElementById("mbl-storyline").innerText = storyline;
+					  e.path[1].classList.add("active")
+					//   e.target.parentElement.parentElement.parentElement.classList.add("blur-active")
+					   e.path[3].classList.add("blur-active")
+					   e.path[0].innerText = "...less";
+					   e.path[1].childNodes[0].innerHTML = short_description 
+					//   this.more_btn = "less";
+					//   this.active_class = "active";
+					//   this.blur_cls = "blur-active";
+	
+					  
+				  }
+		
 			
-
-			if(text.length > 100 || mbl_text.length >100) {
-				document.getElementById('storyline').innerHTML = text.slice(0,100)
-				document.getElementById('mbl-storyline').innerHTML = text.slice(0,100)
-				this.more_btn = 'more'
-				this.active_class = ''
-				this.blur_cls = ''
-			} else  {
-				document.getElementById('storyline').innerText = storyline;
-				document.getElementById('mbl-storyline').innerText = storyline;
-				this.more_btn = 'less';
-				this.active_class = 'active'
-				this.blur_cls = 'blur-active'
-				
-
-			}
-
+			
 		},
 		mobileshow() {
 			let w = screen.width;
@@ -202,8 +227,7 @@ export default {
 			}
 		},
 	},
-	mounted() {
-	}
+	mounted() {},
 };
 </script>
 
