@@ -30,7 +30,7 @@
         <div class="game-gallery">
           <div class="game-gallery__header g-section-header--structure">
             <p class="title-top--gray">STORYLINE</p>
-            <h2 class="page-title">{{activity.title}}</h2>
+            <h2 class="page-title">{{ activity.title }}</h2>
             <p class="g-description--light">
               Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
             </p>
@@ -39,24 +39,24 @@
         </div>
         <div class="storyline-details">
           <div class="storyline-details__story">
-            <h4>Story about {{activity.title}}</h4>
-            <p>
-              {{activity.storyline}}...
-            </p>
+            <h4>Story about {{ activity.title }}</h4>
+            <p>{{ activity.storyline }}...</p>
           </div>
           <div class="storyline-details__details">
             <div class="details-list">
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> monetization_on </span>
-                <p>Starts at <span>${{activity.price}}/Person</span></p>
+                <p>
+                  Starts at <span>${{ activity.price }}/Person</span>
+                </p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> group </span>
-                <p>Game Team Size: {{activity.minimum_participant}}-{{activity.maximum_participant}} Person</p>
+                <p>Game Team Size: {{ activity.minimum_participant }}-{{ activity.maximum_participant }} Person</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> schedule </span>
-                <p>Game Duration: {{activity.duration}} Minutes</p>
+                <p>Game Duration: {{ activity.duration }} Minutes</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> directions_run </span>
@@ -64,15 +64,15 @@
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> diversity_3 </span>
-                <p>Age: {{activity.mimimum_age}}+</p>
+                <p>Age: {{ activity.mimimum_age }}+</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> escalator_warning </span>
-                <p>Accompany: Under {{activity.accompany_age}} Years</p>
+                <p>Accompany: Under {{ activity.accompany_age }} Years</p>
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> location_on </span>
-                <p>{{ownCompany.address_line}}</p>
+                <p>{{ ownCompany.address_line }}</p>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
       <escapelly-advantages />
     </section>
     <section id="games" class="g-section--structure">
-      <available-game :ownGame="ownGames"/>
+      <available-game :ownGame="ownGames" />
     </section>
     <section class="escape-companies1 g-section--structure">
       <div class="escape-companies__main-box1 body-container">
@@ -124,7 +124,7 @@
           <i class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
-	  {{ this.myfunc() }}
+      {{ this.myfunc() }}
     </section>
   </div>
 </template>
@@ -144,32 +144,30 @@ export default {
   data() {
     return {
       ownGames: [],
-	  activity: {},
-	  ownCompany: {}
-	  
+      activity: {},
+      ownCompany: {},
     };
   },
   methods: {
-	getActivity() {
-		fetch(`http://159.203.95.1/activity/viewset/activityprofile/${this.$route.params.id}/`)
-		.then((response) => response.json())
-		.then((data) => this.activity = data)
-	},
-	getOwnCompany() {
-		for(let i = 0; i < this.companies.length; i++) {
-			if(this.activity.activity) {
-				if(this.companies[i].id == this.activity.activity.company.id) {
-					this.ownCompany = this.companies[i]
-				}
-			}
-		}
-	},
-	
-	myfunc() {
-		this.getOwnCompany()
-		this.getOtherGames
-	}
+    getActivity() {
+      fetch(`http://159.203.95.1/activity/viewset/activityprofile/${this.$route.params.id}/`)
+        .then((response) => response.json())
+        .then((data) => (this.activity = data));
+    },
+    getOwnCompany() {
+      for (let i = 0; i < this.companies.length; i++) {
+        if (this.activity.activity) {
+          if (this.companies[i].id == this.activity.activity.company.id) {
+            this.ownCompany = this.companies[i];
+          }
+        }
+      }
+    },
 
+    myfunc() {
+      this.getOwnCompany();
+      this.getOtherGames;
+    },
   },
   components: {
     BreadCrumb,
@@ -179,21 +177,21 @@ export default {
     TopCompanies,
   },
   computed: {
-	getOtherGames() {
-		for(let i = 0; i < this.activity_profiles.length; i++) {
-			if(this.ownCompany != null){
-				if(this.ownCompany.company) {
-					if(this.activity_profiles[i].activity.company.id === this.ownCompany.company.id) {
-						this.ownGames.push(this.activity_profiles[i])
-					}
-				}
-			}
-		}
-	},
+    getOtherGames() {
+      for (let i = 0; i < this.activity_profiles.length; i++) {
+        if (this.ownCompany != null) {
+          if (this.ownCompany.company) {
+            if (this.activity_profiles[i].activity.company.id === this.ownCompany.company.id) {
+              this.ownGames.push(this.activity_profiles[i]);
+            }
+          }
+        }
+      }
+    },
   },
   mounted() {
-	this.getActivity();
-  }
+    this.getActivity();
+  },
 };
 </script>
 
