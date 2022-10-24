@@ -1,11 +1,7 @@
 <template>
 	<div>
 		<div class="inner-container">
-			<router-link
-				:to="{ name: 'game_details', params: { id: activityprofile.id } }"
-				class="game-card"
-				
-			>
+			<router-link :to="{ name: 'game_details', params: { id: activityprofile.id } }" class="game-card">
 				<div class="header">
 					<p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
 					<p><i class="fa-solid fa-person-running"></i> In Person</p>
@@ -19,7 +15,7 @@
 					<div class="card-body">
 						<div>
 							<router-link :to="{ name: 'game_details', params: { id: activityprofile.id } }">
-								<h5 id="escape-game">{{ activityprofile.title}}{{titleshort( activityprofile.title)}}</h5>
+								<h5 id="escape_game">{{ activityprofile.title.slice(0,23) }}</h5>
 							</router-link>
 							<div class="company-name">
 								<span>by </span>
@@ -49,40 +45,50 @@
 </template>
 
 <script>
+import { title } from "process";
+
 export default {
-  props:{
-    companyprofiles:Array,
-	activityprofile: Object
-  },
+	props: {
+		companyprofiles: Array,
+		activityprofile: Object,
+		activityprofiles: Array,
+	},
 	data() {
 		return {
 			items: ["a", "b", "c", "d", "e", "f", "g", "h"],
-
 		};
 	},
 
 	methods: {
-		
-		titleshort(title) {
-			if(title){
+		// titleshort(title) {
+		// 	if (title) {
+		// 		let text = title.slice(0, 23);
+		// 		let x = document.querySelector("#escape_game");
 
-				let text= title.slice(0,23)
-				let x = document.querySelector('#escape-game')
-				if(title.length > 23){
-					x.innerHTML = title.slice(0,20)
-					console.log(title.length, x);
-				} else {
-				
-					console.log(title.length);
+		// 		if (title.length > 23) {
+		// 			for (let i = 0; i < this.activityprofiles.length; i++) {
+		// 			x.classList.add("hi" + i);
+		// 			console.log(title.length, x);
 					
-				}
-			}
-			
-		},
+		// 			}
+		// 		} else {
+		// 			console.log(title.length);
+		// 		}
+		// 	} else {
+		// 		console.log("hi");
+		// 	}
+
+			// if(title){
+
+			// 	for(let i= 0; i< this.activityprofiles.length;i++){
+
+			// 	 document.getElementById('escape-game').classList.add("game1")
+
+			// 	}
+		// 	// }
+		// },
 	},
-	mounted() {
-		
-	},
+	mounted() {},
 };
 </script>
 
