@@ -15,7 +15,7 @@
 					<div class="card-body">
 						<div>
 							<router-link :to="{ name: 'game_details', params: { id: activityprofile.id } }">
-								<h5 id="escape_game">{{ activityprofile.title.slice(0,23) }}</h5>
+								<h5 id="escape_game">{{ this.titleExcerpt(activityprofile.title, 23, '...') }}</h5>
 							</router-link>
 							<div class="company-name">
 								<span>by </span>
@@ -45,53 +45,22 @@
 </template>
 
 <script>
-import { title } from "process";
-
 export default {
 	props: {
 		companyprofiles: Array,
 		activityprofile: Object,
 		activityprofiles: Array,
 	},
-	data() {
-		return {
-			items: ["a", "b", "c", "d", "e", "f", "g", "h"],
-		};
-	},
-
 	methods: {
-		// titleshort(title) {
-		// 	if (title) {
-		// 		let text = title.slice(0, 23);
-		// 		let x = document.querySelector("#escape_game");
-
-		// 		if (title.length > 23) {
-		// 			for (let i = 0; i < this.activityprofiles.length; i++) {
-		// 			x.classList.add("hi" + i);
-		// 			console.log(title.length, x);
-					
-		// 			}
-		// 		} else {
-		// 			console.log(title.length);
-		// 		}
-		// 	} else {
-		// 		console.log("hi");
-		// 	}
-
-			// if(title){
-
-			// 	for(let i= 0; i< this.activityprofiles.length;i++){
-
-			// 	 document.getElementById('escape-game').classList.add("game1")
-
-			// 	}
-		// 	// }
-		// },
+		titleExcerpt(title, length, symbol) {
+			let new_title = title
+			if(title.length > length) {
+				new_title =  title.slice(0, length-symbol.length) + symbol
+			}	
+			return new_title
+		}
 	},
-	mounted() {},
 };
 </script>
 
-<style src="@/assets/css/components/EscapeRoomSection.scss" lang="scss">
-//------------------------ Under this is shakil's css---------------------------
-</style>
+<style src="@/assets/css/components/EscapeRoomSection.scss" lang="scss"></style>
