@@ -6,10 +6,15 @@
 			:pagination="{
 				clickable: true,
 			}"
+			:autoplay="{
+				delay: 4000,
+				disableOnInteraction: false,
+				
+			}"
 			:modules="modules"
 			class=""
 		>
-			<swiper-slide v-for="game in ownGame" :key="game.id" v-show="desktopshow()">
+			<swiper-slide v-for="game in ownGames" :key="game.id" v-show="desktopshow()">
 				<div class="game-card__inner-container">
 					<router-link :to="{ name: 'game_details', params: { id: game.id } }" class="card-img">
 						<img v-if="game.main_image" :src="game.main_image.image" alt="" />
@@ -32,10 +37,12 @@
 							</div>
 						</div>
 					</router-link>
-					<div class="card-body" >
+					<div class="card-body">
 						<div class="card-body__header">
 							<p>ESCAPE ROOM</p>
-							<router-link :to="{ name: 'game_details', params: { id: game.id } }" class="game-title">{{ game.title }}</router-link>
+							<router-link :to="{ name: 'game_details', params: { id: game.id } }" class="game-title">{{
+								this.titleExcerpt(game.title, 28, "...")
+							}}</router-link>
 							<p class="header-description" id="description">
 								<span>{{ game.short_description.slice(0, 100) }}</span>
 								<span class="more-btn" @click="textCollaps($event, game.short_description)">... more</span>
@@ -75,7 +82,7 @@
 		</swiper>
 
 		<!-- mobile-responsive -->
-		<div v-for="game in ownGame" :key="game.id" v-show="mobileshow()">
+		<div v-for="game in ownGames" :key="game.id" v-show="mobileshow()">
 			<div class="game-card__inner-container">
 				<div class="card-img">
 					<img v-if="game.main_image" :src="game.main_image.image" alt="" />
@@ -145,7 +152,7 @@ import "swiper/css/pagination";
 // import "./style.css";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 
 export default {
 	data() {
@@ -156,7 +163,7 @@ export default {
 		};
 	},
 	props: {
-		ownGame: Array,
+		ownGames: Array,
 	},
 	components: {
 		Swiper,
@@ -164,50 +171,52 @@ export default {
 	},
 	setup() {
 		return {
-			modules: [Pagination],
+			modules: [Pagination, Autoplay],
 		};
 	},
 
 	methods: {
-		textCollaps(e, short_description ) {
+		textCollaps(e, short_description) {
 			// let text = document.getElementById("storyline").innerHTML;
-			let text = e.path[1].childNodes[0].innerHTML
+			let text = e.path[1].childNodes[0].innerHTML;
 			let mbl_text = document.getElementById("mbl-storyline").innerHTML;
 			let detailshtml = document.getElementById("description");
 			// const parent = e.currentTarget.parentNode
-		     
-			 console.log(e);
 
-				  if (text.length > 100 ) {
-					//   document.getElementById("storyline").innerHTML = text.slice(0, 100);
-					e.path[1].childNodes[0].innerHTML  = text.slice(0, 100);
-					//   document.getElementById("mbl-storyline").innerHTML = text.slice(0, 100);
-					  e.path[1].classList.remove("active")
-					  e.path[3].classList.remove("blur-active")
-					//   e.target.parentElement.parentElement.parentElement.classList.remove("blur-active")
-					  e.target.innerText = "...more"
-					  
-					//   this.more_btn = "more";
-					//   this.active_class = "";
-					//   this.blur_cls = "";
-				  } else {
-					  // document.getElementById("storyline").innerHTML = storyline;
-					//  
-					//   document.getElementById("mbl-storyline").innerText = storyline;
-					  e.path[1].classList.add("active")
-					//   e.target.parentElement.parentElement.parentElement.classList.add("blur-active")
-					   e.path[3].classList.add("blur-active")
-					   e.path[0].innerText = "...less";
-					   e.path[1].childNodes[0].innerHTML = short_description 
-					//   this.more_btn = "less";
-					//   this.active_class = "active";
-					//   this.blur_cls = "blur-active";
-	
-					  
-				  }
-		
-			
-			
+			console.log(e);
+
+			if (text.length > 100) {
+				//   document.getElementById("storyline").innerHTML = text.slice(0, 100);
+				e.path[1].childNodes[0].innerHTML = text.slice(0, 100);
+				//   document.getElementById("mbl-storyline").innerHTML = text.slice(0, 100);
+				e.path[1].classList.remove("active");
+				e.path[3].classList.remove("blur-active");
+				//   e.target.parentElement.parentElement.parentElement.classList.remove("blur-active")
+				e.target.innerText = "...more";
+
+				//   this.more_btn = "more";
+				//   this.active_class = "";
+				//   this.blur_cls = "";
+			} else {
+				// document.getElementById("storyline").innerHTML = storyline;
+				//
+				//   document.getElementById("mbl-storyline").innerText = storyline;
+				e.path[1].classList.add("active");
+				//   e.target.parentElement.parentElement.parentElement.classList.add("blur-active")
+				e.path[3].classList.add("blur-active");
+				e.path[0].innerText = "...less";
+				e.path[1].childNodes[0].innerHTML = short_description;
+				//   this.more_btn = "less";
+				//   this.active_class = "active";
+				//   this.blur_cls = "blur-active";
+			}
+		},
+		titleExcerpt(title, length, symbol) {
+			let new_title = title;
+			if (title.length > length) {
+				new_title = title.slice(0, length - symbol.length) + symbol;
+			}
+			return new_title;
 		},
 		mobileshow() {
 			let w = screen.width;

@@ -11,7 +11,7 @@
 							<h6>Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.</h6>
 						</div>
 						<div class="escapegame__main">
-							<div v-for="activityprofile in activity_profiles" :key="activityprofile.id">
+							<div v-for="activityprofile in activeactivity" :key="activityprofile.id">
 								<escape-room-section :activityprofile="activityprofile" :activityprofiles="activity_profiles" :companyprofiles="companies" />
 							</div>
 						</div>
@@ -66,12 +66,19 @@ export default {
 		MissionVision,
 	},
 	data() {
-		return {};
+		return {
+			limit: 12
+		};
 	},
 
 	methods: {
 		loadmorepage() {},
 	},
+	computed:{
+		activeactivity(){
+			return this.limit ? this.activity_profiles.slice(0,this.limit) : this.activity_profiles;
+		}
+	}
 };
 </script>
 

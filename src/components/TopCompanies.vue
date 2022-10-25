@@ -50,7 +50,7 @@ export default {
 				transition: 700,
 				autoplay: 3000,
 				wrapAround: true,
-				itemToVisible:3
+				
 			},
 		};
 	},
