@@ -40,12 +40,12 @@ export default {
 	},
   data(){
     return{
-      limit: 2 ,
+      limit: 8 ,
     }
   },
   methods:{
     limited(){
-     this.limit = this.limit+1;
+     this.limit = this.limit+4;
 	 
      
     }

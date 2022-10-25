@@ -117,7 +117,7 @@
       <escapelly-advantages />
     </section>
     <section id="games" class="g-section--structure">
-      <available-game :ownGame="ownGames"/>
+      <available-game :ownGames="ownGames"/>
     </section>
     <section class="gallery g-section--structure">
       <div class="gallery__main-box body-container">
@@ -141,10 +141,10 @@
         </div>
 
         <top-companies :companies="this.otherCompanies" :activity_profiles="activity_profiles" />
-        <div class="footer-btn-container">
-          <a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
+        <router-link :to="{name : 'company_list'}" class="footer-btn-container">
+          <a class="footer-btn" href=""> View more escape rooms</a>
           <i class="fa-solid fa-chevron-right"></i>
-        </div>
+        </router-link>
       </div>
     </section>
     {{ this.myfunc() }}

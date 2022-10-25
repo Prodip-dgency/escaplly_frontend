@@ -107,7 +107,7 @@
       <escapelly-advantages />
     </section>
     <section id="games" class="g-section--structure">
-      <available-game :ownGame="ownGames" />
+      <available-game :ownGames="otherGames" />
     </section>
     <section class="escape-companies1 g-section--structure">
       <div class="escape-companies__main-box1 body-container">
@@ -119,10 +119,10 @@
         </div>
 
         <top-companies :companies="companies" :activity_profiles="activity_profiles" />
-        <div class="footer-btn-container">
-          <a class="footer-btn" href="#" @click="myfunc"> View more escape rooms</a>
+        <router-link :to="{name: 'company_list'}" class="footer-btn-container">
+          <a class="footer-btn" href=""> View more escape rooms</a>
           <i class="fa-solid fa-chevron-right"></i>
-        </div>
+        </router-link>
       </div>
       {{ this.myfunc() }}
     </section>
@@ -144,6 +144,7 @@ export default {
   data() {
     return {
       ownGames: [],
+      otherGames: [],
       activity: {},
       ownCompany: {},
     };
@@ -166,6 +167,7 @@ export default {
 
     myfunc() {
       this.getOwnCompany();
+      this.getOwnGames;
       this.getOtherGames;
     },
   },
@@ -177,7 +179,7 @@ export default {
     TopCompanies,
   },
   computed: {
-    getOtherGames() {
+    getOwnGames() {
       for (let i = 0; i < this.activity_profiles.length; i++) {
         if (this.ownCompany != null) {
           if (this.ownCompany.company) {
@@ -188,6 +190,13 @@ export default {
         }
       }
     },
+    getOtherGames(){
+      for(let i=0; i< this.ownGames.length; i++){
+        if(this.ownGames[i].activity.id != this.$route.params.id){
+          this.otherGames.push(this.ownGames[i])
+        }
+      }
+    }
   },
   mounted() {
     this.getActivity();
