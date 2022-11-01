@@ -22,7 +22,7 @@
 		</div>
 		<div class="gallery-tab__content-wrapper">
 			<div id="photoTab" class="gallery-tab__content">
-				<image-gallery-slider />
+				<image-gallery-slider :activity="activity"/>
 			</div>
 			<div id="videoTab" class="gallery-tab__content">
 				<img src="../../assets/img/companycard2.jpg" alt="" />
@@ -39,6 +39,9 @@ import ImageGallerySlider from "./ImageGallerySlider.vue";
 export default {
 	components: {
 		ImageGallerySlider,
+	},
+	props:{
+		activity: Object
 	},
 	methods: {
 		openTab(e, tabname) {

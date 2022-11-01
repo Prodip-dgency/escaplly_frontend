@@ -1,0 +1,104 @@
+$media-mobile-sm: "only screen and (max-width : 480px)";
+.contact-page {
+	.bread-crumb {
+		.bread-crumb-section__main {
+			color: #9a9a9a;
+			padding: 10px 0;
+			.is-active {
+				color: black;
+			}
+			@media #{$media-mobile-sm} {
+				padding: 10px 10px;
+			}
+		}
+	}
+	.contact-page__headersection {
+		margin-top: inherit;
+		.headsection-main {
+			display: flex;
+			gap: 80px;
+			.headsection-main__text {
+				flex: 1;
+				h2 {
+					font-size: 50px;
+					line-height: 70px;
+					color: var(--primary-color);
+				}
+				p {
+					font-size: 24px;
+					line-height: 33px;
+					font-weight: 500;
+					margin-top: 20px;
+				}
+
+				button {
+					border: none;
+					padding: 15px 30px;
+					background: var(--link-and-icon-color);
+					font-size: 18px;
+					color: #ffffff;
+					display: flex;
+					align-items: center;
+					gap: 10px;
+					margin-top: 40px;
+				}
+			}
+			.headsection-main__image {
+				flex: 1;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+	.contact-page__bodysection {
+		.bodysection-main__formsection {
+			background: #f9f9f9;
+			width: 70%;
+			margin: auto;
+			padding: 50px;
+
+			.combained-input {
+				display: flex;
+				gap: 50px;
+			}
+			.text-field {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				flex: 1;
+				margin-bottom: 30px;
+				.input-area {
+					padding: 10px 10px;
+					font-size: 18px;
+					border: none;
+					background: #e7e7e7;
+					box-shadow: -2px 0px 0px #9081b1;
+				}
+				select {
+					padding: 10px 10px;
+					font-size: 18px;
+					border: none;
+					background: #e7e7e7;
+					box-shadow: -2px 0px 0px #9081b1;
+				}
+              
+			}
+            .form-btn{
+                text-align: center;
+                margin-top: 40px;
+                button{
+                    border: none;
+                    padding: 15px 30px;
+                    font-size: 18px;
+                    background: var(--primary-color);
+                    color: #ffffff;
+                    border-radius: 5px;
+                   
+                }
+            }
+		}
+	}
+}

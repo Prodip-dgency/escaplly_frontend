@@ -19,17 +19,17 @@
 							</router-link>
 							<div class="company-name">
 								<span>by </span>
-								<router-link :to="{ name: 'company_details', params: { id: activityprofile.activity.company.id } }">
-									<p>{{ activityprofile.activity.company.title }}</p>
+								<router-link :to="{ name: 'company_details', params: { id: activityprofile.company_profile.id } }">
+									<p>{{ activityprofile.company_profile.title }}</p>
 								</router-link>
 							</div>
 						</div>
 
 						<div class="card-footer">
-							<div v-for="companyprofile in companyprofiles" :key="companyprofile.id">
-								<div class="location" v-if="activityprofile.activity.company.id == companyprofile.company.id">
+							<div >
+								<div class="location" v-if=" activityprofile.company_profile">
 									<span class="material-symbols-outlined"> location_on </span>
-									<p>{{ companyprofile.city }}, {{ companyprofile.state }}</p>
+									<p>{{ activityprofile.company_profile.city }}, {{  activityprofile.company_profile.state }}</p>
 								</div>
 							</div>
 							<p>
@@ -49,7 +49,6 @@ export default {
 	props: {
 		companyprofiles: Array,
 		activityprofile: Object,
-		activityprofiles: Array,
 	},
 	methods: {
 		titleExcerpt(title, length, symbol) {

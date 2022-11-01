@@ -13,12 +13,12 @@
             <h4>{{ item.title }}</h4>
             <p>{{ item.description }}</p>
           </div>
-          <div class="btn-container">
+          <router-link :to="{ name: item.link }" class="btn-container">
             <button :class="item.classname"><i class="fa-solid fa-play"></i>{{ item.btn_name }}</button>
-            <router-link :to="{ name: item.link }">
+            <a>
               Learn more <i class="fa-solid fa-chevron-right"></i>
-            </router-link>
-          </div>
+            </a>
+          </router-link>
         </div>
       </div>
     </div>

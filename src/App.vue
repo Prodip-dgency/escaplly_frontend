@@ -2,7 +2,7 @@
 	<div>
 		<navsection />
 
-		<router-view :companies="companies" :activity_profiles="activity_profiles" id="mainsection" :key="$route.fullPath"/>
+		<router-view :companies="companies" :activity_profiles="activity_profiles" :custom_activities="custom_activities" id="mainsection" :key="$route.fullPath"/>
 
 		<footer-section />
 	</div>
@@ -22,6 +22,7 @@ export default {
 		return {
 			companies: [],
 			activity_profiles: [],
+			custom_activities : []
 		};
 	},
 
@@ -34,6 +35,10 @@ export default {
 		fetch("http://159.203.95.1/activity/viewset/activityprofile/")
 			.then((res) => res.json())
 			.then((data) => (this.activity_profiles = data));
+		
+		fetch("http://159.203.95.1/activity/viewset/customapi/")
+		     .then((res) => res.json())
+			 .then((data) => this.custom_activities = data)
 	},
 };
 </script>

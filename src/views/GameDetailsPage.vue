@@ -7,12 +7,12 @@
       <div class="profile-main body-container">
         <div class="profile-main__header">
           <div class="profile-img">
-            <img src="@/assets/img/companycard1.jpg" alt="" />
+            <img v-if="activity.company_profile" :src="activity.company_profile.profile_image.image" alt="" />
           </div>
           <div class="profile-description">
             <div class="description-info">
-              <p>WEST NYACK, NY</p>
-              <h2 class="page-title">{{ ownCompany.title }}</h2>
+              <p v-if="activity.company_profile">{{activity.company_profile.city}},{{activity.company_profile.state}} </p>
+              <h2 class="page-title" v-if="activity.company_profile">{{ activity.company_profile.title }}</h2>
             </div>
             <button>Book This Game</button>
           </div>
@@ -32,10 +32,10 @@
             <p class="title-top--gray">STORYLINE</p>
             <h2 class="page-title">{{ activity.title }}</h2>
             <p class="g-description--light">
-              Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
+              {{activity.short_description}}
             </p>
           </div>
-          <gallery />
+          <gallery :activity="activity"/>
         </div>
         <div class="storyline-details">
           <div class="storyline-details__story">
@@ -72,7 +72,7 @@
               </div>
               <div class="details-list__item">
                 <span class="material-symbols-outlined"> location_on </span>
-                <p>{{ ownCompany.address_line }}</p>
+                <p>{{ activity.address }}</p>
               </div>
             </div>
           </div>
@@ -146,27 +146,27 @@ export default {
       ownGames: [],
       otherGames: [],
       activity: {},
-      ownCompany: {},
+      // ownCompany: {},
     };
   },
   methods: {
     getActivity() {
-      fetch(`http://159.203.95.1/activity/viewset/activityprofile/${this.$route.params.id}/`)
+      fetch(`http://159.203.95.1/activity/viewset/customapi/${this.$route.params.id}/`)
         .then((response) => response.json())
         .then((data) => (this.activity = data));
     },
-    getOwnCompany() {
-      for (let i = 0; i < this.companies.length; i++) {
-        if (this.activity.activity) {
-          if (this.companies[i].id == this.activity.activity.company.id) {
-            this.ownCompany = this.companies[i];
-          }
-        }
-      }
-    },
+    // getOwnCompany() {
+    //   for (let i = 0; i < this.companies.length; i++) {
+    //     if (this.activity.activity) {
+    //       if (this.companies[i].id == this.activity.company_profile.id) {
+    //         this.ownCompany = this.companies[i];
+    //       }
+    //     }
+    //   }
+    // },
 
     myfunc() {
-      this.getOwnCompany();
+      // this.getOwnCompany();
       this.getOwnGames;
       this.getOtherGames;
     },
@@ -181,9 +181,9 @@ export default {
   computed: {
     getOwnGames() {
       for (let i = 0; i < this.activity_profiles.length; i++) {
-        if (this.ownCompany != null) {
-          if (this.ownCompany.company) {
-            if (this.activity_profiles[i].activity.company.id === this.ownCompany.company.id) {
+        if (this.activity != null) {
+          if (this.activity.company_profile) {
+            if (this.activity_profiles[i].activity.company === this.activity.company_profile.id) {
               this.ownGames.push(this.activity_profiles[i]);
             }
           }
