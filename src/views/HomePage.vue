@@ -11,8 +11,8 @@
 							<h6>Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.</h6>
 						</div>
 						<div class="escapegame__main">
-							<div v-for="activityprofile in activeactivity" :key="activityprofile.id">
-								<escape-room-section :activityprofile="activityprofile" :activityprofiles="activity_profiles" :companyprofiles="companies" />
+							<div v-for="activityprofile in active_activity" :key="activityprofile.id">
+								<escape-room-section  :activityprofile="activityprofile"  :companyprofiles="companies" />
 							</div>
 						</div>
 					</div>
@@ -56,6 +56,7 @@ export default {
 	props: {
 		companies: Array,
 		activity_profiles: Array,
+		custom_activities: Array
 	},
 	components: {
 		Herosection,
@@ -75,8 +76,8 @@ export default {
 		loadmorepage() {},
 	},
 	computed:{
-		activeactivity(){
-			return this.limit ? this.activity_profiles.slice(0,this.limit) : this.activity_profiles;
+		active_activity(){
+			return this.limit ? this.custom_activities.slice(0,this.limit) : this.custom_activities;
 		}
 	}
 };

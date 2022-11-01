@@ -128,7 +128,7 @@
             Lorem Ipsum is simply dummy text of the text a Lorem Ipsum is simply dummy text of the text a lpsum simply text for dummy only.
           </p>
         </div>
-        <gallery />
+        <!-- <gallery /> -->
       </div>
     </section>
     <section class="escape-companies g-section--structure">
@@ -226,8 +226,10 @@ export default {
       let buttons = document.getElementsByClassName("overview__button");
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].className = buttons[i].className.replace("active", "");
+       
       }
       e.currentTarget.className += " active";
+      
     },
     
     // getOwnGames() {

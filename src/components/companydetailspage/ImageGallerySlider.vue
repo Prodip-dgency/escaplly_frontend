@@ -11,11 +11,15 @@
       :thumbs="{ swiper: thumbsSwiper }"
       :modules="modules"
       class="mySwiper2"
+      
     >
-      <swiper-slide><img src="@/assets/img/companycard3.jpg" /></swiper-slide>
-      <swiper-slide><img src="@/assets/img/companycard1.jpg" /></swiper-slide>
+
+
+      <swiper-slide v-for="item in this.activity.gallery"><img :src="item.image" /></swiper-slide>
+      
+      <!-- <swiper-slide><img src="@/assets/img/companycard1.jpg" /></swiper-slide>
       <swiper-slide><img src="@/assets/img/companycard2.jpg" /></swiper-slide>
-      <swiper-slide><img src="@/assets/img/companycard4.jpg" /></swiper-slide>
+      <swiper-slide><img src="@/assets/img/companycard4.jpg" /></swiper-slide> -->
     </swiper>
     <swiper
       @swiper="setThumbsSwiper"
@@ -27,10 +31,10 @@
       :modules="modules"
       class="mySwiper"
     >
-      <swiper-slide><img src="@/assets/img/companycard3.jpg" /></swiper-slide>
-      <swiper-slide><img src="@/assets/img/companycard1.jpg" /></swiper-slide>
-      <swiper-slide><img src="@/assets/img/companycard2.jpg" /></swiper-slide>
-      <swiper-slide><img src="@/assets/img/companycard4.jpg" /></swiper-slide>
+      <swiper-slide v-for="item in this.activity.gallery"><img class="galler__img" :src="item.image" /></swiper-slide>
+      <!-- <swiper-slide><img class="galler__img" src="@/assets/img/companycard1.jpg" /></swiper-slide>
+      <swiper-slide><img class="galler__img" src="@/assets/img/companycard2.jpg" /></swiper-slide>
+      <swiper-slide><img class="galler__img" src="@/assets/img/companycard4.jpg" /></swiper-slide> -->
     </swiper>
   </div>
 </template>
@@ -50,6 +54,9 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+  },
+  props:{
+    activity: Object
   },
   data() {
     return {

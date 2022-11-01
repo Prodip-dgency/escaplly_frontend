@@ -50,14 +50,21 @@ const router = createRouter({
     };
   
     if (savedPosition) {
-      position.left = savedPosition.x;
-      position.top = savedPosition.y;
+      position.left = savedPosition.left;
+      position.top = savedPosition.top;
+    }
+    if (to.hash) {
+      return {
+        selector: to.hash,
+        behavior: 'smooth',
+      }
     }
   
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(position)
-      }, 200)
+        
+      }, 300)
     })
   }
 })
