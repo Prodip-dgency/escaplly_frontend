@@ -81,7 +81,7 @@ export default {
 		activityFunctions(icompany) {
 			let activity_list = [];
 			for (let x = 0; x < this.activity_profiles.length; x++) {
-				if (this.activity_profiles[x].activity.company.id == icompany.company.id) {
+				if (this.activity_profiles[x].activity.company == icompany.company.id) {
 					activity_list.push(this.activity_profiles[x]);
 				}
 			}

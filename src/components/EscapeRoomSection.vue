@@ -19,7 +19,7 @@
 							</router-link>
 							<div class="company-name">
 								<span>by </span>
-								<router-link :to="{ name: 'company_details', params: { id: activityprofile.company_profile.id } }">
+								<router-link :to="{ name: 'company_details' }">
 									<p>{{ activityprofile.company_profile.title }}</p>
 								</router-link>
 							</div>
@@ -41,6 +41,7 @@
 				</div>
 			</router-link>
 		</div>
+		{{this.mufunc()}}
 	</div>
 </template>
 
@@ -57,6 +58,9 @@ export default {
 				new_title =  title.slice(0, length-symbol.length) + symbol
 			}	
 			return new_title
+		},
+		mufunc(){
+			console.log(this.activityprofile.id);
 		}
 	},
 };

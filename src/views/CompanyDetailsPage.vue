@@ -187,7 +187,7 @@ export default {
         for(let i = 0; i<(this.activityProfiles).length; i++) {
           if(this.activityProfiles[i]){
             if(this.companyDetails.company){
-              if(this.activityProfiles[i].activity.company.id == this.companyDetails.company.id) {
+              if(this.activityProfiles[i].activity.company == this.companyDetails.company.id) {
                 this.ownGames.push(this.activityProfiles[i]);
               }
             }
