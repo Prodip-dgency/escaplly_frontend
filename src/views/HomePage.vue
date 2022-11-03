@@ -12,7 +12,7 @@
 						</div>
 						<div class="escapegame__main">
 							<div v-for="activityprofile in active_activity" :key="activityprofile.id">
-								<escape-room-section  :activityprofile="activityprofile"  :companyprofiles="companies" />
+								<escape-room-section  :activityprofile="activityprofile" />
 							</div>
 						</div>
 					</div>
@@ -41,6 +41,14 @@
 			</div>
 		</div>
 		<mission-vision />
+		<!-- <div v-for="activity in active_activity" :key="activity">
+			{{ activity.id }}
+			<br><br><br>
+		</div> -->
+		<div v-for="company in companies" :key="company">
+			{{ company.id }}
+			<br><br><br>
+		</div>
 	</div>
 </template>
 

@@ -19,9 +19,9 @@
 							</router-link>
 							<div class="company-name">
 								<span>by </span>
-								<router-link :to="{ name: 'company_details' }">
+								<!-- <router-link :to="{ name: 'company_details', params: { id: activityprofile.company_profile.id } }"> -->
 									<p>{{ activityprofile.company_profile.title }}</p>
-								</router-link>
+								<!-- </router-link> -->
 							</div>
 						</div>
 
@@ -33,22 +33,19 @@
 								</div>
 							</div>
 							<p>
-								From <span>${{ activityprofile.price }}</span
-								>/Person
+								From <span>${{ activityprofile.price }}</span>/Person
 							</p>
 						</div>
 					</div>
 				</div>
 			</router-link>
 		</div>
-		{{this.mufunc()}}
 	</div>
 </template>
 
 <script>
 export default {
 	props: {
-		companyprofiles: Array,
 		activityprofile: Object,
 	},
 	methods: {
@@ -60,7 +57,7 @@ export default {
 			return new_title
 		},
 		mufunc(){
-			console.log(this.activityprofile.id);
+			console.log(this.activityprofile);
 		}
 	},
 };
