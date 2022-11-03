@@ -36,28 +36,27 @@
 					<form action="">
 						<div class="combained-input">
 							<div class="text-field first-name">
-								<label for="">What’s your first name? *</label>
-								<input type="text" placeholder="Your first name" class="input-area"/>
+								<label for="">What's your first name? *</label>
+								<input v-model="contactformData.first_name" required type="text" placeholder="Your first name" class="input-area"/>
 							</div>
 							<div class="text-field last-name">
-								<label for="">What’s your last name? *</label>
-								<input type="text" placeholder="Your last name" class="input-area"/>
+								<label for="">What's your last name? *</label>
+								<input v-model="contactformData.last_name" required type="text" placeholder="Your last name" class="input-area"/>
 							</div>
 						</div>
 						<div class="combained-input">
 							<div class="text-field">
-								<label for="">What’s your email? *</label>
-								<input type="text" placeholder="Your email address" class="input-area"/>
+								<label for="">What's your email? *</label>
+								<input v-model="contactformData.email" required type="email" placeholder="Your email address" class="input-area"/>
 							</div>
 							<div class="text-field">
 								<label for="">What's your phone number? *</label>
-								<input type="text" placeholder="Your phone number" class="input-area"/>
+								<input v-model="contactformData.phone_no" required type="text" placeholder="Your phone number" class="input-area"/>
 							</div>
 						</div>
 						<div class="text-field">
 							<label for="">Subject of your communications? *</label>
-							<!-- <input type="text" placeholder="I am communicating because..."/> -->
-							<select id="cars">
+							<select v-model="contactformData.subject_of_communication" id="cars" required>
 								<option value="" disabled selected hidden>I am communicating because...</option>
 								<option value="volvo">Volvo</option>
 								<option value="saab">Saab</option>
@@ -67,17 +66,15 @@
 						</div>
 						<div class="text-field">
 							<label for="">Enter the company name, city or remote *</label>
-							<input type="text" placeholder="Type here" class="input-area"/>
+							<input v-model="contactformData.company_name" required type="text" placeholder="Type here" class="input-area"/>
 						</div>
 						<div class="text-field">
-							<label for="">What’s your message?</label>
-							<textarea name="" id="" cols="30" rows="6" placeholder="Write your message here" class="input-area"></textarea>
+							<label for="">What's your message?</label>
+							<textarea v-model="contactformData.message" name="" id="" cols="30" rows="6" placeholder="Write your message here" class="input-area"></textarea>
 						</div>
 						<div class="form-btn">
-							<button>Submit</button>
+							<button @click.prevent="postData()">Submit</button>
 						</div>
-
-						
 					</form>
 				</div>
 			</div>
@@ -86,7 +83,37 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			contactformData: {
+				first_name: "",
+				last_name: "",
+				email: "",
+				phone_no: "",
+				subject_of_communication: "",
+				company_name: "",
+				message: ""
+			}
+		}
+	},
+	methods: {
+		postData() {
+			let options = {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json;charset=utf-8",
+				},
+				body: JSON.stringify(this.contactformData),
+			};
+			fetch('http://159.203.95.1/contact-from/viewsets/contact-from1/', options)
+			.then((result) => result.json())
+			.then((data) => {
+				console.log(data)
+			});
+		},
+	}
+};
 </script>
 
 <style src="@/assets/css/views/ContactPage.scss" lang="scss"></style>
