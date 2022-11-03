@@ -41,14 +41,6 @@
 			</div>
 		</div>
 		<mission-vision />
-		<!-- <div v-for="activity in active_activity" :key="activity">
-			{{ activity.id }}
-			<br><br><br>
-		</div> -->
-		<div v-for="company in companies" :key="company">
-			{{ company.id }}
-			<br><br><br>
-		</div>
 	</div>
 </template>
 
