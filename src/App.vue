@@ -36,7 +36,7 @@ export default {
 			.then((res) => res.json())
 			.then((data) => (this.activity_profiles = data));
 		
-		fetch("http://159.203.95.1/activity/viewset/customapi/")
+		fetch("http://159.203.95.1/activity/viewset/custom-activity-profile-api/")
 		     .then((res) => res.json())
 			 .then((data) => this.custom_activities = data)
 	},

@@ -107,7 +107,7 @@
       <escapelly-advantages />
     </section>
     <section id="games" class="g-section--structure">
-      <available-game :ownGames="otherGames" />
+      <available-game :ownGames="ownGames" />
     </section>
     <section class="escape-companies1 g-section--structure">
       <div class="escape-companies__main-box1 body-container">
@@ -151,7 +151,7 @@ export default {
   },
   methods: {
     getActivity() {
-      fetch(`http://159.203.95.1/activity/viewset/customapi/${this.$route.params.id}/`)
+      fetch(`http://159.203.95.1/activity/viewset/custom-activity-profile-api/${this.$route.params.id}/`)
         .then((response) => response.json())
         .then((data) => (this.activity = data));
     },
@@ -169,6 +169,7 @@ export default {
       // this.getOwnCompany();
       this.getOwnGames;
       this.getOtherGames;
+      console.log();
     },
   },
   components: {
@@ -183,20 +184,20 @@ export default {
       for (let i = 0; i < this.activity_profiles.length; i++) {
         if (this.activity != null) {
           if (this.activity.company_profile) {
-            if (this.activity_profiles[i].activity.company === this.activity.company_profile.id) {
+            if (this.activity_profiles[i].activity.company == this.activity.company_profile.id) {
               this.ownGames.push(this.activity_profiles[i]);
             }
           }
         }
       }
     },
-    getOtherGames(){
-      for(let i=0; i< this.ownGames.length; i++){
-        if(this.ownGames[i].activity.id != this.$route.params.id){
-          this.otherGames.push(this.ownGames[i])
-        }
-      }
-    }
+    // getOtherGames(){
+    //   for(let i=0; i< this.ownGames.length; i++){
+    //     if(this.ownGames[i].activity.id != this.$route.params.id){
+    //       this.otherGames.push(this.ownGames[i])
+    //     }
+    //   }
+    // }
   },
   mounted() {
     this.getActivity();

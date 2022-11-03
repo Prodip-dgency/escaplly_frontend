@@ -16,7 +16,7 @@
 							</div>
 						</div>
 					</div>
-					<router-link :to="{ name: 'game_list' }" class="footer-btn-container" @click="loadmorepage">
+					<router-link :to="{ name: 'game_list' }" class="footer-btn-container" >
 						<a class="footer-btn" href="#"> View more escape rooms</a>
 						<i class="fa-solid fa-chevron-right"></i>
 					</router-link>
@@ -73,7 +73,9 @@ export default {
 	},
 
 	methods: {
-		loadmorepage() {},
+		loadmorepage() {
+			console.log(this.active_activity);
+		},
 	},
 	computed:{
 		active_activity(){
