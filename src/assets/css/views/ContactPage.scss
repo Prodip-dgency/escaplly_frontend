@@ -86,7 +86,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 			.text-field {
 				display: flex;
 				flex-direction: column;
-				gap: 10px;
 				flex: 1;
 				margin-bottom: 30px;
 				.input-area {
@@ -95,6 +94,8 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 					border: none;
 					background: #e7e7e7;
 					box-shadow: -2px 0px 0px #9081b1;
+					outline: none;
+					margin-top: 10px;
 				}
 				select {
 					padding: 10px 10px;
