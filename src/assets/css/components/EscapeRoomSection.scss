@@ -20,9 +20,12 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
     }
     .img-body {
       div {
+        overflow: hidden;
+       
         img {
           width: 276px;
           height: 180px;
+          transition: all 0.6s ease-in;
           @media #{$media-mobile-sm} {
             width: 152px;
             height: 118px;
@@ -117,6 +120,9 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
       box-shadow: 0px 1px 35px 1px rgba(0, 0, 0, 0.25);
       transition: all 0.3s;
       transform: scale(1.05);
+      img{
+        transform: scale(1.2);
+      }
     }
     @media #{$media-mobile-sm} {
       width: inherit;

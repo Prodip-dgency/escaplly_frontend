@@ -31,8 +31,8 @@ import EscapeRoomSection from "@/components/EscapeRoomSection.vue";
 
 export default {
 	props: {
-		activity_profiles: Array,
 		companies: Array,
+		custom_activities: Array
 	},
 	components: {
 		BreadCrumb,
@@ -52,7 +52,7 @@ export default {
   },
   computed:{
     computedactivity(){
-      return this.limit ? this.activity_profiles.slice(0,this.limit) : this.activity_profiles
+      return this.limit ? this.custom_activities.slice(0,this.limit) : this.custom_activities
     }
   }
 };
