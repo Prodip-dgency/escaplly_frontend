@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="inner-container">
-			<router-link :to="{ name: 'game_details', params: { id: activityprofile.id } }" class="game-card">
+			<div class="game-card">
 				<div class="header">
 					<p><i class="fa-regular fa-calendar-check"></i> Book Here</p>
 					<p><i class="fa-solid fa-person-running"></i> In Person</p>
@@ -19,9 +19,9 @@
 							</router-link>
 							<div class="company-name">
 								<span>by </span>
-								<!-- <router-link :to="{ name: 'company_details', params: { id: activityprofile.company_profile.id } }"> -->
-									<p>{{ activityprofile.company_profile.title }}</p>
-								<!-- </router-link> -->
+								<router-link :to="{ name: 'company_details', params: { id: activityprofile.company_profile.id } }">
+									<p v-if="activityprofile.company_profile">{{ activityprofile.company_profile.title }}</p>
+								</router-link>
 							</div>
 						</div>
 
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</div>
-			</router-link>
+			</div>
 		</div>
 	</div>
 </template>
