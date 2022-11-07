@@ -25,7 +25,7 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
         img {
           width: 276px;
           height: 180px;
-          transition: all 0.6s ease-in;
+          transition: all 0.2s ease-in;
           @media #{$media-mobile-sm} {
             width: 152px;
             height: 118px;
@@ -121,7 +121,7 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
       transition: all 0.3s;
       transform: scale(1.05);
       img{
-        transform: scale(1.2);
+        transform: scale(1.04);
       }
     }
     @media #{$media-mobile-sm} {

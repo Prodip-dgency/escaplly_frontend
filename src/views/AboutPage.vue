@@ -189,7 +189,7 @@ export default {
 				this.active = true;
 			} else {
 				x.style.display = "block";
-				this.active = false;
+				this.active = false;	
 			}
 		},
 	},
