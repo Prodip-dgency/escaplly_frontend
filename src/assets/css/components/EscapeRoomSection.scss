@@ -5,8 +5,6 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
 
 .inner-container {
   font-family: "Roboto", sans-serif;
-  display: flex;
-
   .game-card {
     padding: 6px 7px;
     border-radius: 5px;
@@ -129,15 +127,9 @@ $media-tab: "only screen and (min-width : 530px) and (max-width : 1024px)";
     }
   }
   @media #{$media-mobile-sm} {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     padding: 0 10px;
+    margin-bottom: 20px;
   }
-  @media #{$media-tab} {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media #{$media-tab-sm} {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+ 
 }
