@@ -1,4 +1,4 @@
- 
+$media-mobile-sm: "only screen and (max-width : 480px)";
          .frequently-asked__main{
             .asked-main-header{
                 width: 70%;
@@ -6,10 +6,21 @@
                 h2{
                     font-size: 40px;
                     margin-bottom: 20px;
+                    @media #{$media-mobile-sm} {
+                       font-size: 28px;
+                    }
                 }
                 p{
                     font-size: 24px;
                     line-height: 33px;
+                    @media #{$media-mobile-sm} {
+                       font-size: 18px;
+                       line-height: 25px;
+                    }
+                }
+                @media #{$media-mobile-sm} {
+                  width: inherit;
+                  margin-bottom: 40px;
                 }
             }
             .asked-question{
@@ -25,6 +36,9 @@
                     span{
                         font-weight: 700;
                         font-size: 24px;
+                    }
+                    @media #{$media-mobile-sm} {
+                       font-size: 20px;
                     }
                 }
                 .asked-question__ans{

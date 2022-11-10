@@ -1,5 +1,4 @@
 <template>
-	<div>
 		<div class="inner-container">
 			<div class="game-card">
 				<div class="header">
@@ -40,7 +39,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 </template>
 
 <script>

@@ -187,12 +187,19 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 			h3 {
 				font-size: 40px;
 				line-height: 56px;
+				@media #{$media-mobile-sm} {
+					font-size: 28px;
+					line-height: 40px;
+				}
 			}
 			p {
 				font-size: 18px;
 				line-height: 27px;
 				margin: 20px 0 40px 0;
 				color: var(--text-color-light-varient4);
+			}
+			@media #{$media-mobile-sm} {
+				margin-bottom: 40px;
 			}
 		}
 
@@ -203,6 +210,9 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 				height: 100%;
 			}
 		}
+		@media #{$media-mobile-sm} {
+			display: block;
+		}
 	}
 	.whatis-escaperoom__typical-components {
 		background: #fbf9ff;
@@ -212,6 +222,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 				width: 50%;
 				text-align: center;
 				margin: auto;
+				@media #{$media-mobile-sm} {
+					font-size: 28px;
+					width: inherit;
+					text-align: inherit;
+				}
 			}
 			.typical-components-main__components {
 				border-radius: 10px;
@@ -219,6 +234,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 				grid-template-columns: repeat(2, 1fr);
 				gap: 40px;
 				margin: 80px 0 100px 0;
+				.components-item{
+					@media #{$media-mobile-sm} {
+						margin-bottom: 30px;
+					}
+				}
 				.components-item__title {
 					font-size: 22px;
 					background: #e8e1f8;
@@ -232,6 +252,11 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 					padding: 15px 30px;
 					box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
 				}
+				@media #{$media-mobile-sm} {
+					margin: 40px 0 50px 0;
+					display: block;
+					
+				}
 			}
 			.typical-components-main__footer-heading {
 				font-size: 40px;
@@ -240,10 +265,18 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 				text-align: center;
 				margin: auto;
 				color: #462b92;
+				@media #{$media-mobile-sm} {
+					font-size: 22px;
+					line-height: 30px;
+					width: 90%;
+				}
 			}
 			.typical-components-main__button {
 				text-align: center;
 				margin-top: 60px;
+				@media #{$media-mobile-sm} {
+					margin-top: 40px;
+				}
 			}
 		}
 	}
