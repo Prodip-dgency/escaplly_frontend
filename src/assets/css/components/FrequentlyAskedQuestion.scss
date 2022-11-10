@@ -1,0 +1,39 @@
+ 
+         .frequently-asked__main{
+            .asked-main-header{
+                width: 70%;
+                margin-bottom: 80px;
+                h2{
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-size: 24px;
+                    line-height: 33px;
+                }
+            }
+            .asked-question{
+                border-bottom: 1px solid #cccccc;
+                padding: 26px 0;
+                .asked-question__question{
+                    font-size: 22px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 600;
+                    cursor: pointer;
+                    span{
+                        font-weight: 700;
+                        font-size: 24px;
+                    }
+                }
+                .asked-question__ans{
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #73738F;
+                    background: #F9F9F9;
+                    padding: 10px 20px;
+                    margin-top: 20px;
+                }
+            }
+        }

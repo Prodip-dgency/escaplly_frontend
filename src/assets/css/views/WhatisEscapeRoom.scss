@@ -1,6 +1,14 @@
 $media-mobile-sm: "only screen and (max-width : 480px)";
-.whatis-escaperoom{
-    .whatis-escaperoom__headersection {
+.whatis-escaperoom {
+	.g--page-button {
+		border: none;
+		background: var(--link-and-icon-color);
+		padding: 10px 30px;
+		color: white;
+		font-size: 18px;
+		border-radius: 5px;
+	}
+	.whatis-escaperoom__headersection {
 		margin-top: inherit;
 		.headsection-main {
 			display: flex;
@@ -26,18 +34,16 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 						line-height: 25px;
 					}
 				}
+				.btn {
+					display: flex;
+					justify-content: center;
+				}
 
 				button {
-					border: none;
-					padding: 10px 30px;
-					background: var(--link-and-icon-color);
-					font-size: 18px;
-					color: #ffffff;
 					display: flex;
 					align-items: center;
 					gap: 10px;
 					margin-top: 40px;
-                    border-radius: 5px;
 				}
 			}
 			.headsection-main__image {
@@ -54,85 +60,191 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 			@media #{$media-mobile-sm} {
 				flex-direction: column;
 				gap: 40px;
+				text-align: center;
 			}
 		}
 	}
 
-    .whatis-escaperoom__about{
-        .aboutsection-main__header{
-            width: 70%;
-            h2{
-                font-size: 40px;
-                margin-bottom: 20px;
-            }
-            p{
-                font-size: 22px;
-            }
-        }
-        .aboutsection-main__body{
-            margin-top: 60px;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            column-gap: 50px;
-            row-gap: 40px;
-           .main-body-item{
-             h5{
-                font-size: 26px;
-                color: var(--primary-color);
-                span{
-                    font-size: 66px;
-                    color: #E7E1F5;
-                    margin-right: 5px;
-                }
-             }
+	.whatis-escaperoom__about {
+		.aboutsection-main__header {
+			width: 70%;
+			h2 {
+				font-size: 40px;
+				margin-bottom: 20px;
+				@media #{$media-mobile-sm} {
+					font-size: 28px;
+				}
+			}
+			p {
+				font-size: 22px;
+				@media #{$media-mobile-sm} {
+					font-size: 18px;
+				}
+			}
+			@media #{$media-mobile-sm} {
+				width: inherit;
+			}
+		}
+		.aboutsection-main__body {
+			margin-top: 60px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 50px;
+			row-gap: 40px;
+			.main-body-item {
+				h5 {
+					display: flex;
+					align-items: baseline;
+					gap: 5px;
+					.number {
+						font-size: 66px;
+						color: #e7e1f5;
+					}
+					.text {
+						font-size: 26px;
+						color: var(--primary-color);
+						@media #{$media-mobile-sm} {
+							font-size: 24px;
+						}
+					}
+				}
 
-             p{
-                margin: 25px 0 0 44px;
-                color: #73738F;
-             }
-           } 
-        }
-    }
+				p {
+					margin: 25px 0 0 44px;
+					color: #73738f;
+				}
+			}
+			@media #{$media-mobile-sm} {
+				display: block;
+				margin-top: 40px;
+			}
+		}
+	}
 
-    .playinstruction-mainsection{
-        .playinstruction-mainsection__header{
-            text-align: center;
-            width: 70%;
-            margin: auto;
-            .header-title{
-                font-size: 22px;
-                color: var(--text-color-light-varient4);
-            }
-            h2{
-                font-size: 50px;
-            }
-            .header-description{
-                font-size: 24px;
-                margin: 25px 0 80px 0;
-            }
-        }
-        .playinstruction-mainsection__body{
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-            gap: 55px;
-            .body-item{
-                img{
-                    height: 80px;
-                    width: 80px;
-                    background: #cccccc;
-                }
-                .body-item__title{
-                    font-size: 22px;
-                    font-weight: 600;
-                    color: var(--primary-color);
-                    margin: 20px 0 10px 0;
-                }
-                .body-item__description{
-                    font-size: 18px;
-                    color: #73738F;
-                }
-            }
-        }
-    }
+	.playinstruction-mainsection {
+		.playinstruction-mainsection__header {
+			text-align: center;
+			width: 70%;
+			margin: auto;
+			.header-title {
+				font-size: 22px;
+				color: var(--text-color-light-varient4);
+			}
+			h2 {
+				font-size: 50px;
+				@media #{$media-mobile-sm} {
+					font-size: 35px;
+				}
+			}
+			.header-description {
+				font-size: 24px;
+				margin: 25px 0 80px 0;
+				@media #{$media-mobile-sm} {
+					font-size: 18px;
+					margin: 20px 0 50px 0;
+				}
+			}
+			@media #{$media-mobile-sm} {
+				width: inherit;
+			}
+		}
+		.playinstruction-mainsection__body {
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+			gap: 55px;
+			.body-item {
+				img {
+					height: 80px;
+					width: 80px;
+					background: #cccccc;
+				}
+				.body-item__title {
+					font-size: 22px;
+					font-weight: 600;
+					color: var(--primary-color);
+					margin: 20px 0 10px 0;
+				}
+				.body-item__description {
+					font-size: 18px;
+					color: #73738f;
+				}
+				@media #{$media-mobile-sm} {
+					margin-bottom: 40px;
+				}
+			}
+			@media #{$media-mobile-sm} {
+				display: block;
+			}
+		}
+	}
+	.puzzlesolve-main {
+		display: flex;
+		gap: 90px;
+		.puzzlesolve-main__text {
+			flex: 1;
+
+			h3 {
+				font-size: 40px;
+				line-height: 56px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 27px;
+				margin: 20px 0 40px 0;
+				color: var(--text-color-light-varient4);
+			}
+		}
+
+		.puzzlesolve-main__img {
+			flex: 1;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.whatis-escaperoom__typical-components {
+		background: #fbf9ff;
+		.typical-components-main {
+			.typical-components-main__title {
+				font-size: 40px;
+				width: 50%;
+				text-align: center;
+				margin: auto;
+			}
+			.typical-components-main__components {
+				border-radius: 10px;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 40px;
+				margin: 80px 0 100px 0;
+				.components-item__title {
+					font-size: 22px;
+					background: #e8e1f8;
+					padding: 15px 30px;
+					border-radius: 10px 10px 0 0;
+				}
+				.components-item__description {
+					font-size: 18px;
+					background: #f9f6ff;
+					border-radius: 0 0 10px 10px;
+					padding: 15px 30px;
+					box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+				}
+			}
+			.typical-components-main__footer-heading {
+				font-size: 40px;
+				line-height: 56px;
+				width: 70%;
+				text-align: center;
+				margin: auto;
+				color: #462b92;
+			}
+			.typical-components-main__button {
+				text-align: center;
+				margin-top: 60px;
+			}
+		}
+	}
 }
