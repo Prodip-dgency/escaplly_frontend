@@ -13,6 +13,8 @@ import CookiePolicyPageView from '@/views/policy_pages/CookiePolicyPage'
 import EscapeRoomPlayersView from '../views/EscaperoomPlayers'
 import EscapeRoomOwnersView from '@/views/EscaperoomOwners'
 import WhatIsEscapeRoomView from '@/views/WhatisEscapeRoom'
+import SignUp from '@/views/authentication/SignUp'
+import LogIn from '@/views/authentication/LogIn'
 
 
 const routes = [
@@ -32,6 +34,12 @@ const routes = [
   { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicyPageView },
   { path: '/cookie-policy', name: 'cookie-policy', component: CookiePolicyPageView },
   { path: '/disclaimer', name: 'disclaimer', component:DisclaimerPageView },
+
+  
+  { path: '/sign-up', name: 'signup', component:SignUp },
+  { path: '/log-in', name: 'login', component:LogIn },
+
+
 
 
   
