@@ -8,7 +8,7 @@
 	</div>
 </template>
 
-<script>
+<script> 
 import Navsection from "./components/Navsection.vue";
 import FooterSection from "./components/FooterSection.vue";
 
@@ -40,6 +40,10 @@ export default {
 		     .then((res) => res.json())
 			 .then((data) => this.custom_activities = data)
 	},
+
+	beforeCreate() {
+		this.$store.commit('initializeStore')
+	}
 };
 </script>
 
